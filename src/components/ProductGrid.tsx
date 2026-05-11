@@ -56,13 +56,13 @@ const ProductCard = ({ title, category, description, image, features, onQuote, h
                 <div className="flex items-center gap-2 mt-auto">
                     <Link
                         href={href || "/contact"}
-                        className="flex-1 bg-[#f1f5f9] hover:bg-[#e2e8f0] text-gray-800 text-[9px] font-bold py-3 rounded flex items-center justify-center gap-2 transition-colors uppercase tracking-widest"
+                        className="flex-1 bg-[#f1f5f9] hover:bg-[#e2e8f0] text-gray-800 text-[12px] font-bold py-3 rounded flex items-center justify-center gap-2 transition-colors uppercase tracking-widest"
                     >
-                        INFO <MoveRight size={14} />
+                        INFO <MoveRight size={11} />
                     </Link>
                     <button
                         onClick={onQuote}
-                        className="flex-[1.2] bg-[#2563eb] hover:bg-[#1d4ed8] text-white text-[9px] font-bold py-3 rounded flex items-center justify-center transition-colors uppercase tracking-widest shadow-md"
+                        className="flex-[1.2] bg-[#2563eb] hover:bg-[#1d4ed8] text-white text-[11px] font-bold py-3 rounded flex items-center justify-center transition-colors uppercase tracking-widest shadow-md"
                     >
                         GET QUOTE
                     </button>

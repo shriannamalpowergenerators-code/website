@@ -87,7 +87,7 @@ const DieselGeneratorsPage = () => {
         { range: "25 - 40 kVA", description: "Prime Rated", phase: "Three Phase", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-25-40kVA_Spec-Sheet_Rev-0.pdf" },
         { range: "50 - 58.5 kVA", description: "Prime Rated", phase: "Three Phase", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-50-58.5kVA_Spec-Sheet_Rev-0.pdf" },
         { range: "82.5 - 140 kVA", description: "Prime Rated", phase: "Three Phase", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-82.5-140kVA_Spec-Sheet_Rev-0.pdf" },
-        { range: "125 kVA", description: "Prime Rated", phase: "Three Phase", pdfUrl: "#" }, 
+        { range: "82.5 kVA", description: "Prime Rated", phase: "Three Phase", pdfUrl: "/pdfs/82.5 kVA_Spec Sheet_Rev-0 - NEW.pdf" },
         { range: "160 - 250 kVA", description: "Prime Rated", phase: "Three Phase", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-160-250kVA_Spec-Sheet_Rev-0.pdf" },
     ];
     mhpThreePhase.sort(sortByKva);

@@ -78,11 +78,11 @@ const ProductGrid = ({ onQuoteInquiry }: { onQuoteInquiry: () => void }) => {
     const salesProducts = [
         {
             id: 1,
-            title: " Generators",
+            title: "Electric Generators",
             category: "POWER SYSTEMS",
             description: "Precision power backup for mission-critical industrial and commercial applications.",
             image: "/images/hero anamalai power generator.png",
-            features: ["2500kVA Max", "Silent Env", "Emissions Cert"],
+            features: ["2500kVA+", "Silent Env", ""],
             href: "/generators",
         },
         {
@@ -118,9 +118,9 @@ const ProductGrid = ({ onQuoteInquiry }: { onQuoteInquiry: () => void }) => {
         {
             id: 5,
             title: "Rental Generators",
-            category: "FLEXIBLE POWER",
+            category: "RENTAL POWER",
             description: "Rapid deployment temporary power units for events and remote sites.",
-            image: "/images/rental generators.jpeg",
+            image: "/images/rental generators.png",
             features: ["24/7 Support", "Turnkey Setup", "Fuel Mgmt"],
             href: "/rental-generators",
         },
@@ -132,7 +132,7 @@ const ProductGrid = ({ onQuoteInquiry }: { onQuoteInquiry: () => void }) => {
     return (
         <section className="py-24 bg-[#F8FAFC] overflow-x-hidden" id="inventory">
             <div className="container mx-auto px-4 md:px-6">
-                
+
                 {/* Header Section */}
                 <div className="flex flex-col items-center text-center mb-12">
                     <h2 className="text-3xl md:text-5xl font-heading font-black text-brand-enterprise mb-8 uppercase tracking-tight">
@@ -143,21 +143,19 @@ const ProductGrid = ({ onQuoteInquiry }: { onQuoteInquiry: () => void }) => {
                     <div className="flex p-1 bg-white rounded-full border border-gray-200 shadow-inner w-fit">
                         <button
                             onClick={() => setActiveTab("sales")}
-                            className={`flex items-center gap-2 px-8 py-3 rounded-full text-[11px] font-bold tracking-widest uppercase transition-all duration-300 ${
-                                activeTab === "sales" 
-                                ? "bg-brand-enterprise text-white shadow-lg" 
+                            className={`flex items-center gap-2 px-8 py-3 rounded-full text-[11px] font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === "sales"
+                                ? "bg-brand-enterprise text-white shadow-lg"
                                 : "text-gray-400 hover:text-brand-enterprise"
-                            }`}
+                                }`}
                         >
                             <Zap size={14} /> Systems Sale
                         </button>
                         <button
                             onClick={() => setActiveTab("rental")}
-                            className={`flex items-center gap-2 px-8 py-3 rounded-full text-[11px] font-bold tracking-widest uppercase transition-all duration-300 ${
-                                activeTab === "rental" 
-                                ? "bg-brand-enterprise text-white shadow-lg" 
+                            className={`flex items-center gap-2 px-8 py-3 rounded-full text-[11px] font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === "rental"
+                                ? "bg-brand-enterprise text-white shadow-lg"
                                 : "text-gray-400 hover:text-brand-enterprise"
-                            }`}
+                                }`}
                         >
                             <Repeat size={14} /> Rental Fleet
                         </button>
@@ -166,7 +164,7 @@ const ProductGrid = ({ onQuoteInquiry }: { onQuoteInquiry: () => void }) => {
 
                 {/* Product Grid */}
                 <div className="min-h-[600px]">
-                    <motion.div 
+                    <motion.div
                         layout
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
                     >

@@ -66,9 +66,12 @@ const Hero = () => {
                         </h1>
 
                         <p className="text-base md:text-lg text-[#475569] font-sans max-w-lg leading-relaxed">
-                            We provide reliable power backup solutions for industrial, commercial,
-                            and residential needs. Wholesale distribution of premium generators,
-                            solar infrastructure, and high-precision stabilizers.
+                            <strong>Shri Annamalai Power Generators</strong> offers advanced Electric generator solutions
+                            designed to deliver dependable and efficient backup power for industrial, commercial,
+                            institutional, residential applications ,etc ., <br /> Our generator systems are engineered for
+                            high performance, operational reliability, and seamless power management across diverse
+                            environments and demanding conditions.
+
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
@@ -98,11 +101,11 @@ const Hero = () => {
 
                         <div className="grid grid-cols-3 gap-4 md:gap-8 pt-8 border-t border-gray-200/50">
                             <div className="flex flex-col">
-                                <span className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise">25+</span>
+                                <span className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise">20+</span>
                                 <span className="text-[8px] md:text-[10px] text-[#64748B] font-bold uppercase tracking-widest leading-tight">Years Experience</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise">500+</span>
+                                <span className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise">3000+</span>
                                 <span className="text-[8px] md:text-[10px] text-[#64748B] font-bold uppercase tracking-widest leading-tight">Successful Installs</span>
                             </div>
                             <div className="flex flex-col">
@@ -119,7 +122,7 @@ const Hero = () => {
                                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
                             </div>
                             <span className="text-[10px] md:text-[11px] font-bold text-gray-500 uppercase tracking-widest">
-                                Executing Projects In: <span className="text-brand-enterprise font-black px-1">Malaysia, Trichy & Beyond</span>
+                                Executing Projects In: <span className="text-brand-enterprise font-black px-1">Across India</span>
                             </span>
                         </div>
                     </motion.div>
@@ -158,13 +161,6 @@ const Hero = () => {
 
                         <div className="w-20 h-1.5 bg-blue-600 mt-6 rounded-full"></div>
                     </div>
-                    {/* <div className="flex flex-col items-center text-center mb-20 relative">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-[#1e3a8a] mb-6 tracking-tight">
-                      Trusted by industry leaders for successful installations
-                    </h2>
-                    <div className="w-24 h-[2px] bg-[#2563eb]"></div>
-                </div> */}
-
 
                     <div className="relative w-full flex overflow-hidden">
                         <motion.div

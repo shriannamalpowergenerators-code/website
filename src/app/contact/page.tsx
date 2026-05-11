@@ -158,7 +158,7 @@ export default function ContactPage() {
                                         <option value="" disabled>
                                             Select Requirement Type
                                         </option>
-                                        <option value="generators">Generators</option>
+                                        <option value="generators">Electric Generators</option>
                                         <option value="solar">Solar Infrastructure</option>
                                         <option value="servo">Servo Stabilizer</option>
                                         <option value="ups">Custom UPS System</option>
@@ -291,12 +291,12 @@ export default function ContactPage() {
                                     </a>
 
                                     <a
-                                        href="mailto:info@sapgene.com"
+                                        href="mailto:sapgenekkl@gmail.com"
                                         className="flex items-center gap-4 p-4 bg-[#F1F5F9] rounded-lg sm:col-span-2"
                                     >
                                         <Mail size={20} />
                                         <span className="text-xs font-bold uppercase">
-                                            info@sapgene.com
+                                            sapgenekkl@gmail.com
                                         </span>
                                     </a>
                                 </div>

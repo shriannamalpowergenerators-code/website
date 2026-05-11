@@ -24,7 +24,7 @@ const Footer = () => {
                         </Link>
 
                         <p className="text-[#94A3B8] font-sans text-sm leading-relaxed max-w-sm">
-                            Providing high-end industrial energy solutions across Tamil Nadu and Puducherry. Authorized partners in world-class power generation since 1999.
+                            Providing high-end industrial energy solutions across Tamil Nadu and Puducherry. Authorized partners in world-class power generation since 2004.
                         </p>
 
                         <div className="flex items-center gap-4">
@@ -53,10 +53,7 @@ const Footer = () => {
                             </a>
                         </div>
 
-                        <div className="flex items-center gap-2 mt-4 px-4 py-2 bg-white/5 border border-white/10 w-fit rounded-sm">
-                            <ShieldCheck size={16} className="text-brand-action" />
-                            <span className="text-[10px] font-bold text-white tracking-[0.2em] uppercase">ISO 9001:2015 CERTIFIED</span>
-                        </div>
+
                     </div>
 
                     {/* Service Hubs */}
@@ -66,7 +63,7 @@ const Footer = () => {
                             <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
                                 <div className="flex gap-3">
                                     <MapPin className="text-white shrink-0" size={18} />
-                                    <span>19B <br/> 6th cross Extension <br/> Anna Nagar <br/> Pondicherry - 605005</span>
+                                    <span>19B <br /> 6th cross Extension <br /> Anna Nagar <br /> Pondicherry - 605005</span>
                                 </div>
                                 <div className="flex gap-3">
                                     <Phone className="text-white shrink-0" size={18} />
@@ -74,7 +71,7 @@ const Footer = () => {
                                 </div>
                                 <div className="flex gap-3">
                                     <Mail className="text-white shrink-0" size={18} />
-                                    <span>Sapgenekkl@gmail.com</span>
+                                    <span>sapgenekkl@gmail.com</span>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +81,7 @@ const Footer = () => {
                             <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
                                 <div className="flex gap-3">
                                     <MapPin className="text-white shrink-0" size={18} />
-                                    <span>11 <br/> West St <br/> MelaSoutheral <br className="hidden md:block" /> Karaikal - 609602</span>
+                                    <span>11 <br /> West St <br /> MelaSoutheral <br className="hidden md:block" /> Karaikal - 609602</span>
                                 </div>
                                 <div className="flex gap-3">
                                     <Phone className="text-white shrink-0" size={18} />
@@ -92,7 +89,7 @@ const Footer = () => {
                                 </div>
                                 <div className="flex gap-3">
                                     <Mail className="text-white shrink-0" size={18} />
-                                    <span>Sapgenekkl@gmail.com</span>
+                                    <span>sapgenekkl@gmail.com</span>
                                 </div>
                             </div>
                         </div>
@@ -134,8 +131,8 @@ const Footer = () => {
                         <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
                         <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
                         <span className="opacity-20 hidden md:inline">|</span>
-                        <Link href="/" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link href="/" className="hover:text-white transition-colors">Legal Brief</Link>
+                        <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link href="/legal" className="hover:text-white transition-colors">Legal Brief</Link>
                     </div>
                 </div>
             </div>

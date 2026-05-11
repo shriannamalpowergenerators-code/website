@@ -23,16 +23,26 @@ export default function GalleryPage() {
     ];
 
     const exhibitionImages = [
-        { src: "/images/shri annamalai power generators/Km Trbhvnm Mr. Manimaran 125.jpeg", alt: "Sugam Multi Speciality Hospital | Kumbakonam" },
-        { src: "/images/shri annamalai power generators/Tnj Mr. Dr. Rajasekar 58.5-1.jpeg", alt: "ARC Kamatchi Jewellery | Mayiladuthurai" },
-        { src: "/images/shri annamalai power generators/Ngi Uma Bakery 125-1.jpeg", alt: "Hotel Ariyas | Mannargudi" },
-        { src: "/images/shri annamalai power generators/Copy of Pdy Pondicherry Maritime Academy 58.5 -1.jpeg", alt: "Saradharam Apartment | Chidambaram" },
-        { src: "/images/shri annamalai power generators/Pdy Luminuous Datamatics 40 kva-1.jpeg", alt: "Hotel Sea Gate | Velankanni" },
-        { src: "/images/shri annamalai power generators/gensets.jpeg", alt: "K S Pattu Centre | Mayiladuthurai" },
-        { src: "/images/shri annamalai power generators/Pdy Pondicherry Maritime.jpeg", alt: "Hotel Manivizha | Thirukadaiyur" },
+        { src: "/images/gallery-exhibition/WhatsApp Image 2026-05-11 at 1.52.25 PM (2).jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/Gemini_Generated_Image_pglxgfpglxgfpglx.png", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/IMG-20241227-WA0002.jpg.jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/IMG-20241227-WA0006.jpg.jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/IMG_20241228_110304688.jpg.jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/IMG_20241228_110415852.jpg.jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/WhatsApp Image 2026-05-11 at 1.52.18 PM (2).jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/WhatsApp Image 2026-05-11 at 1.52.18 PM (3).jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/WhatsApp Image 2026-05-11 at 1.52.25 PM.jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/WhatsApp Image 2026-05-11 at 1.52.21 PM (1).jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/WhatsApp Image 2026-05-11 at 1.52.21 PM.jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/WhatsApp Image 2026-05-11 at 1.52.24 PM (1).jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/WhatsApp Image 2026-05-11 at 1.52.24 PM.jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/WhatsApp Image 2026-05-11 at 1.52.25 PM (1).jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/WhatsApp Image 2026-05-11 at 1.52.19 PM.jpeg", alt: "Exhibition Event" },
+        { src: "/images/gallery-exhibition/stall 2.jpeg", alt: "Exhibition Stall" },
+        { src: "/images/gallery-exhibition/stall.jpeg", alt: "Exhibition Stall" },
     ];
 
-const currentImages = activeTab === "showcase" ? showcaseImages : exhibitionImages;
+    const currentImages = activeTab === "showcase" ? showcaseImages : exhibitionImages;
     return (
         <main className="min-h-screen bg-slate-50 selection:bg-brand-action selection:text-white">
             <Header variant="light" />
@@ -62,8 +72,8 @@ const currentImages = activeTab === "showcase" ? showcaseImages : exhibitionImag
                             <button
                                 onClick={() => setActiveTab("showcase")}
                                 className={`flex items-center gap-2 px-6 sm:px-8 py-3 rounded-full text-[10px] md:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === "showcase"
-                                        ? "bg-brand-enterprise text-white shadow-md"
-                                        : "text-slate-500 hover:text-brand-enterprise"
+                                    ? "bg-brand-enterprise text-white shadow-md"
+                                    : "text-slate-500 hover:text-brand-enterprise"
                                     }`}
                             >
                                 <LayoutGrid size={14} /> Showcase
@@ -71,8 +81,8 @@ const currentImages = activeTab === "showcase" ? showcaseImages : exhibitionImag
                             <button
                                 onClick={() => setActiveTab("exhibition")}
                                 className={`flex items-center gap-2 px-6 sm:px-8 py-3 rounded-full text-[10px] md:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === "exhibition"
-                                        ? "bg-brand-enterprise text-white shadow-md"
-                                        : "text-slate-500 hover:text-brand-enterprise"
+                                    ? "bg-brand-enterprise text-white shadow-md"
+                                    : "text-slate-500 hover:text-brand-enterprise"
                                     }`}
                             >
                                 <Award size={14} /> Exhibition

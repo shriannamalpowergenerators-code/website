@@ -6,13 +6,19 @@ import Footer from "@/components/Footer";
 import LeadModal from "@/components/LeadModal";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FileText, Download, ArrowRight, Zap, CheckCircle2, PhoneCall } from "lucide-react";
+import { FileText, Download, ArrowRight, ShieldCheck, CheckCircle2, PhoneCall } from "lucide-react";
 
 interface SpecSheet {
     range: string;
     description: string;
     pdfUrl: string;
+    phase?: "Single Phase" | "Three Phase";
 }
+
+const sortByKva = (a: SpecSheet, b: SpecSheet) => {
+    const getVal = (s: string) => parseFloat(s.match(/[\d.]+/)?.at(0) || "0");
+    return getVal(a.range) - getVal(b.range);
+};
 
 const SpecSheetCard = ({ sheet, onEnquire }: { sheet: SpecSheet; onEnquire: () => void }) => (
     <motion.div
@@ -25,7 +31,12 @@ const SpecSheetCard = ({ sheet, onEnquire }: { sheet: SpecSheet; onEnquire: () =
             <div className="w-12 h-12 bg-[#e0eaf5] rounded flex items-center justify-center text-[#175C96]">
                 <FileText size={24} strokeWidth={1.5} />
             </div>
-            <span className="text-[10px] md:text-xs font-bold text-gray-400 absolute right-0 top-2 tracking-widest uppercase">TECHNICAL PDF</span>
+            <div className="flex flex-col items-end">
+                <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">TECHNICAL PDF</span>
+                {sheet.phase && (
+                    <span className="text-[10px] font-bold text-red-600 mt-1 uppercase italic tracking-wider">{sheet.phase}</span>
+                )}
+            </div>
         </div>
 
         <h4 className="text-xl md:text-2xl font-black text-[#175C96] mb-3 tracking-tight">{sheet.range}</h4>
@@ -64,22 +75,22 @@ const DieselGeneratorsPage = () => {
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
-    const lhpRange: SpecSheet[] = [
-        { range: "7.5 - 18.5 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-7.5-18.5-kVA_Spec-Sheet_SP_Rev-0.pdf" },
-        { range: "7.5 - 20 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-7.5-20kVA_Spec-Sheet_Rev-0.pdf" },
-        { range: "25 - 40 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-25-40kVA_Spec-Sheet_Rev-0.pdf" },
-        { range: "25 - 35 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-25-35kVA_Spec-Sheet_SP_Rev-0.pdf" },
-        { range: "41 - 50 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-41-50kVA_Spec-Sheet_SP_Rev-0.pdf" },
-        { range: "50 - 58.5 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-50-58.5kVA_Spec-Sheet_Rev-0.pdf" },
-        { range: "82.5 - 140 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-82.5-140kVA_Spec-Sheet_Rev-0.pdf" },
-        { range: "160 - 250 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-160-250kVA_Spec-Sheet_Rev-0.pdf" },
+    const mhpSinglePhase: SpecSheet[] = [
+        { range: "7.5 - 18.5 kVA", description: "Prime Rated", phase: "Single Phase", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-7.5-18.5-kVA_Spec-Sheet_SP_Rev-0.pdf" },
+        { range: "25 - 35 kVA", description: "Prime Rated", phase: "Single Phase", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-25-35kVA_Spec-Sheet_SP_Rev-0.pdf" },
+        { range: "41 - 50 kVA", description: "Prime Rated", phase: "Single Phase", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-41-50kVA_Spec-Sheet_SP_Rev-0.pdf" },
     ];
+    mhpSinglePhase.sort(sortByKva);
 
-    const mhpRange: SpecSheet[] = [
-        { range: "160 - 250 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-160-250kVA_Spec-Sheet_Rev-0.pdf" },
-        { range: "320 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-320kVA_Spec-Sheet_Rev-0.pdf" },
-        { range: "380 - 500 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-380-500kVA_Spec-Sheet_Rev-0.pdf" },
+    const mhpThreePhase: SpecSheet[] = [
+        { range: "7.5 - 20 kVA", description: "Prime Rated", phase: "Three Phase", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-7.5-20kVA_Spec-Sheet_Rev-0.pdf" },
+        { range: "25 - 40 kVA", description: "Prime Rated", phase: "Three Phase", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-25-40kVA_Spec-Sheet_Rev-0.pdf" },
+        { range: "50 - 58.5 kVA", description: "Prime Rated", phase: "Three Phase", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-50-58.5kVA_Spec-Sheet_Rev-0.pdf" },
+        { range: "82.5 - 140 kVA", description: "Prime Rated", phase: "Three Phase", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-82.5-140kVA_Spec-Sheet_Rev-0.pdf" },
+        { range: "125 kVA", description: "Prime Rated", phase: "Three Phase", pdfUrl: "#" }, 
+        { range: "160 - 250 kVA", description: "Prime Rated", phase: "Three Phase", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-160-250kVA_Spec-Sheet_Rev-0.pdf" },
     ];
+    mhpThreePhase.sort(sortByKva);
 
     const hhpRange: SpecSheet[] = [
         { range: "650 - 750 kVA, 500 - 600 kWe", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/N-650-750kVA_Spec-Sheet_Rev-0.pdf?v=1" },
@@ -93,6 +104,7 @@ const DieselGeneratorsPage = () => {
         { range: "1250 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/1250%20-%20KTA50G27_Specs%20Sheet_Rev0%20(%20for%20Rest%20of%20India).pdf" },
         { range: "1800 kVA", description: "Prime Rated", pdfUrl: "https://www.powericaltd.com/pdf/new-cpcbviplus/1800%20kVA_KTA50-G29_Specification%20Sheet_Rev0%20(%20for%20CAQM%20region).pdf" },
     ];
+    hhpRange.sort(sortByKva);
 
     return (
         <main className="min-h-screen bg-white">
@@ -101,7 +113,7 @@ const DieselGeneratorsPage = () => {
             {/* Hero Section */}
             <div className="relative pt-32 pb-16 md:pb-24 bg-brand-enterprise overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center">
                 <Image
-                    src="/images/diesel-generator-hero.png"
+                    src="/images/products/diesel-generator-hero.png"
                     alt="generators"
                     fill
                     className="object-cover opacity-20"
@@ -113,7 +125,7 @@ const DieselGeneratorsPage = () => {
                         <motion.span
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="text-[10px] md:text-[11px] font-bold  tracking-[0.4em] uppercase mb-4 block"
+                            className="text-[10px] md:text-[11px] font-bold  tracking-[0.4em] uppercase mb-4 block text-white"
                         >
                             Products / Power Systems
                         </motion.span>
@@ -142,8 +154,8 @@ const DieselGeneratorsPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                     {[
                         { title: "CPCB IV+ Compliant", desc: "Latest emission norms meeting environment standards." },
-                        { title: "Zero Maintenance", desc: "Longer service intervals & world-class support." },
-                        { title: "Hybrid Ready", desc: "Seamless integration with solar and grid controllers." },
+                        { title: "Low Maintenance", desc: "Longer service intervals & world-class support." },
+                        { title: "Synchronization Ready Systems ", desc: "Seamless integration with solar and grid controllers." },
                     ].map((feature, i) => (
                         <motion.div
                             key={i}
@@ -169,30 +181,43 @@ const DieselGeneratorsPage = () => {
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-10">
-                            <span className="text-[10px] md:text-xs font-bold text-brand-action tracking-widest uppercase mb-4 block">DG Products</span>
+                            <span className="text-[10px] md:text-xs font-bold text-brand-action tracking-widest uppercase mb-4 block">Electric Generator Products</span>
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-brand-enterprise uppercase tracking-tight mb-8">
-                                Diesel Generator sets ("DG sets") <br className="hidden md:block" /> <span className="text-brand-action">powered by Cummins engines</span>
+                                Electric Generator Sets <br className="hidden md:block" /> <span className="text-brand-action">Powered by Cummins Powerica</span>
                             </h2>
                         </div>
                         <div className="space-y-6 text-gray-600 font-sans text-[15px] md:text-base leading-relaxed md:leading-[1.8] text-justify md:text-left">
                             <p>
-                                We supply DG sets along with auxiliary items, including acoustic enclosures, fuel and exhaust systems, and customised control panel systems. Our offering comprises of comprehensive high speed generator solutions, powered by Cummins engines, covering the design, marketing, testing, supply, installing, and commissioning of DG sets ranging from 7.5 kVA to 3,750 kVA. Based on capacity, DG sets are broadly classified as low horse power with a range of 7.5 kVA to 160 kVA (“LHP”), medium horse power with a range of 180 kVA to 500 kVA (“MHP”) and high horse power with a range above 500 kVA (“HHP”).
+                                We supply a wide range of diesel generator sets along with complete auxiliary systems including:
                             </p>
+                            <ul className="list-disc pl-6 space-y-2 font-semibold">
+                                <li>Acoustic Enclosures</li>
+                                <li>Fuel Systems</li>
+                                <li>Exhaust Systems</li>
+                                <li>Customized Control Panels</li>
+                                <li>Automation &amp; Synchronization Solutions</li>
+                            </ul>
                             <p>
-                                Since our inception in 1984, we have formed a long standing relationship with Cummins, as one of their OEMs. The engines and alternators for our DG sets are sourced directly from Cummins. We also collaborate with Cummins on the integration and testing of diesel generator products, ensuring alignment with evolving technological, regulatory, environmental and emission standards.
+                                Our Electric Generator solutions are suitable for small-scale backup requirements as well as large industrial and infrastructure applications.
                             </p>
-                            <p>
-                                We operate in-house supply facilities to maintain direct control over processes, costs, and timelines. Our captive approach enables us to optimize inventory, uphold quality assurance standards, and manage supply chain costs and delivery timelines. This structure also enhances our responsiveness to changing customer needs and facilitates faster time-to-market.
-                            </p>
-                            <p>
-                                Our extensive sales network supports effective customer engagement and market penetration. Our network comprised 19 sales/marketing offices in addition to our registered and corporate offices, supported by a sales and marketing team of 125 personnel. We also engage with 32 authorised dealers appointed jointly by Cummins and ourselves, providing prompt service across a wide range of market segments.
-                            </p>
-                            <p>
-                                Our DG set customers operate across diverse sectors, including commercial (hospitality, healthcare, banking and financial services industry – banks, education, residential and other real estate), infrastructure (retail infrastructure, logistics, railways and metros), manufacturing (industrial, process industries, dairy), agriculture (including cold storage and aquaculture), information technology/data centres, government and defense, and rentals.
-                            </p>
-                            <p className="border-l-4 border-brand-action pl-4 py-1 italic font-semibold text-gray-800 bg-gray-50 p-4 rounded-r-lg">
-                                In addition to supply, we provide onsite installation services for DG sets. Our on-site capabilities include electrical works, installation of exhaust systems, construction of diesel tank farms, load balancing, and automation solutions to support seamless transitions between the grid and DG sets, particularly in multi-unit operations. This integrated approach, encompassing supply, marketing, and installation, enables us to achieve deep market penetration, make data-driven decisions on product and pricing strategies, and build enduring customer relationships.
-                            </p>
+
+                            <h3 className="text-2xl font-bold text-brand-enterprise mt-8 mb-4">Applications &amp; Industries</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <ul className="list-disc pl-6 space-y-2">
+                                    <li>Manufacturing Industries</li>
+                                    <li>Hospitals &amp; Healthcare centres</li>
+                                    <li>Hotels &amp; Hospitality Businesses</li>
+                                    <li>Educational Institutions</li>
+                                    <li>Commercial Buildings &amp; Offices</li>
+                                </ul>
+                                <ul className="list-disc pl-6 space-y-2">
+                                    <li>IT Infrastructure &amp; Data centres</li>
+                                    <li>Agriculture &amp; Cold Storage</li>
+                                    <li>Government &amp; Infrastructure Projects</li>
+                                    <li>Residential &amp; Real Estate Developments</li>
+                                    <li>Defence</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -204,81 +229,100 @@ const DieselGeneratorsPage = () => {
                     <span className="text-[10px] md:text-xs font-bold text-brand-action tracking-widest uppercase mb-4 block">Official Authorizations</span>
                     <h2 className="text-2xl md:text-4xl font-heading font-black text-brand-enterprise uppercase tracking-tight mb-12">Certified Partners & Dealers</h2>
 
-                    <div className="flex flex-col items-center justify-center gap-12 max-w-5xl mx-auto">
-                        {/* Certificate */}
-                        <div className="w-full max-w-2xl bg-white p-4 md:p-8 rounded-2xl shadow-xl border border-gray-100">
-                            <Image
-                                src="/images/SAPG 2026- DEALER CERTIFICATE-CUMMINS&POWERICA.webp"
-                                alt="Dealer Certificate - Cummins & Powerica"
-                                width={800}
-                                height={600}
-                                className="w-full h-auto object-contain rounded-lg shadow-sm"
-                                unoptimized
-                            />
-                        </div>
-
-                        {/* Partner Logos */}
-                        <div className="flex flex-wrap items-center justify-center gap-12 md:gap-24 pt-6 mt-6 border-t border-gray-200/50 w-full">
-                            <div className="flex items-center justify-center">
-                                <Image src="/images/Cummins Logo.jpeg" alt="Cummins" width={200} height={80} className="object-contain w-40 md:w-52 h-auto mix-blend-multiply" unoptimized />
-                            </div>
-                            <div className="flex items-center justify-center">
-                                <Image src="/images/Powerica Logo.jpeg" alt="Powerica" width={200} height={80} className="object-contain w-40 md:w-52 h-auto mix-blend-multiply" unoptimized />
-                            </div>
-                        </div>
+                    <div className="w-full max-w-2xl mx-auto bg-white p-4 md:p-8 rounded-2xl shadow-xl border border-gray-100 mb-16">
+                        <Image
+                            src="/images/SAPG 2026- DEALER CERTIFICATE-CUMMINS&POWERICA.webp"
+                            alt="Dealer Certificate - Cummins & Powerica"
+                            width={800}
+                            height={600}
+                            className="w-full h-auto object-contain rounded-lg shadow-sm"
+                            unoptimized
+                        />
                     </div>
                 </div>
             </section>
 
+            {/* Product Brochures UI Section */}
+            <section className="relative w-full py-16 overflow-hidden bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-6">
+                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div className="space-y-8">
+                            <div>
+                                <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">Product <span className="text-red-600">Brochures</span></h2>
+                                <div className="mt-4 h-1.5 w-24 bg-red-600 rounded-full" />
+                            </div>
+                            <div className="space-y-6">
+                                <p className="text-xl text-gray-600 leading-relaxed">
+                                    Explore our collection of <span className="font-semibold text-gray-900">Cummins Powerica DG Set Brochures</span> to view detailed specifications, features, capacities, and technical information.
+                                </p>
+                                <div className="flex items-start gap-4 p-4 rounded-xl bg-white/60 border border-gray-100 shadow-sm backdrop-blur-sm">
+                                    <div className="p-3 bg-red-50 rounded-lg text-red-600"><Download size={24} /></div>
+                                    <p className="text-gray-700 font-medium">Download brochures to find the right power solution for your operational requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <motion.div whileHover={{ y: -5 }} className="relative p-8 rounded-3xl bg-white border border-gray-200 shadow-2xl shadow-gray-200/50">
+                            <div className="absolute top-0 right-0 -mt-4 -mr-4 p-4 bg-red-600 rounded-2xl shadow-lg text-white"><ShieldCheck size={32} /></div>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Powering Performance with Reliability</h3>
+                            <p className="text-gray-600 leading-relaxed mb-8">
+                                With dependable generator technology from <span className="font-medium text-gray-800">Cummins Powerica</span> and dedicated support from <span className="font-medium text-gray-800">Shri Annamalai Power Generators</span>, we deliver power solutions built for performance, efficiency, and uninterrupted operations.
+                            </p>
+                        </motion.div>
+                    </motion.div>
+                </div>
+            </section>
+
             {/* Product Range Sections */}
-            <div className="py-16 md:py-24 space-y-20 md:space-y-32">
-                {/* LHP Section */}
+            <div id="brochure-ranges" className="py-16 md:py-24 space-y-20 md:space-y-32">
                 <section className="container mx-auto px-4 md:px-6">
                     <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-5 mb-12 border-b border-gray-100 pb-8">
                         <div>
                             <span className="text-[10px] md:text-[11px] font-bold text-brand-action tracking-widest uppercase mb-2 block">RANGE 01</span>
-                            <h2 className="text-3xl md:text-5xl font-black font-heading text-[#1e3a8a] uppercase tracking-tight">LHP (7.5 kVA - 160 kVA)</h2>
+                            <h2 className="text-3xl md:text-5xl font-black font-heading text-[#1e3a8a] uppercase tracking-tight">LHP & MHP (7.5 kVA - 250 kVA)</h2>
                         </div>
                         <p className="text-gray-500 font-sans text-sm md:text-base leading-relaxed max-w-sm italic">
                             Versatile power solutions for retail units, offices, and light industrial clusters.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-                        {lhpRange.map((sheet, i) => <SpecSheetCard key={i} sheet={sheet} onEnquire={openModal} />)}
-                    </div>
-                </section>
 
-                {/* MHP Section */}
-                <section className="bg-gray-50 py-16">
-                    <div className="container mx-auto px-4 md:px-6">
-                        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-5 mb-12 border-b border-gray-200 pb-8">
-                            <div>
-                                <span className="text-[10px] md:text-[11px] font-bold text-brand-action tracking-widest uppercase mb-2 block">RANGE 02</span>
-                                <h2 className="text-3xl md:text-5xl font-black font-heading text-[#1e3a8a] uppercase tracking-tight">MHP (180 kVA - 500 kVA)</h2>
-                            </div>
-                            <p className="text-gray-500 font-sans text-sm md:text-base leading-relaxed max-w-sm italic">
-                                Medium horsepower sets for robust back-up, continuous processes, and construction activities.
-                            </p>
-                        </div>
+                    {/* Single Phase Sub-section */}
+                    <div className="mb-16">
+                        <h3 className="text-lg font-bold text-gray-800 mb-6 flex items-center gap-3">
+                            <div className="w-2 h-8 bg-red-600 rounded-full" />
+                            Single Phase Solutions
+                        </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-                            {mhpRange.map((sheet, i) => <SpecSheetCard key={i} sheet={sheet} onEnquire={openModal} />)}
+                            {mhpSinglePhase.map((sheet, i) => <SpecSheetCard key={i} sheet={sheet} onEnquire={openModal} />)}
+                        </div>
+                    </div>
+
+                    {/* Three Phase Sub-section */}
+                    <div>
+                        <h3 className="text-lg font-bold text-gray-800 mb-6 flex items-center gap-3">
+                            <div className="w-2 h-8 bg-[#1e3a8a] rounded-full" />
+                            Three Phase Solutions
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                            {mhpThreePhase.map((sheet, i) => <SpecSheetCard key={i} sheet={sheet} onEnquire={openModal} />)}
                         </div>
                     </div>
                 </section>
 
                 {/* HHP Section */}
-                <section className="container mx-auto px-4 md:px-6">
-                    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-5 mb-12 border-b border-gray-100 pb-8">
-                        <div>
-                            <span className="text-[10px] md:text-[11px] font-bold text-brand-action tracking-widest uppercase mb-2 block">RANGE 03</span>
-                            <h2 className="text-3xl md:text-5xl font-black font-heading text-[#1e3a8a] uppercase tracking-tight">HHP (Above 500 kVA)</h2>
+                <section className="bg-gray-50 py-16">
+                    <div className="container mx-auto px-4 md:px-6">
+                        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-5 mb-12 border-b border-gray-200 pb-8">
+                            <div>
+                                <span className="text-[10px] md:text-[11px] font-bold text-brand-action tracking-widest uppercase mb-2 block">RANGE 02</span>
+                                <h2 className="text-3xl md:text-5xl font-black font-heading text-[#1e3a8a] uppercase tracking-tight">HHP (Above 500 kVA)</h2>
+                            </div>
+                            <p className="text-gray-500 font-sans text-sm md:text-base leading-relaxed max-w-sm italic">
+                                High horsepower solutions for critical standby duty, breakdown survival, and peak saving.
+                            </p>
                         </div>
-                        <p className="text-gray-500 font-sans text-sm md:text-base leading-relaxed max-w-sm italic">
-                            High horsepower solutions for critical standby duty, breakdown survival, and peak saving.
-                        </p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-                        {hhpRange.map((sheet, i) => <SpecSheetCard key={i} sheet={sheet} onEnquire={openModal} />)}
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                            {hhpRange.map((sheet, i) => <SpecSheetCard key={i} sheet={sheet} onEnquire={openModal} />)}
+                        </div>
                     </div>
                 </section>
             </div>

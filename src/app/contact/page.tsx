@@ -206,7 +206,7 @@ export default function ContactPage() {
 
                                 {/* Submit */}
                                 <div className="md:col-span-2">
-                                    <button className="w-full bg-brand-action hover:bg-brand-enterprise text-white py-5 rounded-sm font-heading font-black text-xs tracking-widest transition-all shadow-xl shadow-brand-action/20 flex items-center justify-center gap-3">
+                                    <button className="w-full bg-brand-enterprise hover:bg-brand-enterprise text-white py-5 rounded-sm font-heading font-black text-xs tracking-widest transition-all shadow-xl shadow-brand-action/20 flex items-center justify-center gap-3">
                                         TRANSMIT REQUIREMENT
                                         <Send size={16} />
                                     </button>
@@ -302,17 +302,7 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            <div className="mt-4 p-6 bg-brand-enterprise/5 rounded-xl border border-brand-enterprise/10 flex items-center gap-4">
-                                <ShieldCheck className="text-brand-action" size={32} />
-                                <div>
-                                    <div className="text-xs font-black text-brand-enterprise uppercase">
-                                        Verified Response
-                                    </div>
-                                    <p className="text-[10px] text-gray-500 mt-1 uppercase">
-                                        ISO 9001:2015 Registered Support Team
-                                    </p>
-                                </div>
-                            </div>
+                            
                         </motion.div>
                     </div>
                 </div>

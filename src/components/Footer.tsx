@@ -59,7 +59,7 @@ const Footer = () => {
                     {/* Service Hubs */}
                     <div className="lg:col-span-4 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8">
                         <div className="flex flex-col gap-6">
-                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-brand-action uppercase">pondicherry HUB</h4>
+                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase">pondicherry OFFICE</h4>
                             <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
                                 <div className="flex gap-3">
                                     <MapPin className="text-white shrink-0" size={18} />
@@ -77,7 +77,7 @@ const Footer = () => {
                         </div>
 
                         <div className="flex flex-col gap-6">
-                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-brand-action uppercase">KARAIKAL OFF</h4>
+                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase">HEADQUARTERS - KARAIKAL</h4>
                             <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
                                 <div className="flex gap-3">
                                     <MapPin className="text-white shrink-0" size={18} />
@@ -97,7 +97,7 @@ const Footer = () => {
 
                     {/* Mini Form */}
                     <div className="lg:col-span-4 flex flex-col gap-6">
-                        <h4 className="font-heading font-black text-xs tracking-[0.3em] text-brand-action uppercase">QUICK INQUIRY</h4>
+                        <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase">QUICK INQUIRY</h4>
                         <form onSubmit={(e) => { e.preventDefault(); alert("Thanks for your inquiry. A representative will contact you shortly."); }} className="flex flex-col gap-3">
                             <input
                                 type="text"

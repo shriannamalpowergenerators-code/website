@@ -19,8 +19,8 @@ export default function AboutPage() {
     const closeModal = () => setIsModalOpen(false);
 
     const stats = [
-        { label: "Years of Excellence", value: "25+", icon: Clock },
-        { label: "Global Installations", value: "500+", icon: Zap },
+        { label: "Years of Excellence", value: "20+", icon: Clock },
+        { label: "Global Installations", value: "3000+", icon: Zap },
         { label: "Certified Engineers", value: "50+", icon: Users },
         { label: "Quality Awards", value: "12", icon: Award },
     ];

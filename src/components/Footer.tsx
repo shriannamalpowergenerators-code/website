@@ -59,7 +59,7 @@ const Footer = () => {
                     {/* Service Hubs */}
                     <div className="lg:col-span-4 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8">
                         <div className="flex flex-col gap-6">
-                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase">pondicherry OFFICE</h4>
+                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase">BRANCH OFFICE - PONDICHERRY</h4>
                             <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
                                 <div className="flex gap-3">
                                     <MapPin className="text-white shrink-0" size={18} />
@@ -77,11 +77,11 @@ const Footer = () => {
                         </div>
 
                         <div className="flex flex-col gap-6">
-                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase">HEADQUARTERS - KARAIKAL</h4>
+                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase">HEAD OFFICE - KARAIKAL</h4>
                             <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
                                 <div className="flex gap-3">
                                     <MapPin className="text-white shrink-0" size={18} />
-                                    <span>14 <br /> West St <br /> Mela Oduthurai <br className="hidden md:block" /> Karaikal - 609602</span>
+                                    <span>14 <br /> West St <br /> Mela Oduthurai <br/> Karaikal - 609602</span>
                                 </div>
                                 <div className="flex gap-3">
                                     <Phone className="text-white shrink-0" size={18} />

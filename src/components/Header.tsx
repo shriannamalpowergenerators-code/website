@@ -35,7 +35,7 @@ const Header = ({ onQuote, variant = "dark" }: { onQuote?: () => void; variant?:
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 md:gap-3 group max-w-[75%] sm:max-w-none">
                     <div className="w-[45px] md:w-16 h-auto flex items-center justify-center shrink-0">
-                        <img src="/images/logo.webp" alt="Logo" className="w-full object-contain" />
+                        <img src="/images/sapgen logo.png" alt="Logo" className="w-full object-contain" />
                     </div>
                     <div className="flex flex-col whitespace-normal">
                         <span className="font-heading font-black text-[12px] sm:text-[18px] md:text-2xl leading-[1.2] transition-colors text-brand-enterprise tracking-tight">

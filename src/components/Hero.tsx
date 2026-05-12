@@ -91,10 +91,10 @@ const Hero = () => {
                             </Link>
 
                             <Link
-                                href="#inventory"
+                                href="/generators"
                                 className="w-full sm:w-auto bg-brand-enterprise hover:bg-brand-action text-white px-8 py-4 rounded-sm font-heading font-bold text-sm tracking-wide transition-all flex items-center justify-center gap-2 group shadow-xl shadow-brand-enterprise/10"
                             >
-                                VIEW INVENTORY
+                                Explore Generators
                                 <MoveRight className="group-hover:translate-x-1 transition-transform" size={18} />
                             </Link>
                         </div>

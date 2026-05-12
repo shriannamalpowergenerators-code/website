@@ -234,7 +234,7 @@ export default function ContactPage() {
                                                 Karaikal Headquarters
                                             </h4>
                                             <p className="text-sm">
-                                                Off: 11, West St, MelaSoutheral, Karaikal, Puducherry -
+                                                14, West St, Mela Oduthurai, Karaikal, Puducherry -
                                                 609602
                                             </p>
                                         </div>

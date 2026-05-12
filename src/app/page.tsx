@@ -35,7 +35,7 @@ export default function Home() {
       },
       {
         "@type": "PostalAddress",
-        "streetAddress": "Off: 11, West St, MelaSoutheral",
+        "streetAddress": "14, West St, Mela Oduthurai",
         "addressLocality": "Karaikal",
         "postalCode": "609602",
         "addressCountry": "IN"

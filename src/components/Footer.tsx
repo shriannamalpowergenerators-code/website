@@ -63,7 +63,7 @@ const Footer = () => {
                             <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
                                 <div className="flex gap-3">
                                     <MapPin className="text-white shrink-0" size={18} />
-                                    <span>19B <br /> 6th cross Extension <br /> Anna Nagar <br /> Pondicherry - 605005</span>
+                                    <span>19B <br /> 6th cross Extn <br /> Anna Nagar <br /> Pondicherry - 605005</span>
                                 </div>
                                 <div className="flex gap-3">
                                     <Phone className="text-white shrink-0" size={18} />
@@ -81,7 +81,7 @@ const Footer = () => {
                             <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
                                 <div className="flex gap-3">
                                     <MapPin className="text-white shrink-0" size={18} />
-                                    <span>11 <br /> West St <br /> MelaSoutheral <br className="hidden md:block" /> Karaikal - 609602</span>
+                                    <span>14 <br /> West St <br /> Mela Oduthurai <br className="hidden md:block" /> Karaikal - 609602</span>
                                 </div>
                                 <div className="flex gap-3">
                                     <Phone className="text-white shrink-0" size={18} />
@@ -126,8 +126,7 @@ const Footer = () => {
                     <div className="text-[10px] font-bold text-[#64748B] tracking-widest uppercase">
                         © 2026 Shri Annamalai Power Generators. All Rights Reserved.
                     </div>
-                    <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-4 text-[10px] font-bold text-[#64748B] tracking-widest uppercase">
-                        <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                    <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-4 text-[10px] font-bold text-[#64748B] tracking-widest uppercase pr-24 md:pr-28">                        <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
                         <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
                         <span className="opacity-20 hidden md:inline">|</span>

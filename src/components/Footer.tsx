@@ -10,10 +10,10 @@ const Footer = () => {
         <footer className="bg-brand-enterprise text-white pt-24 pb-12 relative overflow-hidden" id="contact">
             <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-action opacity-5 -skew-x-12 translate-x-1/2 pointer-events-none" />
 
-            <div className="container mx-auto px-4 md:px-6 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+            <div className="container mx-auto px-2 md:px-6 relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start mb-16">
                     {/* Brand Info */}
-                    <div className="lg:col-span-4 flex flex-col gap-8">
+                    <div className="lg:col-span-4 flex flex-col justify-start gap-6 h-full">
                         <Link href="/" className="flex items-center gap-3 w-full">
                             <div className="w-12 h-12 bg-white rounded flex items-center justify-center shrink-0">
                                 <img src="/images/logo.webp" alt="Logo" className="w-10 h-10 object-contain" />
@@ -57,46 +57,82 @@ const Footer = () => {
                     </div>
 
                     {/* Service Hubs */}
-                    <div className="lg:col-span-4 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8">
+                    <div className="lg:col-span-4 grid grid-cols-1 md:grid-cols-2 gap-10">
                         <div className="flex flex-col gap-6">
-                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase">BRANCH OFFICE - PONDICHERRY</h4>
+                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase leading-relaxed">
+                                KARAIKAL
+                                <br className="hidden md:block" />
+                                <span className="md:ml-0 ml-2">ADDRESS</span>
+                            </h4>
                             <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
                                 <div className="flex gap-3">
                                     <MapPin className="text-white shrink-0" size={18} />
-                                    <span>19B <br /> 6th cross Extn <br /> Anna Nagar <br /> Pondicherry - 605005</span>
+                                    <p className="leading-7">
+                                        14, West Street <br />
+                                        Mela Oduthurai <br />
+                                        Karaikal - 609602
+                                    </p>
                                 </div>
-                                <div className="flex gap-3">
+                                <div className="flex items-start gap-3">
                                     <Phone className="text-white shrink-0" size={18} />
-                                    <span>+91 94429 46598</span>
+                                    <a
+                                        href="tel:+919442946598"
+                                        className="hover:text-white transition-colors"
+                                    >
+                                        +91 94429 46598
+                                    </a>
                                 </div>
                                 <div className="flex gap-3">
                                     <Mail className="text-white shrink-0" size={18} />
-                                    <span>sapgenekkl@gmail.com</span>
+                                    <a
+                                        href="mailto:sapgenekkl@gmail.com"
+                                        className="hover:text-white transition-colors break-all sm:break-normal"
+                                    >
+                                        sapgenekkl@gmail.com
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
                         <div className="flex flex-col gap-6">
-                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase">HEAD OFFICE - KARAIKAL</h4>
-                            <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
-                                <div className="flex gap-3">
+                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase leading-relaxed">
+                                PONDICHERRY
+                                <br className="hidden md:block" />
+                                <span className="md:ml-0 ml-2">ADDRESS</span>
+                            </h4>                            <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
+                                <div className="flex items-start gap-3 min-h-[90px]">
                                     <MapPin className="text-white shrink-0" size={18} />
-                                    <span>14 <br /> West St <br /> Mela Oduthurai <br/> Karaikal - 609602</span>
+                                    <p className="leading-7">
+                                        19B, 6th Cross Extn <br />
+                                        Anna Nagar <br />
+                                        Pondicherry - 605005
+                                    </p>
                                 </div>
                                 <div className="flex gap-3">
                                     <Phone className="text-white shrink-0" size={18} />
-                                    <span>+91 94429 46598</span>
+                                    <a
+                                        href="tel:+919443126598"
+                                        className="hover:text-white transition-colors"
+                                    >
+                                        +91 94431 26598
+                                    </a>
                                 </div>
                                 <div className="flex gap-3">
                                     <Mail className="text-white shrink-0" size={18} />
-                                    <span>sapgenekkl@gmail.com</span>
+                                    <a
+                                        href="mailto:sapgenekkl@gmail.com"
+                                        className="hover:text-white transition-colors break-all sm:break-normal"
+                                    >
+                                        sapgenekkl@gmail.com
+                                    </a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
                     {/* Mini Form */}
-                    <div className="lg:col-span-4 flex flex-col gap-6">
+                    <div className="lg:col-span-4 flex flex-col gap-5 h-full">
                         <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase">QUICK INQUIRY</h4>
                         <form onSubmit={(e) => { e.preventDefault(); alert("Thanks for your inquiry. A representative will contact you shortly."); }} className="flex flex-col gap-3">
                             <input
@@ -123,10 +159,10 @@ const Footer = () => {
                 </div>
 
                 <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 text-center md:text-left">
-                    <div className="text-[10px] font-bold text-[#64748B] tracking-widest uppercase">
+                    <div className="text-[10px] font-bold text-grey/90 tracking-widest uppercase">
                         © 2026 Shri Annamalai Power Generators. All Rights Reserved.
                     </div>
-                    <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-4 text-[10px] font-bold text-[#64748B] tracking-widest uppercase pr-24 md:pr-28">                        <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                    <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-4 text-[10px] font-bold text-grey tracking-widest uppercase pr-24 md:pr-28">                        <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
                         <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
                         <span className="opacity-20 hidden md:inline">|</span>

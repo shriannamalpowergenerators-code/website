@@ -149,7 +149,7 @@ export default function OnlineUpsPage() {
                             className="flex items-center justify-center gap-3 bg-white/5 border border-white/10 hover:bg-white/10 text-white px-10 py-5 rounded-sm font-heading font-black text-xs tracking-widest transition-all w-full sm:w-auto"
                         >
                             <PhoneCall size={18} />
-                            +91 94429 46598
+                            +91 94431 26598
                         </a>
                     </div>
                 </div>

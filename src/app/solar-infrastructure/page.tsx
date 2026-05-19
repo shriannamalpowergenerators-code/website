@@ -55,7 +55,7 @@ export default function SolarInfrastructurePage() {
 
                         <h3 className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise mt-10 mb-4">Why Invest in Industrial Solar Arrays?</h3>
                         <p className="text-gray-600 font-sans leading-relaxed mb-6">
-                            Implementing solar power goes beyond sustainable branding; it dramatically enhances business continuity and Return on Investment (ROI). Companies utilizing our high-efficiency inversion technologies experience a sharp reduction in electrical operational expenditure. With net metering and local regulatory energy credits in Tamil Nadu and Puducherry, deploying solar infrastructure is heavily incentivized for fast break-even intervals.
+                            Implementing solar power goes beyond sustainable branding; it dramatically enhances business continuity and Return on Investment (ROI). Companies utilizing our high-efficiency inversion technologies experience a sharp reduction in electrical operational expenditure. With net metering and local regulatory energy credits in Tamil Nadu and Pondicherry, deploying solar infrastructure is heavily incentivized for fast break-even intervals.
                         </p>
 
                         <p className="text-gray-600 font-sans leading-relaxed">
@@ -149,7 +149,7 @@ export default function SolarInfrastructurePage() {
                             className="flex items-center justify-center gap-3 bg-white/5 border border-white/10 hover:bg-white/10 text-white px-10 py-5 rounded-sm font-heading font-black text-xs tracking-widest transition-all w-full sm:w-auto"
                         >
                             <PhoneCall size={18} />
-                            +91 94429 46598
+                            +91 94431 26598
                         </a>
                     </div>
                 </div>

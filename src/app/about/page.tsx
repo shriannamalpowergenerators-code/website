@@ -56,7 +56,7 @@ export default function AboutPage() {
                         transition={{ duration: 0.6 }}
                         className="max-w-4xl mx-auto md:mx-0"
                     >
-                        <span className="text-brand-action font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">Our Legacy</span>
+                        <span className="text-blue-100/80 font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">Our Legacy</span>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-black leading-tight mb-6 tracking-tight">
                             Powering <span className="text-brand-action">Industrial Progress</span> Since 2004.
                         </h1>

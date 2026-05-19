@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import LeadModal from "@/components/LeadModal";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FileText, Download, ArrowRight, Zap, CheckCircle2, PhoneCall, ShieldCheck } from "lucide-react";
+import { FileText, File, Download, ArrowRight, Zap, CheckCircle2, PhoneCall, ShieldCheck } from "lucide-react";
 
 interface SpecSheet {
     range: string;
@@ -134,7 +134,7 @@ const DieselGeneratorsPage = () => {
                             animate={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-7xl font-heading font-black text-white mb-6 md:mb-8 tracking-tight leading-tight"
                         >
-                            GENERATING SETS
+                            ELECTRICAL GENERATING SETS
                         </motion.h1>
 
                         <motion.p
@@ -155,21 +155,10 @@ const DieselGeneratorsPage = () => {
                             transition={{ delay: 0.35 }}
                             className="flex flex-col sm:flex-row items-start gap-4 mt-8 md:mt-10"
                         >
-                            <a
-                                href="#product-brochures"
-                                className="group inline-flex items-center justify-center gap-3 bg-brand-action hover:bg-white text-white hover:text-brand-action px-8 py-4 rounded-xl font-heading font-black text-[11px] tracking-[0.2em] uppercase transition-all duration-300 shadow-2xl"
-                            >
-                                <Download
-                                    size={18}
-                                    className="transition-transform duration-300 group-hover:-translate-y-0.5"
-                                />
-
-                                View Product Brochures
-                            </a>
 
                             <a
                                 href="#generator-ranges"
-                                className="group inline-flex items-center justify-center gap-3 border border-white/20 bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-xl font-heading font-black text-[11px] tracking-[0.2em] uppercase transition-all duration-300"
+                                className="group inline-flex items-center justify-center gap-3 border border-white/20 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-heading font-black text-[11px] tracking-[0.2em] uppercase transition-all duration-300"
                             >
                                 Explore Generator Range
 
@@ -479,7 +468,7 @@ const DieselGeneratorsPage = () => {
                                     Explore our collection of <span className="font-semibold text-gray-900">Cummins Powerica DG Set Brochures</span> to view detailed specifications, features, capacities, and technical information.
                                 </p>
                                 <div className="flex items-start gap-4 p-4 rounded-xl bg-white/60 border border-gray-100 shadow-sm backdrop-blur-sm">
-                                    <div className="p-3 bg-red-50 rounded-lg text-red-600"><Download size={24} /></div>
+                                    <div className="p-3 bg-red-50 rounded-lg text-red-600"><File size={24} /></div>
                                     <p className="text-gray-700 font-medium">Download brochures to find the right power solution for your operational requirements.</p>
                                 </div>
                             </div>
@@ -620,7 +609,7 @@ const DieselGeneratorsPage = () => {
                             className="w-full sm:w-auto flex items-center justify-center gap-3 bg-white/5 border border-white/10 hover:bg-white/10 text-white px-10 md:px-12 py-4 md:py-5 rounded-sm font-heading font-black text-xs tracking-widest transition-all"
                         >
                             <PhoneCall size={18} />
-                            +91 94429 46598
+                            +91 94431 26598
                         </a>
                     </div>
                 </div>

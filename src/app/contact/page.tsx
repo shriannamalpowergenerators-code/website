@@ -59,7 +59,7 @@ export default function ContactPage() {
                         transition={{ duration: 0.6 }}
                         className="max-w-3xl mx-auto px-2"
                     >
-                        <span className="text-brand-action font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">
+                        <span className="text-blue-100/80 font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">
                             Connect with Engineering
                         </span>
 
@@ -127,7 +127,7 @@ export default function ContactPage() {
                                     </label>
                                     <input
                                         type="email"
-                                        placeholder="john@company.com"
+                                        placeholder="s"
                                         className={fieldStyle}
                                     />
                                 </div>
@@ -234,7 +234,7 @@ export default function ContactPage() {
                                                 Karaikal HeadOffice
                                             </h4>
                                             <p className="text-sm">
-                                                14, West St, Mela Oduthurai, Karaikal, Puducherry -
+                                                14, West St, Mela Oduthurai, Karaikal, Pondicherry -
                                                 609602
                                             </p>
                                         </div>
@@ -270,7 +270,7 @@ export default function ContactPage() {
                                     >
                                         <Phone size={20} />
                                         <span className="text-xs font-bold tracking-widest">
-                                            +91 94429 46598
+                                            +91 94431 26598
                                         </span>
                                     </a>
 

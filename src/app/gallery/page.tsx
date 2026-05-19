@@ -52,7 +52,7 @@ export default function GalleryPage() {
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-action/5 -skew-x-12 translate-x-1/4 pointer-events-none" />
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
                     <div className="max-w-4xl mx-auto flex flex-col items-center">
-                        <span className="text-[10px] md:text-[11px] font-bold tracking-[0.4em] uppercase mb-4 block text-brand-action text-center">
+                        <span className="text-[10px] md:text-[11px] font-bold tracking-[0.4em] uppercase mb-4 block text-blue-100/80 text-center">
                             Portfolio
                         </span>
                         <h1 className="text-4xl md:text-6xl font-heading font-black text-white tracking-tight leading-tight uppercase text-center">

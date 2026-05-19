@@ -67,8 +67,8 @@ const Hero = () => {
 
                         <p className="text-base md:text-lg text-[#475569] font-sans max-w-lg leading-relaxed">
                             <strong>Shri Annamalai Power Generators</strong> offers advanced Electric generator solutions
-                            designed to deliver dependable and efficient backup power for industrial, commercial,
-                            institutional, residential applications ,etc ., <br /> Our generator systems are engineered for
+                            designed to deliver dependable and efficient backup power for <strong>Industrial, Commercial,
+                            Institutional, Residential Applications </strong> <br /> Our generator systems are engineered for
                             high performance, operational reliability, and seamless power management across diverse
                             environments and demanding conditions.
 
@@ -131,11 +131,11 @@ const Hero = () => {
                     <motion.div
                         style={{ y: imageY }}
                         initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        whileInView={{ opacity: 1, scale: 1.0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="relative w-full mt-8 lg:mt-0"
-                    >
+                         className="relative w-full flex justify-center mt-10 md:mt-4 lg:-mt-24 xl:-mt-28"
+                 >
                         <div className="absolute -inset-4 bg-brand-action/10 blur-3xl rounded-full opacity-30 pointer-events-none" />
                         <div className="relative w-full flex items-center justify-center group">
                             <Image
@@ -143,7 +143,7 @@ const Hero = () => {
                                 alt="Industrial 2500kVA Generator"
                                 width={2020}
                                 height={1280}
-                                className="w-full h-auto max-w-full drop-shadow-xl"
+                               className="w-full max-w-[95%] md:max-w-full h-auto object-contain drop-shadow-xl"
                                 priority
                             />
                         </div>

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { MoveRight, ShieldCheck, Zap, Repeat } from "lucide-react";
+import { MoveRight, ShieldCheck, Zap, Repeat ,PhoneCall} from "lucide-react";
 import Image from "next/image";
 
 interface ProductCardProps {
@@ -188,9 +188,9 @@ const ProductGrid = ({ onQuoteInquiry }: { onQuoteInquiry: () => void }) => {
                         <h3 className="text-2xl md:text-3xl font-heading font-black uppercase mb-4">Require a Bespoke Solution?</h3>
                         <p className="text-white/70 max-w-lg text-sm font-sans">Our engineers design custom load-balancing configurations for specific industrial requirements.</p>
                     </div>
-                    <Link href="/contact" className="bg-brand-action hover:bg-white hover:text-brand-action text-white px-10 py-4 rounded font-heading font-black text-xs tracking-widest transition-all relative z-10 flex items-center gap-3">
-                        CONSULT AN ENGINEER <MoveRight size={16} />
-                    </Link>
+                    <a href="tel:+919443126598" className="bg-brand-action hover:bg-white hover:text-brand-action text-white px-10 py-4 rounded font-heading font-black text-xs tracking-widest transition-all relative z-10 flex items-center gap-3">
+                      <PhoneCall size={18} />  CONSULT AN ENGINEER <MoveRight size={16} />
+                    </a>
                 </motion.div>
             </div>
         </section>

@@ -108,13 +108,6 @@ const DieselGeneratorsPage = () => {
 
             {/* Hero Section */}
             <div className="relative pt-32 pb-16 md:pb-24 bg-brand-enterprise overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center">
-                <Image
-                    src="/images/diesel-generator-hero.png"
-                    alt="generators"
-                    fill
-                    className="object-cover opacity-20"
-                    priority
-                />
 
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-action opacity-10 -skew-x-12 translate-x-1/4" />
 
@@ -340,14 +333,13 @@ const DieselGeneratorsPage = () => {
                                     <div className="absolute top-0 right-0 w-40 h-40 bg-brand-action/10 rounded-full blur-3xl" />
 
                                     <span className="text-[10px] md:text-xs tracking-[0.3em] uppercase text-brand-action font-bold block mb-4">
-                                        Installation & Technical Support
+                                        Installation & Turnkey Solutions
                                     </span>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                                         {[
                                             "Generator Supply & Delivery",
-                                            "Turnkey Solutions",
                                             "Testing & Commissioning",
                                             "Electrical Integration",
                                             "Fuel & Exhaust System Setup",

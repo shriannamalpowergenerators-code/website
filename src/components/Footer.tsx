@@ -58,48 +58,16 @@ const Footer = () => {
 
                     {/* Service Hubs */}
                     <div className="lg:col-span-4 grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <div className="flex flex-col gap-6">
-                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase leading-relaxed">
-                                KARAIKAL
-                                <br className="hidden md:block" />
-                                <span className="md:ml-0 ml-2">ADDRESS</span>
-                            </h4>
-                            <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
-                                <div className="flex gap-3">
-                                    <MapPin className="text-white shrink-0" size={18} />
-                                    <p className="leading-7">
-                                        14, West Street <br />
-                                        Mela Oduthurai <br />
-                                        Karaikal - 609602
-                                    </p>
-                                </div>
-                                <div className="flex items-start gap-3">
-                                    <Phone className="text-white shrink-0" size={18} />
-                                    <a
-                                        href="tel:+919442946598"
-                                        className="hover:text-white transition-colors"
-                                    >
-                                        +91 94429 46598
-                                    </a>
-                                </div>
-                                <div className="flex gap-3">
-                                    <Mail className="text-white shrink-0" size={18} />
-                                    <a
-                                        href="mailto:sapgenekkl@gmail.com"
-                                        className="hover:text-white transition-colors break-all sm:break-normal"
-                                    >
-                                        sapgenekkl@gmail.com
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
 
+                        {/* Pondicherry */}
                         <div className="flex flex-col gap-6">
                             <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase leading-relaxed">
                                 PONDICHERRY
                                 <br className="hidden md:block" />
                                 <span className="md:ml-0 ml-2">ADDRESS</span>
-                            </h4>                            <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
+                            </h4>
+
+                            <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
                                 <div className="flex items-start gap-3 min-h-[90px]">
                                     <MapPin className="text-white shrink-0" size={18} />
                                     <p className="leading-7">
@@ -108,6 +76,7 @@ const Footer = () => {
                                         Pondicherry - 605005
                                     </p>
                                 </div>
+
                                 <div className="flex gap-3">
                                     <Phone className="text-white shrink-0" size={18} />
                                     <a
@@ -117,6 +86,7 @@ const Footer = () => {
                                         +91 94431 26598
                                     </a>
                                 </div>
+
                                 <div className="flex gap-3">
                                     <Mail className="text-white shrink-0" size={18} />
                                     <a
@@ -127,8 +97,48 @@ const Footer = () => {
                                     </a>
                                 </div>
                             </div>
-
                         </div>
+
+                        {/* Karaikal */}
+                        <div className="flex flex-col gap-6">
+                            <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase leading-relaxed">
+                                KARAIKAL
+                                <br className="hidden md:block" />
+                                <span className="md:ml-0 ml-2">ADDRESS</span>
+                            </h4>
+
+                            <div className="flex flex-col gap-4 text-sm text-[#94A3B8] font-sans">
+                                <div className="flex items-start gap-3 min-h-[90px]">
+                                    <MapPin className="text-white shrink-0" size={18} />
+                                    <p className="leading-7">
+                                        14, West Street <br />
+                                        Mela Oduthurai <br />
+                                        Karaikal - 609602
+                                    </p>
+                                </div>
+
+                                <div className="flex gap-3">
+                                    <Phone className="text-white shrink-0" size={18} />
+                                    <a
+                                        href="tel:+919442946598"
+                                        className="hover:text-white transition-colors"
+                                    >
+                                        +91 94429 46598
+                                    </a>
+                                </div>
+
+                                <div className="flex gap-3">
+                                    <Mail className="text-white shrink-0" size={18} />
+                                    <a
+                                        href="mailto:sapgenekkl@gmail.com"
+                                        className="hover:text-white transition-colors break-all sm:break-normal"
+                                    >
+                                        sapgenekkl@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     {/* Mini Form */}

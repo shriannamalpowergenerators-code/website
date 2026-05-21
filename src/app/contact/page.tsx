@@ -231,11 +231,11 @@ export default function ContactPage() {
                                         <MapPin className="text-brand-action" />
                                         <div>
                                             <h4 className="font-bold text-sm uppercase text-[#64748B]">
-                                                Karaikal Address
+                                                Pondicherry Address
                                             </h4>
                                             <p className="text-sm">
-                                                14, West St, Mela Oduthurai, Karaikal, Pondicherry -
-                                                609602
+                                                19B, 6th Cross Extension, Anna Nagar, Pondicherry -
+                                                605005
                                             </p>
                                         </div>
                                     </div>
@@ -246,11 +246,11 @@ export default function ContactPage() {
                                         <MapPin className="text-brand-action" />
                                         <div>
                                             <h4 className="font-bold text-sm uppercase text-[#64748B]">
-                                                Pondicherry Address
+                                                Karaikal Address
                                             </h4>
                                             <p className="text-sm">
-                                                19B, 6th Cross Extension, Anna Nagar, Pondicherry -
-                                                605005
+                                                14, West St, Mela Oduthurai, Karaikal, Pondicherry -
+                                                609602
                                             </p>
                                         </div>
                                     </div>

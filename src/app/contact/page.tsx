@@ -35,6 +35,58 @@ export default function ContactPage() {
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
+    const [submitError, setSubmitError] = useState<string | null>(null);
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitError(null);
+
+        const formEl = e.currentTarget;
+        const formData = new FormData(formEl);
+        const data: Record<string, string> = {};
+        formData.forEach((value, key) => {
+            data[key] = value as string;
+        });
+
+        // Use process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+        const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+        if (!accessKey) {
+            setSubmitError("Form submission key is missing. Please configure NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY.");
+            setIsSubmitting(false);
+            return;
+        }
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: JSON.stringify({
+                    access_key: accessKey,
+                    subject: "New Engineering Support Request - Shri Annamalai Power Generators",
+                    from_name: "Shri Annamalai Website Contact Form",
+                    ...data
+                })
+            });
+            const result = await response.json();
+            if (result.success) {
+                setIsSubmitSuccess(true);
+                formEl.reset();
+            } else {
+                setSubmitError(result.message || "Failed to transmit requirement. Please try again.");
+            }
+        } catch (error) {
+            setSubmitError("An error occurred during transmission. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     const fieldStyle =
         "w-full bg-white border border-gray-200 px-5 py-4 rounded-sm focus:outline-none focus:border-brand-action transition-all text-sm font-sans text-black placeholder:text-black placeholder:opacity-70";
 
@@ -82,137 +134,184 @@ export default function ContactPage() {
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
                         {/* Form */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="lg:col-span-7 bg-[#F8FAFC] p-8 md:p-12 rounded-2xl border border-gray-100 shadow-xl"
-                        >
-                            <div className="flex flex-col gap-4 mb-10">
-                                <h2 className="text-3xl font-heading font-black text-brand-enterprise uppercase tracking-tight">
-                                    Request Data Specification
-                                </h2>
-
-                                <p className="text-gray-500 text-sm">
-                                    Fill out the form below and an engineer will contact you within
-                                    2 hours.
-                                </p>
-                            </div>
-
-                            <form
-                                onSubmit={(e) => {
-                                    e.preventDefault();
-                                    alert(
-                                        "Your requirement has been transmitted successfully. Our engineers will contact you shortly."
-                                    );
-                                }}
-                                className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                        {isSubmitSuccess ? (
+                            <motion.div 
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                className="lg:col-span-7 bg-[#F8FAFC] p-8 md:p-12 rounded-2xl border border-gray-100 shadow-xl flex flex-col items-center justify-center text-center py-20"
                             >
-                                {/* Name */}
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
-                                        Full Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        placeholder="John Doe"
-                                        className={fieldStyle}
-                                    />
+                                <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6 shadow-md">
+                                    <ShieldCheck size={36} />
+                                </div>
+                                <h2 className="text-3xl font-heading font-black text-brand-enterprise uppercase tracking-tight mb-4">
+                                    Transmission Successful
+                                </h2>
+                                <p className="text-gray-600 max-w-md mb-8">
+                                    Your engineering requirement has been transmitted to our systems. A support engineer will review the specifications and contact you within 2 hours.
+                                </p>
+                                <button 
+                                    onClick={() => setIsSubmitSuccess(false)}
+                                    className="bg-brand-enterprise hover:bg-brand-action text-white px-8 py-3 rounded-sm font-heading font-black text-xs tracking-widest transition-all"
+                                >
+                                    SEND ANOTHER MESSAGE
+                                </button>
+                            </motion.div>
+                        ) : (
+                            <motion.div
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="lg:col-span-7 bg-[#F8FAFC] p-8 md:p-12 rounded-2xl border border-gray-100 shadow-xl"
+                            >
+                                <div className="flex flex-col gap-4 mb-10">
+                                    <h2 className="text-3xl font-heading font-black text-brand-enterprise uppercase tracking-tight">
+                                        Request Data Specification
+                                    </h2>
+
+                                    <p className="text-gray-500 text-sm">
+                                        Fill out the form below and an engineer will contact you within
+                                        2 hours.
+                                    </p>
                                 </div>
 
-                                {/* Email */}
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
-                                        Corporate Email
-                                    </label>
-                                    <input
-                                        type="email"
-                                        placeholder="s"
-                                        className={fieldStyle}
-                                    />
-                                </div>
+                                <form
+                                    onSubmit={handleSubmit}
+                                    className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                                >
+                                    {/* Name */}
+                                    <div className="space-y-2">
+                                        <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
+                                            Full Name
+                                        </label>
+                                        <input
+                                            required
+                                            type="text"
+                                            name="name"
+                                            placeholder="John Doe"
+                                            className={fieldStyle}
+                                            disabled={isSubmitting}
+                                        />
+                                    </div>
 
-                                {/* Phone */}
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
-                                        Contact Number
-                                    </label>
-                                    <input
-                                        type="tel"
-                                        placeholder="+91 00000 00000"
-                                        className={fieldStyle}
-                                    />
-                                </div>
+                                    {/* Email */}
+                                    <div className="space-y-2">
+                                        <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
+                                            Corporate Email
+                                        </label>
+                                        <input
+                                            required
+                                            type="email"
+                                            name="email"
+                                            placeholder="name@company.com"
+                                            className={fieldStyle}
+                                            disabled={isSubmitting}
+                                        />
+                                    </div>
 
-                                {/* Requirement */}
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
-                                        Requirement Type
-                                    </label>
+                                    {/* Phone */}
+                                    <div className="space-y-2">
+                                        <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
+                                            Contact Number
+                                        </label>
+                                        <input
+                                            required
+                                            type="tel"
+                                            name="phone"
+                                            placeholder="+91 00000 00000"
+                                            className={fieldStyle}
+                                            disabled={isSubmitting}
+                                        />
+                                    </div>
 
-                                    <select
-                                        defaultValue=""
-                                        required
-                                        className={`${fieldStyle} appearance-none invalid:text-gray-700`}
-                                    >
-                                        <option value="" disabled>
-                                            Select Requirement Type
-                                        </option>
-                                        <option value="generators">Electric Generators</option>
-                                        <option value="solar">Solar Infrastructure</option>
-                                        <option value="servo">Servo Stabilizer</option>
-                                        <option value="ups">Custom UPS System</option>
-                                    </select>
-                                </div>
+                                    {/* Requirement */}
+                                    <div className="space-y-2">
+                                        <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
+                                            Requirement Type
+                                        </label>
 
-                                {/* State */}
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
-                                        State
-                                    </label>
-                                    <input
-                                        required
-                                        type="text"
-                                        placeholder="E.g. Tamil Nadu"
-                                        className={fieldStyle}
-                                    />
-                                </div>
+                                        <select
+                                            name="requirement_type"
+                                            defaultValue=""
+                                            required
+                                            className={`${fieldStyle} appearance-none invalid:text-gray-700`}
+                                            disabled={isSubmitting}
+                                        >
+                                            <option value="" disabled>
+                                                Select Requirement Type
+                                            </option>
+                                            <option value="generators">Electric Generators</option>
+                                            <option value="solar">Solar Infrastructure</option>
+                                            <option value="servo">Servo Stabilizer</option>
+                                            <option value="ups">Custom UPS System</option>
+                                        </select>
+                                    </div>
 
-                                {/* Zip */}
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
-                                        Pincode / Zip Code
-                                    </label>
-                                    <input
-                                        required
-                                        type="text"
-                                        placeholder="600001"
-                                        className={fieldStyle}
-                                    />
-                                </div>
+                                    {/* State */}
+                                    <div className="space-y-2">
+                                        <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
+                                            State
+                                        </label>
+                                        <input
+                                            required
+                                            type="text"
+                                            name="state"
+                                            placeholder="E.g. Tamil Nadu"
+                                            className={fieldStyle}
+                                            disabled={isSubmitting}
+                                        />
+                                    </div>
 
-                                {/* Message */}
-                                <div className="md:col-span-2 space-y-2">
-                                    <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
-                                        Technical Requirement Details
-                                    </label>
+                                    {/* Zip */}
+                                    <div className="space-y-2">
+                                        <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
+                                            Pincode / Zip Code
+                                        </label>
+                                        <input
+                                            required
+                                            type="text"
+                                            name="pincode"
+                                            placeholder="600001"
+                                            className={fieldStyle}
+                                            disabled={isSubmitting}
+                                        />
+                                    </div>
 
-                                    <textarea
-                                        placeholder="Your Message"
-                                        rows={5}
-                                        className={`${fieldStyle} resize-none`}
-                                    />
-                                </div>
+                                    {/* Message */}
+                                    <div className="md:col-span-2 space-y-2">
+                                        <label className="text-[10px] font-bold text-brand-enterprise uppercase tracking-widest">
+                                            Technical Requirement Details
+                                        </label>
 
-                                {/* Submit */}
-                                <div className="md:col-span-2">
-                                    <button className="w-full bg-brand-enterprise hover:bg-brand-enterprise text-white py-5 rounded-sm font-heading font-black text-xs tracking-widest transition-all shadow-xl shadow-brand-action/20 flex items-center justify-center gap-3">
-                                        TRANSMIT REQUIREMENT
-                                        <Send size={16} />
-                                    </button>
-                                </div>
-                            </form>
-                        </motion.div>
+                                        <textarea
+                                            required
+                                            name="message"
+                                            placeholder="Your Message"
+                                            rows={5}
+                                            className={`${fieldStyle} resize-none`}
+                                            disabled={isSubmitting}
+                                        />
+                                    </div>
+
+                                    {submitError && (
+                                        <div className="md:col-span-2 text-red-500 text-xs font-semibold">
+                                            {submitError}
+                                        </div>
+                                    )}
+
+                                    {/* Submit */}
+                                    <div className="md:col-span-2">
+                                        <button 
+                                            type="submit"
+                                            disabled={isSubmitting}
+                                            className="w-full bg-brand-enterprise hover:bg-brand-enterprise disabled:opacity-50 text-white py-5 rounded-sm font-heading font-black text-xs tracking-widest transition-all shadow-xl shadow-brand-action/20 flex items-center justify-center gap-3 cursor-pointer"
+                                        >
+                                            {isSubmitting ? "TRANSMITTING..." : "TRANSMIT REQUIREMENT"}
+                                            <Send size={16} />
+                                        </button>
+                                    </div>
+                                </form>
+                            </motion.div>
+                        )}
 
                         {/* Right Side */}
                         <motion.div

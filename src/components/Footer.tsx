@@ -1,11 +1,63 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Send, Facebook, Twitter, Linkedin, MessageCircle, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitSuccess, setSubmitSuccess] = useState(false);
+    const [submitError, setSubmitError] = useState<string | null>(null);
+
+    const handleFooterSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitError(null);
+        
+        const formEl = e.currentTarget;
+        const formData = new FormData(formEl);
+        const data: Record<string, string> = {};
+        formData.forEach((value, key) => {
+            data[key] = value as string;
+        });
+
+        const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+        if (!accessKey) {
+            setSubmitError("Form key is missing. Please configure NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY.");
+            setIsSubmitting(false);
+            return;
+        }
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: JSON.stringify({
+                    access_key: accessKey,
+                    subject: "Quick Footer Inquiry - Shri Annamalai Power Generators",
+                    from_name: "Shri Annamalai Footer",
+                    ...data
+                })
+            });
+            const result = await response.json();
+            if (result.success) {
+                setSubmitSuccess(true);
+                formEl.reset();
+                setTimeout(() => setSubmitSuccess(false), 5000);
+            } else {
+                setSubmitError(result.message || "Failed to send message. Please try again.");
+            }
+        } catch (err) {
+            setSubmitError("An error occurred. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
     return (
         <footer className="bg-brand-enterprise text-white pt-24 pb-12 relative overflow-hidden" id="contact">
             <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-action opacity-5 -skew-x-12 translate-x-1/2 pointer-events-none" />
@@ -144,27 +196,50 @@ const Footer = () => {
                     {/* Mini Form */}
                     <div className="lg:col-span-4 flex flex-col gap-5 h-full">
                         <h4 className="font-heading font-black text-xs tracking-[0.3em] text-white uppercase">QUICK INQUIRY</h4>
-                        <form onSubmit={(e) => { e.preventDefault(); alert("Thanks for your inquiry. A representative will contact you shortly."); }} className="flex flex-col gap-3">
-                            <input
-                                type="text"
-                                placeholder="Full Name"
-                                className="bg-white/5 border border-white/10 px-5 py-4 rounded-sm focus:outline-none focus:border-brand-action transition-all text-sm placeholder:text-white/20 font-sans"
-                            />
-                            <input
-                                type="tel"
-                                placeholder="Phone Number"
-                                className="bg-white/5 border border-white/10 px-5 py-4 rounded-sm focus:outline-none focus:border-brand-action transition-all text-sm placeholder:text-white/20 font-sans"
-                            />
-                            <textarea
-                                placeholder="Technical requirement..."
-                                rows={3}
-                                className="bg-white/5 border border-white/10 px-5 py-4 rounded-sm focus:outline-none focus:border-brand-action transition-all text-sm placeholder:text-white/20 font-sans resize-none"
-                            ></textarea>
-                            <button className="bg-brand-action hover:bg-white hover:text-brand-action text-white px-8 py-4 rounded-sm font-heading font-black text-xs tracking-widest transition-all flex items-center justify-center gap-3">
-                                SEND MESSAGE
-                                <Send size={14} />
-                            </button>
-                        </form>
+                        {submitSuccess ? (
+                            <div className="bg-white/5 border border-green-500/30 p-6 rounded text-center">
+                                <p className="text-green-400 font-bold text-sm mb-2">Message Transmitted!</p>
+                                <p className="text-xs text-[#94A3B8]">Thank you for reaching out. A representative will contact you shortly.</p>
+                            </div>
+                        ) : (
+                            <form onSubmit={handleFooterSubmit} className="flex flex-col gap-3">
+                                <input
+                                    required
+                                    type="text"
+                                    name="name"
+                                    placeholder="Full Name"
+                                    className="bg-white/5 border border-white/10 px-5 py-4 rounded-sm focus:outline-none focus:border-brand-action transition-all text-sm placeholder:text-white/20 font-sans"
+                                    disabled={isSubmitting}
+                                />
+                                <input
+                                    required
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="Phone Number"
+                                    className="bg-white/5 border border-white/10 px-5 py-4 rounded-sm focus:outline-none focus:border-brand-action transition-all text-sm placeholder:text-white/20 font-sans"
+                                    disabled={isSubmitting}
+                                />
+                                <textarea
+                                    required
+                                    name="message"
+                                    placeholder="Technical requirement..."
+                                    rows={3}
+                                    className="bg-white/5 border border-white/10 px-5 py-4 rounded-sm focus:outline-none focus:border-brand-action transition-all text-sm placeholder:text-white/20 font-sans resize-none"
+                                    disabled={isSubmitting}
+                                ></textarea>
+                                {submitError && (
+                                    <p className="text-red-400 text-xs font-semibold">{submitError}</p>
+                                )}
+                                <button 
+                                    type="submit"
+                                    disabled={isSubmitting}
+                                    className="bg-brand-action hover:bg-white hover:text-brand-action disabled:opacity-50 text-white px-8 py-4 rounded-sm font-heading font-black text-xs tracking-widest transition-all flex items-center justify-center gap-3 cursor-pointer"
+                                >
+                                    {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
+                                    <Send size={14} />
+                                </button>
+                            </form>
+                        )}
                     </div>
                 </div>
 

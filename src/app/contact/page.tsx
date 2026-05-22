@@ -135,7 +135,7 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
                         {/* Form */}
                         {isSubmitSuccess ? (
-                            <motion.div
+                            <motion.div 
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 className="lg:col-span-7 bg-[#F8FAFC] p-8 md:p-12 rounded-2xl border border-gray-100 shadow-xl flex flex-col items-center justify-center text-center py-20"
@@ -149,7 +149,7 @@ export default function ContactPage() {
                                 <p className="text-gray-600 max-w-md mb-8">
                                     Your engineering requirement has been transmitted to our systems. A support engineer will review the specifications and contact you within 2 hours.
                                 </p>
-                                <button
+                                <button 
                                     onClick={() => setIsSubmitSuccess(false)}
                                     className="bg-brand-enterprise hover:bg-brand-action text-white px-8 py-3 rounded-sm font-heading font-black text-xs tracking-widest transition-all"
                                 >
@@ -202,7 +202,7 @@ export default function ContactPage() {
                                             required
                                             type="email"
                                             name="email"
-                                            placeholder="sapgenekkl@gmail.com
+                                            placeholder="sapgenekkl@gmail.com"
                                             className={fieldStyle}
                                             disabled={isSubmitting}
                                         />
@@ -300,7 +300,7 @@ export default function ContactPage() {
 
                                     {/* Submit */}
                                     <div className="md:col-span-2">
-                                        <button
+                                        <button 
                                             type="submit"
                                             disabled={isSubmitting}
                                             className="w-full bg-brand-enterprise hover:bg-brand-enterprise disabled:opacity-50 text-white py-5 rounded-sm font-heading font-black text-xs tracking-widest transition-all shadow-xl shadow-brand-action/20 flex items-center justify-center gap-3 cursor-pointer"

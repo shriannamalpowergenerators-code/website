@@ -9,7 +9,7 @@ import Link from "next/link";
 import { MoveRight, LayoutGrid, Award } from "lucide-react";
 
 export default function GalleryPage() {
-    const [activeTab, setActiveTab] = useState<"showcase" | "exhibition">("showcase");
+    const [activeTab, setActiveTab] = useState<"showcase" | "exhibition">("exhibition");
 
     const showcaseImages = [
         { src: "/images/shri annamalai power generators/Pdy ASJ Holiday Villa 58.5 kva-1.jpeg", alt: "Pachaiyappa Silks | Kanchipuram" },
@@ -68,7 +68,18 @@ export default function GalleryPage() {
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
                         {/* Toggle Controls - Added a wrapper to ensure button group doesn't stretch */}
+
                         <div className="flex p-1 bg-slate-100 rounded-full border border-slate-200 w-fit">
+                             <button
+                                onClick={() => setActiveTab("exhibition")}
+                                className={`flex items-center gap-2 px-6 sm:px-8 py-3 rounded-full text-[10px] md:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === "exhibition"
+                                    ? "bg-brand-enterprise text-white shadow-md"
+                                    : "text-slate-500 hover:text-brand-enterprise"
+                                    }`}
+                            >
+                                <Award size={14} /> Exhibition
+                            </button>
+
                             <button
                                 onClick={() => setActiveTab("showcase")}
                                 className={`flex items-center gap-2 px-6 sm:px-8 py-3 rounded-full text-[10px] md:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === "showcase"
@@ -77,15 +88,6 @@ export default function GalleryPage() {
                                     }`}
                             >
                                 <LayoutGrid size={14} /> Showcase
-                            </button>
-                            <button
-                                onClick={() => setActiveTab("exhibition")}
-                                className={`flex items-center gap-2 px-6 sm:px-8 py-3 rounded-full text-[10px] md:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === "exhibition"
-                                    ? "bg-brand-enterprise text-white shadow-md"
-                                    : "text-slate-500 hover:text-brand-enterprise"
-                                    }`}
-                            >
-                                <Award size={14} /> Exhibition
                             </button>
                         </div>
 

@@ -5,11 +5,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LeadModal from "@/components/LeadModal";
 import { motion } from "framer-motion";
-import { 
-  ShieldCheck, Target, Zap, Clock, Users, Award, MoveRight, 
-  Sun, Battery, Activity, Layout, Settings, Eye, Star, CheckCircle2 
+import {
+    Target, Zap, Clock, Users, Award, MoveRight, PhoneCall,
+    Sun, Battery, Activity, Layout, Eye, Star, CheckCircle2
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
@@ -26,11 +25,31 @@ export default function AboutPage() {
     ];
 
     const offerings = [
-        { title: "Diesel Generator Sets", icon: Zap },
-        { title: "Solar Power Plants", icon: Sun },
-        { title: "Servo Stabilizers", icon: Activity },
-        { title: "Online UPS Systems", icon: Battery },
-        { title: "Electrical Panel Boards", icon: Layout },
+        {
+            title: "Diesel Generator Sets",
+            icon: Zap,
+            link: "/generators"
+        },
+        {
+            title: "Solar Power Plants",
+            icon: Sun,
+            link: "/solar-infrastructure"
+        },
+        {
+            title: "Servo Stabilizers",
+            icon: Activity,
+            link: "/servo-stabilizers"
+        },
+        {
+            title: "Online UPS Systems",
+            icon: Battery,
+            link: "/online-ups"
+        },
+        {
+            title: "Rental Generators",
+            icon: Layout,
+            link: "/rental-generators"
+        },
     ];
 
     const values = ["Reliability", "Customer Commitment", "Technical Excellence", "Integrity", "Continuous Improvement"];
@@ -72,10 +91,20 @@ export default function AboutPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                         {offerings.map((item, idx) => (
-                            <div key={idx} className="p-6 border border-gray-100 rounded-xl bg-brand-surface hover:border-brand-action transition-colors text-center group">
-                                <item.icon className="mx-auto mb-4 text-brand-enterprise group-hover:text-brand-action transition-colors" size={32} />
-                                <h3 className="text-xs font-bold uppercase tracking-wider text-brand-enterprise">{item.title}</h3>
-                            </div>
+                            <Link
+                                key={idx}
+                                href={item.link}
+                                className="p-6 border border-gray-100 rounded-xl bg-brand-surface hover:border-brand-action hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center group cursor-pointer"
+                            >
+                                <item.icon
+                                    className="mx-auto mb-4 text-brand-enterprise group-hover:text-brand-action transition-colors"
+                                    size={32}
+                                />
+
+                                <h3 className="text-xs font-bold uppercase tracking-wider text-brand-enterprise">
+                                    {item.title}
+                                </h3>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -85,7 +114,7 @@ export default function AboutPage() {
             <section className="py-16 md:py-24 bg-brand-surface relative overflow-hidden">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-                        <motion.div 
+                        <motion.div
                             whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -30 }}
                             className="bg-brand-enterprise p-8 md:p-12 rounded-2xl text-white relative overflow-hidden"
                         >
@@ -97,7 +126,7 @@ export default function AboutPage() {
                             <div className="absolute top-0 right-0 p-4 opacity-5"><Target size={200} /></div>
                         </motion.div>
 
-                        <motion.div 
+                        <motion.div
                             whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 30 }}
                             className="bg-white p-8 md:p-12 rounded-2xl border border-gray-100 shadow-sm relative overflow-hidden"
                         >
@@ -125,7 +154,7 @@ export default function AboutPage() {
                     <div className="flex flex-col md:flex-row gap-12 items-start">
                         <div className="md:w-1/3">
                             <h2 className="text-4xl font-heading font-black text-brand-enterprise uppercase leading-tight mb-6">
-                                Why Choose <br /><span className="text-brand-action">Annamalai?</span>
+                                Why Choose <br /><span className="text-brand-action">Annamalai powers ?</span>
                             </h2>
                             <p className="text-gray-600 mb-8">
                                 We prioritize long-term relationships by offering transparent communication and dependable service at every stage of your power journey.
@@ -176,17 +205,23 @@ export default function AboutPage() {
             {/* Call to Action */}
             <section className="py-16 md:py-24 bg-brand-enterprise relative overflow-hidden z-40">
                 <div className="absolute inset-0 bg-brand-action/5 animate-pulse" />
+
                 <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
                     <div className="max-w-3xl mx-auto flex flex-col items-center gap-6 md:gap-8">
+
                         <h2 className="text-3xl md:text-5xl font-heading font-black text-white uppercase tracking-tight leading-tight">
                             Ready to <span className="text-brand-action">Upgrade</span> Your Power Infrastructure?
                         </h2>
-                        <button
-                            onClick={openModal}
-                            className="bg-brand-action hover:bg-white hover:text-brand-action text-white px-8 md:px-12 py-4 md:py-5 rounded font-heading font-black text-xs md:text-sm tracking-[0.2em] transition-all shadow-2xl shadow-brand-action/30"
+
+                        <a
+                            href="tel:+919443126598"
+                            className="inline-flex items-center gap-3 bg-brand-action hover:bg-white hover:text-brand-action text-white px-8 md:px-12 py-4 md:py-5 rounded font-heading font-black text-xs md:text-sm tracking-[0.2em] transition-all shadow-2xl shadow-brand-action/30"
                         >
+                            <PhoneCall size={18} />
                             TALK TO AN ENGINEER
-                        </button>
+                            <MoveRight size={16} />
+                        </a>
+
                     </div>
                 </div>
             </section>

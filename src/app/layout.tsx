@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Shri Annamalai Power Generators | Generators",
+  title: "Shri Annamalai Power Generators - Sapgen| Generators",
   description: "Engineering superior power for industrial, commercial, and residential use.",
 
   verification: {

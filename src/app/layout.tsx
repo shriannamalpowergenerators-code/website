@@ -1,4 +1,6 @@
+import type { ReactNode } from "react";
 import { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Shri Annamalai Power Generators - Sapgen| Generators",
@@ -12,3 +14,11 @@ export const metadata: Metadata = {
     icon: "/images/logo.webp",
   },
 };
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}

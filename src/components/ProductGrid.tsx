@@ -48,7 +48,7 @@ const ProductCard = ({ title, category, description, image, features, onQuote, h
                 </p>
                 <div className="flex flex-wrap gap-2 mb-8 mt-auto">
                     {features.map((feat, i) => (
-                        <div key={i} className="flex items-center gap-1.5 bg-[#f8fafc] border border-gray-100 px-2 py-1 rounded text-[9px] font-semibold text-[#64748B]">
+                        <div key={i} className="flex items-center gap-1.5 bg-[#f8fafc] border border-gray-100 px-2 py-2 rounded text-[10px] font-semibold text-[#64748B]">
                             <ShieldCheck size={10} className="text-[#2563eb]" /> {feat}
                         </div>
                     ))}
@@ -82,7 +82,7 @@ const ProductGrid = ({ onQuoteInquiry }: { onQuoteInquiry: () => void }) => {
             category: "POWER SYSTEMS",
             description: "Precision power backup for mission-critical industrial and commercial applications.",
             image: "/images/hero anamalai power generator.png",
-            features: ["2500kVA+", "Silent Env", ""],
+            features: ["2500kVA+", "Silent Env"],
             href: "/generators",
         },
         {

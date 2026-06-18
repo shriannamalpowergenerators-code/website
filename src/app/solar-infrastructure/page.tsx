@@ -4,15 +4,43 @@ import { Building2, Landmark, Factory, CheckCircle2, PhoneCall, MoveRight } from
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = {
-    title: "Solar Infrastructure & Hybrid Grids | Shri Annamalai Power Generators",
-    description: "Utility-scale commercial solar arrays, hybrid grid integrations, and renewable energy back-ups. Explore why advanced solar infrastructure is critical for modern industrial operations.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Commercial Solar Infrastructure & Hybrid Grids | SAPGEN Energy",
+    description: "Optimize your operations with SAPGEN commercial solar infrastructure, hybrid grid integrations, and battery backups. Reduce energy costs with solar power.",
     keywords: "solar infrastructure, commercial solar panels, industrial solar grid, hybrid power generators",
+    alternates: {
+        canonical: "https://www.sapgene.com/solar-infrastructure",
+    },
 };
 
 export default function SolarInfrastructurePage() {
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.sapgene.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Solar Infrastructure",
+                "item": "https://www.sapgene.com/solar-infrastructure"
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             <Header variant="light" />
             {/* Hero Section */}
             <div className="relative pt-32 pb-16 md:pb-24 bg-brand-enterprise overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center">

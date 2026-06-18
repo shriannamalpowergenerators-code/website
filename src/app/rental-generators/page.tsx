@@ -4,15 +4,43 @@ import { Tent, HardHat, Cog, Clock, PhoneCall, MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = {
-    title: "Rental Generators | Shri Annamalai Power Generators",
-    description: "Flexible, temporary power solutions tailored for events, construction sites, and emergency deployment scenarios needing immediate grid support.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Rental Generators | Temporary Power Solutions | SAPGEN India",
+    description: "Rent high-performance diesel generators from SAPGEN. We offer flexible, temporary power solutions for events, construction sites, and emergency backups.",
     keywords: "rental generators, hire generators, temporary power solutions, event power rental, construction generator",
+    alternates: {
+        canonical: "https://www.sapgene.com/rental-generators",
+    },
 };
 
 export default function RentalGeneratorsPage() {
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.sapgene.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Rental Generators",
+                "item": "https://www.sapgene.com/rental-generators"
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             <Header variant="light" />
 
             {/* Hero Section */}

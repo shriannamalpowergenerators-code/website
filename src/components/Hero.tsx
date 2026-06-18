@@ -61,17 +61,14 @@ const Hero = () => {
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold text-brand-enterprise leading-[1.1] tracking-tight">
-                            Engineering <span className="text-brand-action">Superior Power</span>{" "}
-                            Backup Solutions.
+                            SAPGEN | Engineering <span className="text-brand-action">India's Best Generators</span> & Power Backup.
                         </h1>
 
                         <p className="text-base md:text-lg text-[#475569] font-sans max-w-lg leading-relaxed">
-                            <strong>Shri Annamalai Power Generators</strong> offers advanced Electric generator solutions
-                            designed to deliver dependable and efficient backup power for <strong>Industrial, Commercial,
-                            Institutional, Residential Applications </strong> <br /> Our generator systems are engineered for
-                            high performance, operational reliability, and seamless power management across diverse
-                            environments and demanding conditions.
-
+                            <strong>Shri Annamalai Power Generators (SAPGEN)</strong> offers advanced electric generator solutions
+                            designed to deliver dependable and efficient backup power. As one of <strong>India's best generator</strong> providers,
+                            we supply systems engineered for high performance, operational reliability, and seamless power management
+                            for <strong>Industrial, Commercial, Institutional, and Residential Applications</strong>.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
@@ -155,7 +152,7 @@ const Hero = () => {
 
                     <div className="flex flex-col items-center mb-12 text-center max-w-3xl mx-auto">
                         <span className="text-[11px] font-bold text-blue-600 tracking-[0.2em] uppercase mb-3">Trusted by</span>
-                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight capitalize">
+                        <h2 className="text-3xl md:text-5xl font-black text-brand-enterprise mb-6 tracking-tight capitalize">
                             industry leaders for <span className="text-blue-600">successful installations</span>
                         </h2>
 

@@ -15,6 +15,27 @@ export async function generateMetadata({ params }: { params: Params }) {
     return {
         title: `${post.title} | Shri Annamalai Power Generators`,
         description: post.description,
+        alternates: {
+            canonical: `https://www.sapgene.com/blog/${slug}`,
+        },
+        openGraph: {
+            title: `${post.title} | Shri Annamalai Power Generators`,
+            description: post.description,
+            url: `https://www.sapgene.com/blog/${slug}`,
+            type: "article",
+            images: [
+                {
+                    url: post.image,
+                    alt: post.title,
+                }
+            ]
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${post.title} | Shri Annamalai Power Generators`,
+            description: post.description,
+            images: [post.image],
+        }
     };
 }
 
@@ -26,6 +47,52 @@ export default async function BlogPost({ params }: { params: Params }) {
         notFound();
     }
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.sapgene.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://www.sapgene.com/blog"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": post.title,
+                "item": `https://www.sapgene.com/blog/${slug}`
+            }
+        ]
+    };
+
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "image": post.image,
+        "datePublished": new Date(post.date).toISOString(),
+        "author": {
+            "@type": "Person",
+            "name": post.author
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Shri Annamalai Power Generators",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.sapgene.com/images/logo.webp"
+            }
+        },
+        "description": post.description
+    };
+
     const contentParagraphs = [
         "When considering power backup solutions, reliability, capacity, and efficiency are paramount. Our engineering team has dedicated decades to understanding the nuanced energy requirements across industrial, commercial, and residential sectors. To ensure continuous operation, modern generators have evolved significantly from their predecessors—incorporating advanced telemetry, sound attenuation, and hybrid capability.",
         "Choosing between different models like Cummins or Powerica involves assessing peak versus continuous load, potential future expansions, and specific local emission norms (like CPCB IV+). Residential setups generally demand quieter, compact solutions with seamless automatic transfer switches, whereas industrial grids require multi-megawatt setups with parallel synchronization.",
@@ -35,6 +102,14 @@ export default async function BlogPost({ params }: { params: Params }) {
 
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+            />
             <Header variant="light" />
 
             <article className="pt-32 pb-24">

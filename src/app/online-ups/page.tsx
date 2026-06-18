@@ -4,15 +4,43 @@ import { Server, Activity, BriefcaseMedical, ShieldCheck, PhoneCall, MoveRight }
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = {
-    title: "Online UPS Systems | Shri Annamalai Power Generators",
-    description: "Zero-transfer time uninterrupted power supplies for mission-critical IT infrastructure, medical setups, and enterprise operations.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Online UPS Systems | Uninterruptible Power Supply Solutions",
+    description: "Ensure zero downtime with SAPGEN Online UPS Systems. True double-conversion power backup designed for critical IT, medical, and industrial applications.",
     keywords: "online UPS, uninterruptible power supply, critical power backup, zero transfer UPS",
+    alternates: {
+        canonical: "https://www.sapgene.com/online-ups",
+    },
 };
 
 export default function OnlineUpsPage() {
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.sapgene.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Online UPS Systems",
+                "item": "https://www.sapgene.com/online-ups"
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             <Header variant="light" />
 
             {/* Hero Section */}

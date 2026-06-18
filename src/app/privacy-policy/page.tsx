@@ -1,9 +1,42 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+export const metadata: Metadata = {
+  title: "Privacy Policy | Shri Annamalai Power Generators",
+  description: "Understand how Shri Annamalai Power Generators (SAPGEN) collects, uses, and safeguards your personal details and inquiry data. Your privacy is our priority.",
+  keywords: "sapgen privacy policy, shri annamalai power generators privacy, generator dealer data security",
+  alternates: {
+    canonical: "https://www.sapgene.com/privacy-policy",
+  },
+};
+
 const PrivacyPolicyPage = () => {
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.sapgene.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Privacy Policy",
+                "item": "https://www.sapgene.com/privacy-policy"
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             <Header />
             <div className="pt-32 pb-16 container mx-auto px-4 md:px-6 max-w-4xl">
                 <h1 className="text-4xl md:text-5xl font-heading font-black text-brand-enterprise mb-8 uppercase">Privacy Policy</h1>

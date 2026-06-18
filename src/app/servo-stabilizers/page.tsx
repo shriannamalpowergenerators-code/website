@@ -4,15 +4,43 @@ import { PlugZap, Cable, Microchip, ShieldAlert, PhoneCall, MoveRight } from "lu
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = {
-    title: "Servo Stabilizers | Shri Annamalai Power Generators",
-    description: "Industrial-grade Servo Stabilizers engineered for precision voltage regulation, protecting sensitive manufacturing units from electrical fluctuations.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Industrial Servo Stabilizers | Precision Voltage Controllers",
+    description: "Protect sensitive machinery with SAPGEN Servo Stabilizers. Get precise voltage regulation, high overload capacity, and shield industrial equipment from surges.",
     keywords: "servo stabilizers, voltage regulation, industrial power protection, precise voltage control",
+    alternates: {
+        canonical: "https://www.sapgene.com/servo-stabilizers",
+    },
 };
 
 export default function ServoStabilizersPage() {
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.sapgene.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servo Stabilizers",
+                "item": "https://www.sapgene.com/servo-stabilizers"
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             <Header variant="light" />
 
             {/* Hero Section */}

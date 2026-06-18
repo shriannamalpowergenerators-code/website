@@ -3,11 +3,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight, Calendar, User } from "lucide-react";
 import Image from "next/image";
+import type { Metadata } from "next";
 
-export const metadata = {
-    title: "Blog | Shri Annamalai Power Generators",
-    description: "Read our latest articles on residential generators, industrial power backup, maintenance tips, and more.",
+export const metadata: Metadata = {
+    title: "SAPGEN Blog | Generator Guides & Industrial Power Backup Insights",
+    description: "Read the latest articles, maintenance tips, and technical guides on residential, commercial, and industrial power backup generators from the SAPGEN team.",
     keywords: "Generator blog, Home power backup tips, Industrial vs residential generators, Generator maintenance",
+    alternates: {
+        canonical: "https://www.sapgene.com/blog",
+    },
 };
 
 export const blogPosts = [
@@ -15,7 +19,7 @@ export const blogPosts = [
         id: 1,
         title: "Choosing the Right Generator for Home",
         slug: "choosing-right-generator-home",
-        description: "A comprehensive guide on evaluating home power needs and selecting the ideal residential generator for reliable power backup.",
+        description: "Discover how to calculate your home power needs and select the ideal residential generator to ensure continuous and reliable backup electricity during blackouts.",
         image: "https://as2.ftcdn.net/v2/jpg/02/94/73/77/1000_F_294737756_KjCqEGclnmeqUPid17G1VFpYaHTHkLVu.jpg?q=80&w=1074&auto=format&fit=crop",
         date: "April 1, 2026",
         author: "Engineering Team",
@@ -24,7 +28,7 @@ export const blogPosts = [
         id: 2,
         title: "Industrial vs Residential Generators",
         slug: "industrial-vs-residential-generators",
-        description: "Understand the key differences between industrial and residential generators, including load capacity, maintenance, and setup.",
+        description: "Understand the key differences between industrial and residential generators, covering voltage capacity, load requirements, maintenance, and setup protocols.",
         image: "https://images.unsplash.com/photo-1509390144018-eeaf65052242?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         date: "March 20, 2026",
         author: "Technical Support",
@@ -33,7 +37,7 @@ export const blogPosts = [
         id: 3,
         title: "Maintenance Tips for Generators",
         slug: "maintenance-tips-generators",
-        description: "Prolong the life of your power backup solutions with these simple yet effective generator maintenance tips.",
+        description: "Extend the lifespan of your commercial or home power backup systems with these highly effective and simple generator maintenance tips from our service team.",
         image: "https://plus.unsplash.com/premium_photo-1661963824822-1cb3a0db75f5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         date: "March 10, 2026",
         author: "Service Dept",
@@ -42,7 +46,7 @@ export const blogPosts = [
         id: 4,
         title: "Benefits of Cummins Generators",
         slug: "benefits-cummins-generators",
-        description: "Explore why Cummins is a trusted brand for both commercial and residential power infrastructure globally.",
+        description: "Explore why Cummins Powerica is the leading choice for commercial, industrial, and residential power generation infrastructure and backup systems worldwide.",
         image: "https://images.unsplash.com/photo-1670875329379-de986110c8ea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         date: "February 25, 2026",
         author: "Sales Team",
@@ -50,8 +54,31 @@ export const blogPosts = [
 ];
 
 export default function BlogPage() {
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.sapgene.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://www.sapgene.com/blog"
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-gray-50 selection:bg-brand-action/30 selection:text-brand-enterprise">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             <Header variant="light" />
 
             <section className="relative pt-32 pb-24 bg-brand-enterprise text-white overflow-hidden">

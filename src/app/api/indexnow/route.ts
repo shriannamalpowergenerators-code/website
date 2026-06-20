@@ -40,34 +40,37 @@ export async function GET(request: Request) {
     urlList: urls,
   };
 
-  try {
-    const response = await fetch('https://api.indexnow.org/indexnow', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-      },
-      body: JSON.stringify(payload),
-    });
+  const endpoints = [
+    'https://api.indexnow.org/indexnow',
+    'https://www.bing.com/indexnow',
+  ];
 
-    if (response.ok) {
-      return NextResponse.json({ 
-        success: true, 
-        message: `Successfully submitted ${urls.length} URLs to IndexNow.`,
-        submittedUrls: urls 
-      });
-    } else {
-      const errorText = await response.text();
-      return NextResponse.json({ 
-        success: false, 
-        message: 'IndexNow submission failed', 
-        details: errorText 
-      }, { status: response.status });
-    }
+  try {
+    const results = await Promise.allSettled(
+      endpoints.map(endpoint =>
+        fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json; charset=utf-8' },
+          body: JSON.stringify(payload),
+        }).then(r => ({ endpoint, status: r.status, ok: r.ok }))
+      )
+    );
+
+    const summary = results.map(r =>
+      r.status === 'fulfilled' ? r.value : { endpoint: 'unknown', status: 0, ok: false }
+    );
+
+    return NextResponse.json({
+      success: true,
+      message: `Submitted ${urls.length} URLs to ${endpoints.length} endpoints.`,
+      results: summary,
+      submittedUrls: urls,
+    });
   } catch (error: any) {
-    return NextResponse.json({ 
-      success: false, 
-      message: 'Error submitting to IndexNow', 
-      error: error.message 
+    return NextResponse.json({
+      success: false,
+      message: 'Error submitting to IndexNow',
+      error: error.message
     }, { status: 500 });
   }
 }

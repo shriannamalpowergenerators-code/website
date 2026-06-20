@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     canonical: "https://www.sapgene.com/online-ups",
   },
   openGraph: {
-    title: "Online UPS Systems & Power Backup Solutions | SAPGEN",
+    title: "Online UPS Systems & Power Backup Solutions | SAPGENE",
     description: "Ensure zero downtime with true double-conversion Online UPS systems. Reliable power backup solutions for IT, medical, and industries in Chennai.",
     url: "https://www.sapgene.com/online-ups",
   },
   twitter: {
-    title: "Online UPS Systems & Power Backup Solutions | SAPGEN",
+    title: "Online UPS Systems & Power Backup Solutions | SAPGENE",
     description: "Ensure zero downtime with true double-conversion Online UPS systems. Reliable power backup solutions for IT, medical, and industries in Chennai.",
   },
 };
@@ -56,7 +56,7 @@ export default function OnlineUpsPage() {
             <div className="relative pt-32 pb-16 md:pb-24 bg-brand-enterprise overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center">
                 <Image
                     src="/images/sapgene-online-ups.png"
-                    alt="SAPGENE Online UPS Systems India – Shri Annamalai Power Generators"
+                    alt="SAPGENEE Online UPS Systems India – Shri Annamalai Power Generators"
                     fill
                     className="object-cover opacity-20 mix-blend-screen"
                     priority

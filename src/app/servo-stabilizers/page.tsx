@@ -8,19 +8,19 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Industrial Servo Stabilizers & Voltage Regulation",
-  description: "Protect sensitive machinery from surges. SAPGEN high-capacity servo voltage stabilizers offer precise regulation for industries in Tamil Nadu.",
+  description: "Protect sensitive machinery from surges. SAPGENE high-capacity servo voltage stabilizers offer precise regulation for industries in Tamil Nadu.",
   keywords: "servo stabilizers, Industrial Generators Tamil Nadu, voltage regulation, industrial power protection, precise voltage control",
   alternates: {
     canonical: "https://www.sapgene.com/servo-stabilizers",
   },
   openGraph: {
-    title: "Industrial Servo Stabilizers & Voltage Regulation | SAPGEN",
-    description: "Protect sensitive machinery from surges. SAPGEN high-capacity servo voltage stabilizers offer precise regulation for industries in Tamil Nadu.",
+    title: "Industrial Servo Stabilizers & Voltage Regulation | SAPGENE",
+    description: "Protect sensitive machinery from surges. SAPGENE high-capacity servo voltage stabilizers offer precise regulation for industries in Tamil Nadu.",
     url: "https://www.sapgene.com/servo-stabilizers",
   },
   twitter: {
-    title: "Industrial Servo Stabilizers & Voltage Regulation | SAPGEN",
-    description: "Protect sensitive machinery from surges. SAPGEN high-capacity servo voltage stabilizers offer precise regulation for industries in Tamil Nadu.",
+    title: "Industrial Servo Stabilizers & Voltage Regulation | SAPGENE",
+    description: "Protect sensitive machinery from surges. SAPGENE high-capacity servo voltage stabilizers offer precise regulation for industries in Tamil Nadu.",
   },
 };
 
@@ -56,7 +56,7 @@ export default function ServoStabilizersPage() {
             <div className="relative pt-32 pb-16 md:pb-24 bg-brand-enterprise overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center">
                 <Image
                     src="/images/sapgene-servo-stabilizer.png"
-                    alt="SAPGENE Servo Stabilizer India – Shri Annamalai Power Generators"
+                    alt="SAPGENEE Servo Stabilizer India – Shri Annamalai Power Generators"
                     fill
                     className="object-cover opacity-20 mix-blend-screen"
                     priority

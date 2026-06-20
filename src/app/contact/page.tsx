@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
-  title: "Contact SAPGENE | Generators Near You in Tamil Nadu",
+  title: "Contact Us | Generator Sales & Service Near You",
   description: "Contact Shri Annamalai Power Generators (SAPGENE) for Cummins generator sales, DG set installation, and emergency maintenance near you in Chennai, Pondicherry & Tamil Nadu. Call +91-9442946598.",
   keywords: "generators near me, contact sapgen, shri annamalai power generators contact, Generator Maintenance Chennai, sapgen phone number, generator dealers phone number, Chennai generator repair, generator service near me",
   alternates: {
     canonical: "https://www.sapgene.com/contact",
   },
   openGraph: {
-    title: "Contact SAPGENE | Generators Near You in Tamil Nadu",
+    title: "SAPGENE | Contact Us – Generator Sales & Service Near You",
     description: "Contact Shri Annamalai Power Generators (SAPGENE) for Cummins generator sales, DG set installation, and emergency maintenance in Chennai, Pondicherry & Tamil Nadu.",
     url: "https://www.sapgene.com/contact",
   },
   twitter: {
-    title: "Contact SAPGENE | Generators Near You in Tamil Nadu",
+    title: "SAPGENE | Contact Us – Generator Sales & Service Near You",
     description: "Contact Shri Annamalai Power Generators (SAPGENE) for Cummins generator sales and emergency maintenance near you in Chennai, Pondicherry & Tamil Nadu.",
   },
 };

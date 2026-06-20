@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
-  title: "Generator Maintenance & Sales Support Chennai",
-  description: "Get in touch with SAPGEN for Cummins generator sales, professional installation, emergency maintenance, and power backup support in Chennai.",
-  keywords: "Generator Maintenance Chennai, sapgen contact, contact shri annamalai power generators, generator dealers phone number, Chennai generator repair",
+  title: "Contact SAPGEN | Generators Near You in Tamil Nadu",
+  description: "Contact Shri Annamalai Power Generators (SAPGEN) for Cummins generator sales, DG set installation, and emergency maintenance near you in Chennai, Pondicherry & Tamil Nadu. Call +91-9442946598.",
+  keywords: "generators near me, contact sapgen, shri annamalai power generators contact, Generator Maintenance Chennai, sapgen phone number, generator dealers phone number, Chennai generator repair, generator service near me",
   alternates: {
     canonical: "https://www.sapgene.com/contact",
   },
   openGraph: {
-    title: "Generator Maintenance & Sales Support Chennai | SAPGEN",
-    description: "Get in touch with SAPGEN for Cummins generator sales, professional installation, emergency maintenance, and power backup support in Chennai.",
+    title: "Contact SAPGEN | Generators Near You in Tamil Nadu",
+    description: "Contact Shri Annamalai Power Generators (SAPGEN) for Cummins generator sales, DG set installation, and emergency maintenance in Chennai, Pondicherry & Tamil Nadu.",
     url: "https://www.sapgene.com/contact",
   },
   twitter: {
-    title: "Generator Maintenance & Sales Support Chennai | SAPGEN",
-    description: "Get in touch with SAPGEN for Cummins generator sales, professional installation, emergency maintenance, and power backup support in Chennai.",
+    title: "Contact SAPGEN | Generators Near You in Tamil Nadu",
+    description: "Contact Shri Annamalai Power Generators (SAPGEN) for Cummins generator sales and emergency maintenance near you in Chennai, Pondicherry & Tamil Nadu.",
   },
 };
 

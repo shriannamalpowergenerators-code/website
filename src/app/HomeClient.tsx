@@ -18,16 +18,18 @@ export default function HomeClient() {
   // Schema.org Script for SEO
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Wholesaler",
+    "@type": ["Wholesaler", "LocalBusiness"],
     "name": "SAPGEN - Shri Annamalai Power Generators",
-    "url": "https://shriannamalai.com",
-    "logo": "https://shriannamalai.com/images/logo.webp",
-    "description": "SAPGEN (Shri Annamalai Power Generators) offers India's best generators and power backup solutions for industrial, commercial, and residential use. Authorized Cummins Powerica dealer in Pondicherry & Karaikal.",
+    "alternateName": ["SAPGEN", "sapgen generators", "Shri Annamalai Power Generator"],
+    "url": "https://www.sapgene.com",
+    "logo": "https://www.sapgene.com/images/logo.webp",
+    "description": "SAPGEN (Shri Annamalai Power Generators) offers India's best generators and power backup solutions for industrial, commercial, and residential use. Authorized Cummins Powerica dealer in Pondicherry, Chennai & Karaikal. Find generators near you across Tamil Nadu.",
     "address": [
       {
         "@type": "PostalAddress",
         "streetAddress": "19B, 6th cross Extension, Anna Nagar",
         "addressLocality": "Pondicherry",
+        "addressRegion": "Puducherry",
         "postalCode": "605005",
         "addressCountry": "IN"
       },
@@ -35,14 +37,22 @@ export default function HomeClient() {
         "@type": "PostalAddress",
         "streetAddress": "14, West St, Mela Oduthurai",
         "addressLocality": "Karaikal",
+        "addressRegion": "Puducherry",
         "postalCode": "609602",
         "addressCountry": "IN"
       }
     ],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 11.9416,
+      "longitude": 79.8083
+    },
+    "areaServed": ["Chennai", "Pondicherry", "Karaikal", "Tamil Nadu", "India"],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-94429-46598",
-      "contactType": "Sales and Technical Support"
+      "telephone": "+91-9442946598",
+      "contactType": "Sales and Technical Support",
+      "availableLanguage": ["en", "ta"]
     }
   };
 

@@ -7,20 +7,20 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Generator Rental Chennai & Temporary Power",
-  description: "Rent high-performance diesel generators. SAPGEN offers flexible, temporary power backup solutions for events, industries, and construction in Chennai.",
-  keywords: "rental generators, Generator Rental Chennai, temporary power solutions, hire generators, construction generators",
+  title: "Generator Rental Near You | SAPGEN Tamil Nadu & Chennai",
+  description: "Rent high-performance Indian generators near you. SAPGEN – Shri Annamalai Power Generators offers flexible Cummins diesel generator rental for events, industries & construction in Chennai, Pondicherry & Tamil Nadu.",
+  keywords: "generator rental near me, generators near me, rental generators, Generator Rental Chennai, temporary power solutions, hire generators, construction generators india, indian generator rental",
   alternates: {
     canonical: "https://www.sapgene.com/rental-generators",
   },
   openGraph: {
-    title: "Generator Rental Chennai & Temporary Power | SAPGEN",
-    description: "Rent high-performance diesel generators. SAPGEN offers flexible, temporary power backup solutions for events, industries, and construction in Chennai.",
+    title: "Generator Rental Near You | SAPGEN Tamil Nadu & Chennai",
+    description: "Rent high-performance Indian generators near you. SAPGEN offers flexible Cummins diesel generator rental for events, industries & construction in Chennai, Pondicherry & Tamil Nadu.",
     url: "https://www.sapgene.com/rental-generators",
   },
   twitter: {
-    title: "Generator Rental Chennai & Temporary Power | SAPGEN",
-    description: "Rent high-performance diesel generators. SAPGEN offers flexible, temporary power backup solutions for events, industries, and construction in Chennai.",
+    title: "Generator Rental Near You | SAPGEN Tamil Nadu & Chennai",
+    description: "Rent high-performance Indian generators near you. SAPGEN offers flexible Cummins diesel generator rental in Chennai, Pondicherry & Tamil Nadu.",
   },
 };
 

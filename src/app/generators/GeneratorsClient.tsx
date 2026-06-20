@@ -417,8 +417,8 @@ export default function GeneratorsClient() {
                     <div className="flex flex-col items-center justify-center gap-12 max-w-5xl mx-auto">
                         <div className="w-full max-w-2xl bg-white p-4 md:p-8 rounded-2xl shadow-xl border border-gray-100">
                             <Image
-                                src="/images/SAPG 2026- DEALER CERTIFICATE-CUMMINS&POWERICA.webp"
-                                alt="Dealer Certificate - Cummins & Powerica - SAPGEN"
+                                src="/images/sapgene-cummins-powerica-dealer-certificate-india.webp"
+                                alt="SAPGENE – Shri Annamalai Power Generators Cummins Powerica Authorized Dealer Certificate India"
                                 width={800}
                                 height={600}
                                 className="w-full h-auto object-contain rounded-lg shadow-sm"

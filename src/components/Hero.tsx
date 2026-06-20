@@ -136,8 +136,8 @@ const Hero = () => {
                         <div className="absolute -inset-4 bg-brand-action/10 blur-3xl rounded-full opacity-30 pointer-events-none" />
                         <div className="relative w-full flex items-center justify-center group">
                             <Image
-                                src="/images/hero anamalai power generator.png"
-                                alt="Industrial 2500kVA Generator"
+                                src="/images/sapgene-cummins-diesel-generator-india.png"
+                                alt="SAPGENE Cummins Diesel Generator India – Shri Annamalai Power Generators"
                                 width={2020}
                                 height={1280}
                                className="w-full max-w-[95%] md:max-w-full h-auto object-contain drop-shadow-xl"

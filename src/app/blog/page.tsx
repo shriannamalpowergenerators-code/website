@@ -6,20 +6,20 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Generator Guides & Tips | SAPGEN Power Blog India",
-  description: "Expert guides on Indian generators, maintenance tips, power backup sizing, and generator buying advice from SAPGEN – Shri Annamalai Power Generators team.",
+  title: "Generator Guides & Tips | SAPGENE Power Blog India",
+  description: "Expert guides on Indian generators, maintenance tips, power backup sizing, and generator buying advice from SAPGENE – Shri Annamalai Power Generators team.",
   keywords: "generator blog india, indian generators guide, generator maintenance tips, home generators india, generators near me blog, best generators india, sapgen blog",
   alternates: {
     canonical: "https://www.sapgene.com/blog",
   },
   openGraph: {
-    title: "Generator Guides & Tips | SAPGEN Power Blog India",
-    description: "Expert guides on Indian generators, maintenance tips, power backup sizing, and generator buying advice from SAPGEN – Shri Annamalai Power Generators team.",
+    title: "Generator Guides & Tips | SAPGENE Power Blog India",
+    description: "Expert guides on Indian generators, maintenance tips, power backup sizing, and generator buying advice from SAPGENE – Shri Annamalai Power Generators team.",
     url: "https://www.sapgene.com/blog",
   },
   twitter: {
-    title: "Generator Guides & Tips | SAPGEN Power Blog India",
-    description: "Expert guides on Indian generators, maintenance tips, power backup sizing, and generator buying advice from SAPGEN – Shri Annamalai Power Generators team.",
+    title: "Generator Guides & Tips | SAPGENE Power Blog India",
+    description: "Expert guides on Indian generators, maintenance tips, power backup sizing, and generator buying advice from SAPGENE – Shri Annamalai Power Generators team.",
   },
 };
 

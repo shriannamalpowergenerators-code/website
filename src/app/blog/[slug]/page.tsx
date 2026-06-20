@@ -90,10 +90,12 @@ export default async function BlogPost({ params }: { params: Params }) {
         },
         "publisher": {
             "@type": "Organization",
-            "name": "Shri Annamalai Power Generators",
+            "name": "SAPGENE – Shri Annamalai Power Generators",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.sapgene.com/images/logo.webp"
+                "url": "https://www.sapgene.com/images/sapgene-logo.png",
+                "width": 512,
+                "height": 512
             }
         },
         "description": post.description

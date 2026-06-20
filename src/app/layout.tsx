@@ -22,11 +22,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.sapgene.com"),
   title: {
-    default: "SAPGEN | Shri Annamalai Power Generators - India's Best Generator Dealer",
-    template: "SAPGEN | %s",
+    default: "SAPGENE | Shri Annamalai Power Generators - India's Best Generator Dealer",
+    template: "SAPGENE | %s",
   },
-  description: "SAPGEN – Shri Annamalai Power Generators. India's trusted dealer for Cummins diesel generators, DG sets, and power backup solutions. Buy or rent generators near you in Chennai, Pondicherry & Tamil Nadu.",
-  keywords: "sapgen, sapgen generators, shri annamalai power generators, generators, indian generators, generators near me, diesel generators india, Generator Dealers Chennai, Power Backup Solutions Chennai, DG Set Installation Chennai, Industrial Generators Tamil Nadu, Generator Maintenance Chennai, Cummins Powerica, diesel generators, Pondicherry, Karaikal, best generators in india, generator dealers india",
+  description: "SAPGENE – Shri Annamalai Power Generators. India's trusted dealer for Cummins diesel generators, DG sets, and power backup solutions. Buy or rent generators near you in Chennai, Pondicherry & Tamil Nadu.",
+  keywords: "sapgene, sapgen, sapgene generators, shri annamalai power generators, generators, indian generators, generators near me, diesel generators india, Generator Dealers Chennai, Power Backup Solutions Chennai, DG Set Installation Chennai, Industrial Generators Tamil Nadu, Generator Maintenance Chennai, Cummins Powerica, diesel generators, Pondicherry, Karaikal, best generators in india, generator dealers india",
   applicationName: "Shri Annamalai Power Generators",
   robots: {
     index: true,
@@ -47,25 +47,26 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/images/logo.webp", sizes: "32x32", type: "image/webp" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/images/sapgene-logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/sapgene-logo.png", sizes: "192x192", type: "image/png" },
     ],
-    shortcut: "/favicon.ico",
+    shortcut: [{ url: "/favicon.ico", type: "image/x-icon" }],
     apple: [
-      { url: "/images/logo.webp", sizes: "180x180", type: "image/webp" },
+      { url: "/images/sapgene-logo.png", sizes: "180x180", type: "image/png" },
     ],
   },
   openGraph: {
-    title: "SAPGEN | Shri Annamalai Power Generators - India's Best Generator Dealer",
-    description: "SAPGEN – Shri Annamalai Power Generators. India's trusted dealer for Cummins diesel generators, DG sets, and power backup solutions. Buy or rent generators near you in Chennai, Pondicherry & Tamil Nadu.",
+    title: "SAPGENE | Shri Annamalai Power Generators - India's Best Generator Dealer",
+    description: "SAPGENE – Shri Annamalai Power Generators. India's trusted dealer for Cummins diesel generators, DG sets, and power backup solutions. Buy or rent generators near you in Chennai, Pondicherry & Tamil Nadu.",
     url: "https://www.sapgene.com",
-    siteName: "Shri Annamalai Power Generators",
+    siteName: "SAPGENE – Shri Annamalai Power Generators",
     images: [
       {
-        url: "/images/SAPG 2026- DEALER CERTIFICATE-CUMMINS&POWERICA.webp",
+        url: "/images/sapgene-cummins-powerica-dealer-certificate-india.webp",
         width: 800,
         height: 600,
-        alt: "SAPGEN Cummins & Powerica Dealer Certificate",
+        alt: "SAPGENE – Shri Annamalai Power Generators Cummins Powerica Authorized Dealer Certificate India",
       },
     ],
     locale: "en_IN",
@@ -73,9 +74,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SAPGEN | Shri Annamalai Power Generators - India's Best Generator Dealer",
-    description: "SAPGEN – Shri Annamalai Power Generators. India's trusted dealer for Cummins diesel generators, DG sets, and power backup solutions in Chennai, Pondicherry & Tamil Nadu.",
-    images: ["/images/SAPG 2026- DEALER CERTIFICATE-CUMMINS&POWERICA.webp"],
+    title: "SAPGENE | Shri Annamalai Power Generators - India's Best Generator Dealer",
+    description: "SAPGENE – Shri Annamalai Power Generators. India's trusted dealer for Cummins diesel generators, DG sets, and power backup solutions in Chennai, Pondicherry & Tamil Nadu.",
+    images: ["/images/sapgene-cummins-powerica-dealer-certificate-india.webp"],
   },
 };
 
@@ -88,12 +89,24 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://www.sapgene.com/#organization",
-    "name": "Shri Annamalai Power Generators",
-    "alternateName": ["SAPGEN", "sapgen generators", "Shri Annamalai Power Generator"],
+    "name": "SAPGENE – Shri Annamalai Power Generators",
+    "alternateName": ["SAPGENE", "SAPGEN", "sapgen", "sapgene", "Shri Annamalai Power Generators", "Shri Annamalai Power Generator"],
     "url": "https://www.sapgene.com",
-    "logo": "https://www.sapgene.com/images/logo.webp",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.sapgene.com/images/sapgene-logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.sapgene.com/images/sapgene-cummins-diesel-generator-india.png",
+      "width": 1200,
+      "height": 630,
+      "caption": "SAPGENE – Shri Annamalai Power Generators – India's Best Cummins Diesel Generator Dealer"
+    },
     "foundingDate": "2003",
-    "description": "SAPGEN (Shri Annamalai Power Generators) is India's trusted authorized Cummins Powerica diesel generator dealer serving Chennai, Pondicherry, Tamil Nadu, and Karaikal.",
+    "description": "SAPGENE (Shri Annamalai Power Generators) is India's trusted authorized Cummins Powerica diesel generator dealer serving Chennai, Pondicherry, Tamil Nadu, and Karaikal.",
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -121,16 +134,22 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "Store", "ElectricalContractor"],
     "@id": "https://www.sapgene.com/#localbusiness",
-    "name": "Shri Annamalai Power Generators (SAPGEN)",
-    "alternateName": "SAPGEN",
-    "image": "https://www.sapgene.com/images/SAPG%202026-%20DEALER%20CERTIFICATE-CUMMINS%20AND%20POWERICA.webp",
+    "name": "SAPGENE – Shri Annamalai Power Generators",
+    "alternateName": ["SAPGENE", "SAPGEN", "Shri Annamalai Power Generators"],
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.sapgene.com/images/sapgene-cummins-diesel-generator-india.png",
+      "width": 1200,
+      "height": 630,
+      "caption": "SAPGENE – Shri Annamalai Power Generators, India's authorized Cummins Powerica diesel generator dealer"
+    },
     "telephone": "+91-9442946598",
     "email": "info@sapgene.com",
     "url": "https://www.sapgene.com",
     "priceRange": "₹₹₹",
     "currenciesAccepted": "INR",
     "paymentAccepted": "Cash, Credit Card, Bank Transfer",
-    "description": "SAPGEN – Shri Annamalai Power Generators. India's best dealer for Cummins diesel generators, DG sets, rental generators, solar infrastructure, and power backup solutions across Tamil Nadu and Puducherry.",
+    "description": "SAPGENE – Shri Annamalai Power Generators. India's best dealer for Cummins diesel generators, DG sets, rental generators, solar infrastructure, and power backup solutions across Tamil Nadu and Puducherry.",
     "address": [
       {
         "@type": "PostalAddress",
@@ -197,9 +216,9 @@ export default function RootLayout({
     "@type": "WebSite",
     "@id": "https://www.sapgene.com/#website",
     "url": "https://www.sapgene.com",
-    "name": "SAPGEN – Shri Annamalai Power Generators",
-    "alternateName": "sapgene.com",
-    "description": "SAPGEN (Shri Annamalai Power Generators) – India's best dealer for Cummins diesel generators and power backup solutions serving Chennai, Pondicherry & Tamil Nadu.",
+    "name": "SAPGENE – Shri Annamalai Power Generators",
+    "alternateName": ["sapgene.com", "SAPGEN", "sapgen"],
+    "description": "SAPGENE (Shri Annamalai Power Generators) – India's best dealer for Cummins diesel generators and power backup solutions serving Chennai, Pondicherry & Tamil Nadu.",
     "publisher": {
       "@id": "https://www.sapgene.com/#organization"
     },
@@ -219,10 +238,10 @@ export default function RootLayout({
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is SAPGEN?",
+        "name": "What is SAPGENE?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "SAPGEN stands for Shri Annamalai Power Generators – India's trusted authorized Cummins Powerica diesel generator dealer with 20+ years of experience. We supply, install, and service diesel generators, online UPS, solar systems, and servo stabilizers across Tamil Nadu, Chennai, Pondicherry, and Karaikal."
+          "text": "SAPGENE (also searched as SAPGEN) is the brand name for Shri Annamalai Power Generators – India's trusted authorized Cummins Powerica diesel generator dealer with 20+ years of experience. Visit sapgene.com. We supply, install, and service diesel generators, online UPS, solar systems, and servo stabilizers across Tamil Nadu, Chennai, Pondicherry, and Karaikal."
         }
       },
       {
@@ -230,7 +249,7 @@ export default function RootLayout({
         "name": "Where can I find generators near me in Chennai or Tamil Nadu?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "SAPGEN (Shri Annamalai Power Generators) serves Chennai and all of Tamil Nadu and Puducherry. Call us at +91-9442946598 or visit our showrooms in Pondicherry (19B, 6th Cross Extension, Anna Nagar – 605005) and Karaikal (14, West St, Mela Oduthurai – 609602) to find generators near you."
+          "text": "SAPGENE (Shri Annamalai Power Generators) serves Chennai and all of Tamil Nadu and Puducherry. Call us at +91-9442946598 or visit our showrooms in Pondicherry (19B, 6th Cross Extension, Anna Nagar – 605005) and Karaikal (14, West St, Mela Oduthurai – 609602) to find generators near you."
         }
       },
       {
@@ -238,15 +257,15 @@ export default function RootLayout({
         "name": "What are the best Indian generators for home and industrial use?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "SAPGEN offers Cummins Powerica diesel generators – the best Indian generators for both home backup and heavy industrial use. Our range covers 7.5 kVA to 2750 kVA, making us the top choice for residential, commercial, and industrial power backup in India."
+          "text": "SAPGENE offers Cummins Powerica diesel generators – the best Indian generators for both home backup and heavy industrial use. Our range covers 7.5 kVA to 2750 kVA, making us the top choice for residential, commercial, and industrial power backup in India."
         }
       },
       {
         "@type": "Question",
-        "name": "Does SAPGEN offer generator rental services?",
+        "name": "Does SAPGENE offer generator rental services?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. SAPGEN offers short-term and long-term rental generators across Tamil Nadu and Puducherry. Our rental fleet includes silent diesel generators from 15 kVA to 1000+ kVA for events, construction sites, and emergency backup deployments."
+          "text": "Yes. SAPGENE (Shri Annamalai Power Generators) offers short-term and long-term rental generators across Tamil Nadu and Puducherry. Our rental fleet includes silent diesel generators from 15 kVA to 1000+ kVA for events, construction sites, and emergency backup deployments."
         }
       },
       {
@@ -254,7 +273,7 @@ export default function RootLayout({
         "name": "Is Shri Annamalai Power Generators an authorized Cummins dealer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Shri Annamalai Power Generators (SAPGEN) is an authorized Cummins Powerica dealer in India. We supply genuine Cummins diesel generator sets backed by official warranty, AMC contracts, and factory-trained service engineers across Tamil Nadu and Puducherry."
+          "text": "Yes. SAPGENE (Shri Annamalai Power Generators) is an authorized Cummins Powerica dealer in India. We supply genuine Cummins diesel generator sets backed by official warranty, AMC contracts, and factory-trained service engineers across Tamil Nadu and Puducherry. Visit us at sapgene.com."
         }
       }
     ]

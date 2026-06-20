@@ -14,8 +14,8 @@ const BrandShowcase = () => {
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
 
     const brands = [
-        { name: "Cummins", id: "cummins", image: "/images/Cummins Logo.jpeg" },
-        { name: "Powerica", id: "powerica", image: "/images/Powerica Logo.jpeg" },
+        { name: "Cummins", id: "cummins", image: "/images/cummins-authorized-dealer-sapgene.jpeg" },
+        { name: "Powerica", id: "powerica", image: "/images/powerica-generator-dealer-sapgene.jpeg" },
         { name: "Kirloskar", id: "kirloskar" },
         { name: "Tata", id: "tata" },
         { name: "Schneider", id: "schneider" },

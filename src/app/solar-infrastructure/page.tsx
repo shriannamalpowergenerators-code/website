@@ -54,8 +54,8 @@ export default function SolarInfrastructurePage() {
             {/* Hero Section */}
             <div className="relative pt-32 pb-16 md:pb-24 bg-brand-enterprise overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center">
                 <Image
-                    src="/images/grid_solar.png"
-                    alt="solar infrastructure"
+                    src="/images/sapgene-solar-infrastructure.png"
+                    alt="SAPGENE Solar Infrastructure India – Shri Annamalai Power Generators"
                     fill
                     className="object-cover opacity-20"
                     priority

@@ -36,7 +36,7 @@ const Header = ({ onQuote, variant = "dark" }: { onQuote?: () => void; variant?:
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 md:gap-3 group max-w-[75%] sm:max-w-none">
                     <div className="relative w-[45px] h-[45px] md:w-16 md:h-16 flex items-center justify-center shrink-0">
-                        <Image src="/images/sapgen logo.png" alt="SAPGEN - Shri Annamalai Power Generators Logo" width={64} height={64} className="object-contain" priority />
+                        <Image src="/images/sapgene-logo.png" alt="SAPGENE - Shri Annamalai Power Generators Logo" width={64} height={64} className="object-contain" priority />
                     </div>
                     <div className="flex flex-col whitespace-normal">
                         <span className="font-heading font-black text-[12px] sm:text-[18px] md:text-2xl leading-[1.2] transition-colors text-brand-enterprise tracking-tight">

@@ -55,8 +55,8 @@ export default function OnlineUpsPage() {
             {/* Hero Section */}
             <div className="relative pt-32 pb-16 md:pb-24 bg-brand-enterprise overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center">
                 <Image
-                    src="/images/grid_ups.png"
-                    alt="Online UPS Systems"
+                    src="/images/sapgene-online-ups.png"
+                    alt="SAPGENE Online UPS Systems India – Shri Annamalai Power Generators"
                     fill
                     className="object-cover opacity-20 mix-blend-screen"
                     priority

@@ -19,11 +19,11 @@ export default function HomeClient() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["Wholesaler", "LocalBusiness"],
-    "name": "SAPGEN - Shri Annamalai Power Generators",
-    "alternateName": ["SAPGEN", "sapgen generators", "Shri Annamalai Power Generator"],
+    "name": "SAPGENE - Shri Annamalai Power Generators",
+    "alternateName": ["SAPGENE", "sapgen generators", "Shri Annamalai Power Generator"],
     "url": "https://www.sapgene.com",
     "logo": "https://www.sapgene.com/images/logo.webp",
-    "description": "SAPGEN (Shri Annamalai Power Generators) offers India's best generators and power backup solutions for industrial, commercial, and residential use. Authorized Cummins Powerica dealer in Pondicherry, Chennai & Karaikal. Find generators near you across Tamil Nadu.",
+    "description": "SAPGENE (Shri Annamalai Power Generators) offers India's best generators and power backup solutions for industrial, commercial, and residential use. Authorized Cummins Powerica dealer in Pondicherry, Chennai & Karaikal. Find generators near you across Tamil Nadu.",
     "address": [
       {
         "@type": "PostalAddress",

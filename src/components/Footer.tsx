@@ -68,7 +68,7 @@ const Footer = () => {
                     <div className="lg:col-span-4 flex flex-col justify-start gap-6 h-full">
                         <Link href="/" className="flex items-center gap-3 w-full">
                             <div className="w-12 h-12 bg-white rounded flex items-center justify-center shrink-0 relative">
-                                <Image src="/images/logo.webp" alt="SAPGEN Logo" width={40} height={40} className="object-contain" />
+                                <Image src="/images/logo.webp" alt="SAPGENE – Shri Annamalai Power Generators Logo" width={40} height={40} className="object-contain" />
                             </div>
                             <div className="flex flex-col">
                                 <span className="font-heading font-black text-sm md:text-xl leading-tight text-white whitespace-normal break-words w-full">SHRI ANNAMALAI POWER GENERATORS</span>

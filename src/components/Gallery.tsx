@@ -106,12 +106,14 @@ export default function GalleryCarousel() {
                     <div className="absolute inset-0 flex items-center justify-between px-4 z-20 pointer-events-none">
                         <button
                             onClick={() => paginate(-1)}
-                            className="pointer-events-auto p-3 rounded-full text-slate-900 shadow-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
+                            aria-label="Previous slide"
+                            className="pointer-events-auto p-3 rounded-full bg-white/80 text-slate-900 shadow-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
                         >
                             <ChevronLeft size={28} />
                         </button>
                         <button
                             onClick={() => paginate(1)}
+                            aria-label="Next slide"
                             className="pointer-events-auto p-3 rounded-full bg-white/80 text-slate-900 shadow-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
                         >
                             <ChevronRight size={28} />
@@ -128,6 +130,7 @@ export default function GalleryCarousel() {
                                 setDirection(index > currentIndex ? 1 : -1);
                                 setCurrentIndex(index);
                             }}
+                            aria-label={`Go to slide ${index + 1}`}
                             className={`h-2 rounded-full transition-all duration-500 ${index === currentIndex ? "w-12 bg-blue-600" : "w-3 bg-slate-300 hover:bg-slate-400"
                                 }`}
                         />

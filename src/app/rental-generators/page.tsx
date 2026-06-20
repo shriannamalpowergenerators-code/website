@@ -7,12 +7,21 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Rental Generators | Temporary Power Solutions | SAPGEN India",
-    description: "Rent high-performance diesel generators from SAPGEN. We offer flexible, temporary power solutions for events, construction sites, and emergency backups.",
-    keywords: "rental generators, hire generators, temporary power solutions, event power rental, construction generator",
-    alternates: {
-        canonical: "https://www.sapgene.com/rental-generators",
-    },
+  title: "Generator Rental Chennai & Temporary Power",
+  description: "Rent high-performance diesel generators. SAPGEN offers flexible, temporary power backup solutions for events, industries, and construction in Chennai.",
+  keywords: "rental generators, Generator Rental Chennai, temporary power solutions, hire generators, construction generators",
+  alternates: {
+    canonical: "https://www.sapgene.com/rental-generators",
+  },
+  openGraph: {
+    title: "Generator Rental Chennai & Temporary Power | SAPGEN",
+    description: "Rent high-performance diesel generators. SAPGEN offers flexible, temporary power backup solutions for events, industries, and construction in Chennai.",
+    url: "https://www.sapgene.com/rental-generators",
+  },
+  twitter: {
+    title: "Generator Rental Chennai & Temporary Power | SAPGEN",
+    description: "Rent high-performance diesel generators. SAPGEN offers flexible, temporary power backup solutions for events, industries, and construction in Chennai.",
+  },
 };
 
 export default function RentalGeneratorsPage() {
@@ -73,12 +82,12 @@ export default function RentalGeneratorsPage() {
                     <div className="max-w-4xl mx-auto prose prose-blue prose-lg md:prose-xl">
                         <h2 className="text-2xl md:text-3xl font-heading font-black text-brand-enterprise mb-6">Reliable Genset On-Hire & Premium Rental Generators Base</h2>
                         <p className="text-gray-600 font-sans leading-relaxed mb-6">
-                            Shri Annamalai Power Generators operates a massive inventory of meticulously maintained acoustic diesel generators available strictly for <strong>long-term and short-term rentals</strong>. Whether you're managing sudden equipment failure, staging a colossal public event in pondicherry, or constructing a remote industrial site in Karaikal, our heavy-duty Cummins-powered temporary generator fleets are guaranteed to keep your operations illuminated.
+                            <Link href="/" className="text-brand-action underline hover:text-brand-enterprise transition-colors">Shri Annamalai Power Generators</Link> operates a massive inventory of meticulously maintained acoustic diesel generators available strictly for <strong>long-term and short-term rentals</strong>. Whether you're managing sudden equipment failure, staging a colossal public event in Pondicherry, or constructing a remote industrial site in Karaikal, our heavy-duty <Link href="/generators" className="text-brand-action underline hover:text-brand-enterprise transition-colors">Cummins-powered temporary generator fleets</Link> are guaranteed to keep your operations illuminated.
                         </p>
 
                         <h3 className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise mt-10 mb-4">Turnkey Power Solutions: From End to End</h3>
                         <p className="text-gray-600 font-sans leading-relaxed mb-6">
-                            Renting a generator from us isn't simply renting hardware. We offer comprehensive <strong>turnkey power setups</strong> which include comprehensive site inspections, logistics, heavy-lift transportation, robust cabling layout, and on-site engineering support. We provide fully staffed 24/7 operator supervision alongside automated fuel management systems, so your organization never has to pause production to worry about logistical breakdowns.
+                            Renting a generator from us isn't simply renting hardware. We offer comprehensive <strong>turnkey power setups</strong> which include comprehensive site inspections, logistics, heavy-lift transportation, <Link href="/servo-stabilizers" className="text-brand-action underline hover:text-brand-enterprise transition-colors">voltage regulation systems</Link> & cabling layout, and on-site engineering support. We provide fully staffed 24/7 operator supervision alongside automated fuel management systems, so your organization never has to pause production to worry about logistical breakdowns.
                         </p>
 
                         <h3 className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise mt-10 mb-4">Flexible Sizing for Construction and Event Scale</h3>
@@ -87,7 +96,7 @@ export default function RentalGeneratorsPage() {
                         </p>
 
                         <p className="text-gray-600 font-sans leading-relaxed">
-                            Every rental generator ships with strict emission compliance certifications and super-silent enclosures, ensuring smooth adherence to local regulatory demands. Reach out today for immediate deployment capabilities and emergency backup dispatches.
+                            Every rental generator ships with strict emission compliance certifications and super-silent enclosures, ensuring smooth adherence to local regulatory demands. <Link href="/contact" className="text-brand-action underline hover:text-brand-enterprise transition-colors">Reach out today</Link> for immediate deployment capabilities and emergency backup dispatches.
                         </p>
                     </div>
                 </div>

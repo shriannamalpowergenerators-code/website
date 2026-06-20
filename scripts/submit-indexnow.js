@@ -1,7 +1,7 @@
 const https = require('https');
 
 const host = 'www.sapgene.com';
-const key = '7ec78198547643a79b64eaf80a51eb41';
+const key = 'e72472cd1b4f4f9490dd460ee494ec6f';
 const keyLocation = `https://${host}/${key}.txt`;
 
 const staticRoutes = [

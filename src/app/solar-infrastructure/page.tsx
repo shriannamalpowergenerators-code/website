@@ -7,12 +7,21 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Commercial Solar Infrastructure & Hybrid Grids | SAPGEN Energy",
-    description: "Optimize your operations with SAPGEN commercial solar infrastructure, hybrid grid integrations, and battery backups. Reduce energy costs with solar power.",
-    keywords: "solar infrastructure, commercial solar panels, industrial solar grid, hybrid power generators",
-    alternates: {
-        canonical: "https://www.sapgene.com/solar-infrastructure",
-    },
+  title: "Commercial Solar Infrastructure & Grid Hybrid",
+  description: "Reduce operational costs with SAPGEN commercial solar arrays, hybrid grid integrations, and industrial power solutions in Chennai and Tamil Nadu.",
+  keywords: "solar infrastructure, commercial solar panels, industrial solar grid, hybrid power generators, Chennai solar",
+  alternates: {
+    canonical: "https://www.sapgene.com/solar-infrastructure",
+  },
+  openGraph: {
+    title: "Commercial Solar Infrastructure & Grid Hybrid | SAPGEN",
+    description: "Reduce operational costs with SAPGEN commercial solar arrays, hybrid grid integrations, and industrial power solutions in Chennai and Tamil Nadu.",
+    url: "https://www.sapgene.com/solar-infrastructure",
+  },
+  twitter: {
+    title: "Commercial Solar Infrastructure & Grid Hybrid | SAPGEN",
+    description: "Reduce operational costs with SAPGEN commercial solar arrays, hybrid grid integrations, and industrial power solutions in Chennai and Tamil Nadu.",
+  },
 };
 
 export default function SolarInfrastructurePage() {
@@ -71,23 +80,23 @@ export default function SolarInfrastructurePage() {
             <section className="py-16 md:py-14 bg-white border-t border-gray-100">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="max-w-4xl mx-auto prose prose-blue prose-lg md:prose-xl">
-                        <h2 className="text-2xl md:text-3xl font-heading font-black text-brand-enterprise mb-6">Advanced Commercial Solar Infrastructure in pondicherry & Karaikal</h2>
+                        <h2 className="text-2xl md:text-3xl font-heading font-black text-brand-enterprise mb-6">Advanced Commercial Solar Infrastructure in Pondicherry & Karaikal</h2>
                         <p className="text-gray-600 font-sans leading-relaxed mb-6">
-                            Shri Annamalai Power Generators is a premier supplier and integrator of <strong>heavy-duty commercial solar infrastructure</strong> tailored specifically for industrial loads. Our deep expertise in combining rooftop solar PV arrays with sophisticated inverter systems ensures that manufacturing hubs, IT parks, and educational campuses can seamlessly transition to clean energy without compromising their baseline grid stability.
+                            <Link href="/" className="text-brand-action underline hover:text-brand-enterprise transition-colors">Shri Annamalai Power Generators</Link> is a premier supplier and integrator of <strong>heavy-duty commercial solar infrastructure</strong> tailored specifically for industrial loads. Our deep expertise in combining rooftop solar PV arrays with sophisticated inverter systems ensures that manufacturing hubs, IT parks, and educational campuses can seamlessly transition to clean energy without compromising their baseline grid stability.
                         </p>
-
+ 
                         <h3 className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise mt-10 mb-4">Hybrid Grid Integrations & Renewable Energy Backup</h3>
                         <p className="text-gray-600 font-sans leading-relaxed mb-6">
-                            Relying solely on external power grids can lead to massive bottlenecks during unexpected peak hour blackouts. Our comprehensive <strong>hybrid grid integrations</strong> fuse high-grade Tier-1 solar panels with robust diesel generator arrays and UPS storage logic. This precise multi-source synchronization dynamically scales power draw—leveraging free solar energy when available, and smoothly bridging to fuel-based backup during extreme climatic conditions or utility-level failures.
+                            Relying solely on external power grids can lead to massive bottlenecks during unexpected peak hour blackouts. Our comprehensive <strong>hybrid grid integrations</strong> fuse high-grade Tier-1 solar panels with robust <Link href="/generators" className="text-brand-action underline hover:text-brand-enterprise transition-colors">diesel generator arrays</Link> and <Link href="/online-ups" className="text-brand-action underline hover:text-brand-enterprise transition-colors">UPS storage logic</Link>. This precise multi-source synchronization dynamically scales power draw—leveraging free solar energy when available, and smoothly bridging to fuel-based backup during extreme climatic conditions or utility-level failures.
                         </p>
-
+ 
                         <h3 className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise mt-10 mb-4">Why Invest in Industrial Solar Arrays?</h3>
                         <p className="text-gray-600 font-sans leading-relaxed mb-6">
                             Implementing solar power goes beyond sustainable branding; it dramatically enhances business continuity and Return on Investment (ROI). Companies utilizing our high-efficiency inversion technologies experience a sharp reduction in electrical operational expenditure. With net metering and local regulatory energy credits in Tamil Nadu and Pondicherry, deploying solar infrastructure is heavily incentivized for fast break-even intervals.
                         </p>
-
+ 
                         <p className="text-gray-600 font-sans leading-relaxed">
-                            When combined with our renowned fleet of Cummins diesel generators, our holistic energy packages represent the ultimate fail-safe strategy against power volatility. Book a technical site inspection today and discover exactly how our specialized solar engineering team can minimize your energy overheads securely.
+                            When combined with our renowned fleet of Cummins diesel generators, our holistic energy packages represent the ultimate fail-safe strategy against power volatility. <Link href="/contact" className="text-brand-action underline hover:text-brand-enterprise transition-colors">Book a technical site inspection today</Link> and discover exactly how our specialized solar engineering team can minimize your energy overheads securely.
                         </p>
                     </div>
                 </div>

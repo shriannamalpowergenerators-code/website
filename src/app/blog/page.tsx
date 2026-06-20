@@ -6,12 +6,21 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "SAPGEN Blog | Generator Guides & Industrial Power Backup Insights",
-    description: "Read the latest articles, maintenance tips, and technical guides on residential, commercial, and industrial power backup generators from the SAPGEN team.",
-    keywords: "Generator blog, Home power backup tips, Industrial vs residential generators, Generator maintenance",
-    alternates: {
-        canonical: "https://www.sapgene.com/blog",
-    },
+  title: "Power Backup Blog: Sizing & Maintenance Guides",
+  description: "Get expert guides, generator maintenance tips, power backup system sizing advice, and industrial energy articles from the SAPGEN technical team.",
+  keywords: "Generator blog, Home power backup tips, Industrial vs residential generators, Generator maintenance",
+  alternates: {
+    canonical: "https://www.sapgene.com/blog",
+  },
+  openGraph: {
+    title: "Power Backup Blog: Sizing & Maintenance Guides | SAPGEN",
+    description: "Get expert guides, generator maintenance tips, power backup system sizing advice, and industrial energy articles from the SAPGEN technical team.",
+    url: "https://www.sapgene.com/blog",
+  },
+  twitter: {
+    title: "Power Backup Blog: Sizing & Maintenance Guides | SAPGEN",
+    description: "Get expert guides, generator maintenance tips, power backup system sizing advice, and industrial energy articles from the SAPGEN technical team.",
+  },
 };
 
 export const blogPosts = [

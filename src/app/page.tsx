@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
-  title: "SAPGEN | Shri Annamalai Power Generators | Cummins Powerica Dealer",
-  description: "Get India's best generators from SAPGEN, authorized Cummins Powerica dealer. We offer top-tier diesel generators & power backup in Pondicherry & Karaikal.",
-  keywords: "sapgen, generators, genrators, indians best generators, best generators in india, Shri Annamalai Power Generators, sapgen generators, generator dealers, generators pondicherry, generators karaikal, power backup solutions",
+  title: "Cummins Diesel Generator Dealer in Chennai",
+  description: "Authorized Cummins Powerica dealer. SAPGEN offers diesel generators, DG set installation, and maintenance services across Chennai, Pondicherry, and Tamil Nadu.",
+  keywords: "sapgen, generators, Generator Dealers Chennai, Power Backup Solutions Chennai, DG Set Installation Chennai, Industrial Generators Tamil Nadu, Generator Maintenance Chennai, Cummins Powerica, diesel generators, Pondicherry, Karaikal",
   alternates: {
     canonical: "https://www.sapgene.com",
   },
   openGraph: {
-    title: "SAPGEN | Shri Annamalai Power Generators | Cummins Powerica Dealer",
-    description: "Get India's best generators from SAPGEN, authorized Cummins Powerica dealer. We offer top-tier diesel generators & power backup in Pondicherry & Karaikal.",
+    title: "Cummins Diesel Generator Dealer in Chennai | SAPGEN",
+    description: "Authorized Cummins Powerica dealer. SAPGEN offers diesel generators, DG set installation, and maintenance services across Chennai, Pondicherry, and Tamil Nadu.",
     url: "https://www.sapgene.com",
     siteName: "Shri Annamalai Power Generators",
     images: [
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SAPGEN | Shri Annamalai Power Generators | Cummins Powerica Dealer",
-    description: "Get India's best generators from SAPGEN, authorized Cummins Powerica dealer. We offer top-tier diesel generators & power backup in Pondicherry & Karaikal.",
+    title: "Cummins Diesel Generator Dealer in Chennai | SAPGEN",
+    description: "Authorized Cummins Powerica dealer. SAPGEN offers diesel generators, DG set installation, and maintenance services across Chennai, Pondicherry, and Tamil Nadu.",
     images: ["https://www.sapgene.com/images/SAPG%202026-%20DEALER%20CERTIFICATE-CUMMINS&POWERICA.webp"],
   },
 };

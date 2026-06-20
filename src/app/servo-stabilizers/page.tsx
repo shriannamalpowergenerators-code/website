@@ -7,12 +7,21 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Industrial Servo Stabilizers | Precision Voltage Controllers",
-    description: "Protect sensitive machinery with SAPGEN Servo Stabilizers. Get precise voltage regulation, high overload capacity, and shield industrial equipment from surges.",
-    keywords: "servo stabilizers, voltage regulation, industrial power protection, precise voltage control",
-    alternates: {
-        canonical: "https://www.sapgene.com/servo-stabilizers",
-    },
+  title: "Industrial Servo Stabilizers & Voltage Regulation",
+  description: "Protect sensitive machinery from surges. SAPGEN high-capacity servo voltage stabilizers offer precise regulation for industries in Tamil Nadu.",
+  keywords: "servo stabilizers, Industrial Generators Tamil Nadu, voltage regulation, industrial power protection, precise voltage control",
+  alternates: {
+    canonical: "https://www.sapgene.com/servo-stabilizers",
+  },
+  openGraph: {
+    title: "Industrial Servo Stabilizers & Voltage Regulation | SAPGEN",
+    description: "Protect sensitive machinery from surges. SAPGEN high-capacity servo voltage stabilizers offer precise regulation for industries in Tamil Nadu.",
+    url: "https://www.sapgene.com/servo-stabilizers",
+  },
+  twitter: {
+    title: "Industrial Servo Stabilizers & Voltage Regulation | SAPGEN",
+    description: "Protect sensitive machinery from surges. SAPGEN high-capacity servo voltage stabilizers offer precise regulation for industries in Tamil Nadu.",
+  },
 };
 
 export default function ServoStabilizersPage() {
@@ -73,21 +82,21 @@ export default function ServoStabilizersPage() {
                     <div className="max-w-4xl mx-auto prose prose-blue prose-lg md:prose-xl">
                         <h2 className="text-2xl md:text-3xl font-heading font-black text-brand-enterprise mb-6">Precision Servo Stabilizers for Industrial Voltage Regulation</h2>
                         <p className="text-gray-600 font-sans leading-relaxed mb-6">
-                            The industrial belts of Tamil Nadu and Puducherry frequently struggle with erratic voltage fluctuations. Shri Annamalai Power Generators combats this by supplying advanced, microprocessor-controlled <strong>Servo Voltage Stabilizers</strong> built to handle extreme input variance. Operating via robust copper-wound buck-boost transformers and responsive伺服 servo motors, our units ensure a continuous ±1% precise voltage output, unconditionally protecting your expensive 3-phase machinery.
+                            The industrial belts of Tamil Nadu and Puducherry frequently struggle with erratic voltage fluctuations. <Link href="/" className="text-brand-action underline hover:text-brand-enterprise transition-colors">Shri Annamalai Power Generators</Link> combats this by supplying advanced, microprocessor-controlled <strong>Servo Voltage Stabilizers</strong> built to handle extreme input variance. Operating via robust copper-wound buck-boost transformers and responsive servo motors, our units ensure a continuous ±1% precise voltage output, unconditionally protecting your <Link href="/generators" className="text-brand-action underline hover:text-brand-enterprise transition-colors">expensive 3-phase machinery & generators</Link>.
                         </p>
-
+ 
                         <h3 className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise mt-10 mb-4">Protecting High-Caliber CNC Machines and Medical Assets</h3>
                         <p className="text-gray-600 font-sans leading-relaxed mb-6">
-                            Heavy electrical surges and brownouts can cause immediate physical damage to the delicate programmable logic controllers (PLCs) found within CNC milling arrays, offset printing lines, and sophisticated medical scanners (MRI/CT). A localized <strong>industrial servo stabilizer</strong> inherently isolates these machines from grid disturbances, extending their lifespans significantly while completely preventing sudden operational errors caused by voltage drops.
+                            Heavy electrical <Link href="/online-ups" className="text-brand-action underline hover:text-brand-enterprise transition-colors">surges, brownouts, and UPS dropouts</Link> can cause immediate physical damage to the delicate programmable logic controllers (PLCs) found within CNC milling arrays, offset printing lines, and sophisticated medical scanners (MRI/CT). A localized <strong>industrial servo stabilizer</strong> inherently isolates these machines from grid disturbances, extending their lifespans significantly while completely preventing sudden operational errors caused by voltage drops.
                         </p>
-
+ 
                         <h3 className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise mt-10 mb-4">Tailored Capacities: From 10kVA to 3000kVA Mainline Stations</h3>
                         <p className="text-gray-600 font-sans leading-relaxed mb-6">
                             We don't believe in one-size-fits-all. Our engineers deploy tailored automatic voltage conditioning systems ranging from agile 10kVA units for individual workstations up to gigantic 3000kVA mainline stabilizers capable of stabilizing whole manufacturing complexes. Featuring IP55-rated enclosures, our hardware tolerates extreme indoor and outdoor industrial environments flawlessly while requiring exceptionally low maintenance parameters.
                         </p>
-
+ 
                         <p className="text-gray-600 font-sans leading-relaxed">
-                            Stop losing profit to power fluctuations and damaged hardware. By implementing a centralized <strong>voltage regulation system</strong>, you secure a smooth, standardized energy baseline that maximizes plant productivity continuously throughout the year.
+                            Stop losing profit to power fluctuations and damaged hardware. By implementing a centralized <Link href="/contact" className="text-brand-action underline hover:text-brand-enterprise transition-colors">voltage regulation system</Link>, you secure a smooth, standardized energy baseline that maximizes plant productivity continuously throughout the year.
                         </p>
                     </div>
                 </div>

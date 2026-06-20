@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -34,8 +35,8 @@ const Header = ({ onQuote, variant = "dark" }: { onQuote?: () => void; variant?:
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 md:gap-3 group max-w-[75%] sm:max-w-none">
-                    <div className="w-[45px] md:w-16 h-auto flex items-center justify-center shrink-0">
-                        <img src="/images/sapgen logo.png" alt="SAPGEN - Shri Annamalai Power Generators Logo" className="w-full object-contain" />
+                    <div className="relative w-[45px] h-[45px] md:w-16 md:h-16 flex items-center justify-center shrink-0">
+                        <Image src="/images/sapgen logo.png" alt="SAPGEN - Shri Annamalai Power Generators Logo" width={64} height={64} className="object-contain" priority />
                     </div>
                     <div className="flex flex-col whitespace-normal">
                         <span className="font-heading font-black text-[12px] sm:text-[18px] md:text-2xl leading-[1.2] transition-colors text-brand-enterprise tracking-tight">
@@ -71,6 +72,8 @@ const Header = ({ onQuote, variant = "dark" }: { onQuote?: () => void; variant?:
                 <button
                     className="md:hidden transition-colors text-brand-enterprise"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label="Toggle mobile menu"
+                    aria-expanded={isMobileMenuOpen}
                 >
                     {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>

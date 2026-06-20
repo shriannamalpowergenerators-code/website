@@ -12,14 +12,20 @@ export async function generateMetadata({ params }: { params: Params }) {
     const { slug } = await params;
     const post = blogPosts.find(p => p.slug === slug);
     if (!post) return { title: "Not Found" };
+    const baseTitle = post.title;
+    const optimizedTitle = baseTitle.length > 50 ? `${baseTitle.substring(0, 47)}...` : baseTitle;
+    const finalTitle = `${optimizedTitle} | SAPGEN`;
+
     return {
-        title: `${post.title} | Shri Annamalai Power Generators`,
+        title: {
+            absolute: finalTitle
+        },
         description: post.description,
         alternates: {
             canonical: `https://www.sapgene.com/blog/${slug}`,
         },
         openGraph: {
-            title: `${post.title} | Shri Annamalai Power Generators`,
+            title: finalTitle,
             description: post.description,
             url: `https://www.sapgene.com/blog/${slug}`,
             type: "article",
@@ -32,7 +38,7 @@ export async function generateMetadata({ params }: { params: Params }) {
         },
         twitter: {
             card: "summary_large_image",
-            title: `${post.title} | Shri Annamalai Power Generators`,
+            title: finalTitle,
             description: post.description,
             images: [post.image],
         }

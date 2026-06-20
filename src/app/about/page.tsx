@@ -2,11 +2,20 @@ import type { Metadata } from "next";
 import AboutClient from "./AboutClient";
 
 export const metadata: Metadata = {
-  title: "About SAPGEN | Shri Annamalai Power Generators & Power Solutions",
-  description: "Learn about SAPGEN (Shri Annamalai Power Generators). With 20+ years of expertise, we deliver premium diesel generators & power systems in South India.",
-  keywords: "about sapgen, shri annamalai power generators legacy, indians best generators, generator dealers pondicherry, generator dealers karaikal, cummins powerica distributors",
+  title: "Industrial Generators & Power Backup Tamil Nadu",
+  description: "Learn about SAPGEN. With 20+ years of expertise, we are leading industrial generator and power backup solution suppliers in Chennai & Tamil Nadu.",
+  keywords: "about sapgen, Industrial Generators Tamil Nadu, Generator Dealers Chennai, Power Backup Solutions Chennai, Cummins Powerica dealer",
   alternates: {
     canonical: "https://www.sapgene.com/about",
+  },
+  openGraph: {
+    title: "Industrial Generators & Power Backup Tamil Nadu | SAPGEN",
+    description: "Learn about SAPGEN. With 20+ years of expertise, we are leading industrial generator and power backup solution suppliers in Chennai & Tamil Nadu.",
+    url: "https://www.sapgene.com/about",
+  },
+  twitter: {
+    title: "Industrial Generators & Power Backup Tamil Nadu | SAPGEN",
+    description: "Learn about SAPGEN. With 20+ years of expertise, we are leading industrial generator and power backup solution suppliers in Chennai & Tamil Nadu.",
   },
 };
 

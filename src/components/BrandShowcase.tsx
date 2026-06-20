@@ -55,7 +55,7 @@ const BrandShowcase = () => {
                             <div className="flex flex-col items-center grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60 group-hover:opacity-100 scale-90 hover:scale-105">
                                 <div className="h-16 flex flex-col items-center justify-center transition-all px-4">
                                     {brand.image ? (
-                                        <Image src={brand.image} alt={brand.name} width={120} height={60} className="object-contain w-28 md:w-36 mix-blend-multiply" unoptimized />
+                                        <Image src={brand.image} alt={brand.name} width={120} height={60} className="object-contain w-28 md:w-36 mix-blend-multiply" />
                                     ) : (
                                         <span className="font-heading font-black text-2xl md:text-3xl tracking-tighter text-brand-enterprise whitespace-nowrap">
                                             {brand.name.toUpperCase()}

@@ -3,11 +3,20 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Shri Annamalai Power Generators",
-  description: "Understand how Shri Annamalai Power Generators (SAPGEN) collects, uses, and safeguards your personal details and inquiry data. Your privacy is our priority.",
+  title: "Privacy Policy - Inquiry Data Protection",
+  description: "Read the privacy policy of Shri Annamalai Power Generators (SAPGEN) to understand how we collect, protect, and handle your inquiry data.",
   keywords: "sapgen privacy policy, shri annamalai power generators privacy, generator dealer data security",
   alternates: {
     canonical: "https://www.sapgene.com/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy - Inquiry Data Protection | SAPGEN",
+    description: "Read the privacy policy of Shri Annamalai Power Generators (SAPGEN) to understand how we collect, protect, and handle your inquiry data.",
+    url: "https://www.sapgene.com/privacy-policy",
+  },
+  twitter: {
+    title: "Privacy Policy - Inquiry Data Protection | SAPGEN",
+    description: "Read the privacy policy of Shri Annamalai Power Generators (SAPGEN) to understand how we collect, protect, and handle your inquiry data.",
   },
 };
 

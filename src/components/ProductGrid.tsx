@@ -32,7 +32,6 @@ const ProductCard = ({ title, category, description, image, features, onQuote, h
                     alt={title}
                     fill
                     className="object-contain p-4 mix-blend-multiply group-hover/image:scale-110 transition-transform duration-500 relative z-0"
-                    unoptimized
                 />
                 <div className="absolute -bottom-3 left-6 bg-[#2563eb] text-white px-3 py-1.5 rounded shadow text-[9px] font-bold uppercase tracking-widest z-10 w-fit">
                     {category}

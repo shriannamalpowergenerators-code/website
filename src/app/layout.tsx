@@ -22,11 +22,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.sapgene.com"),
   title: {
-    default: "SAPGEN | Shri Annamalai Power Generators - India's Best Generators",
-    template: "%s | SAPGEN - Shri Annamalai Power Generators",
+    default: "SAPGEN | Cummins Diesel Generator Dealer Chennai & Tamil Nadu",
+    template: "%s | SAPGEN",
   },
-  description: "SAPGEN (Shri Annamalai Power Generators) offers India's best generators and power backup solutions for industrial, commercial, and residential use. Authorized Cummins Powerica dealer in Pondicherry & Karaikal.",
-  keywords: "sapgen, generators, genrators, indians best generators, best generators in india, Shri Annamalai Power Generators, sapgen generators, diesel generators, solar power plants, servo stabilizers, online ups",
+  description: "Authorized Cummins Powerica dealer. SAPGEN offers diesel generators, DG set installation, and maintenance services across Chennai, Pondicherry, and Tamil Nadu.",
+  keywords: "sapgen, generators, Generator Dealers Chennai, Power Backup Solutions Chennai, DG Set Installation Chennai, Industrial Generators Tamil Nadu, Generator Maintenance Chennai, Cummins Powerica, diesel generators, Pondicherry, Karaikal",
   applicationName: "Shri Annamalai Power Generators",
   robots: {
     index: true,
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "SAPGEN | Shri Annamalai Power Generators - India's Best Generators",
-    description: "SAPGEN (Shri Annamalai Power Generators) offers India's best generators and power backup solutions. Authorized Cummins Powerica dealers.",
+    title: "SAPGEN | Cummins Diesel Generator Dealer Chennai & Tamil Nadu",
+    description: "Authorized Cummins Powerica dealer. SAPGEN offers diesel generators, DG set installation, and maintenance services across Chennai, Pondicherry, and Tamil Nadu.",
     url: "https://www.sapgene.com",
     siteName: "Shri Annamalai Power Generators",
     images: [
@@ -73,8 +73,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SAPGEN | Shri Annamalai Power Generators - India's Best Generators",
-    description: "SAPGEN (Shri Annamalai Power Generators) provides CPCB IV+ compliant diesel generators and energy systems across India.",
+    title: "SAPGEN | Cummins Diesel Generator Dealer Chennai & Tamil Nadu",
+    description: "Authorized Cummins Powerica dealer. SAPGEN offers diesel generators, DG set installation, and maintenance services across Chennai, Pondicherry, and Tamil Nadu.",
     images: ["/images/SAPG 2026- DEALER CERTIFICATE-CUMMINS&POWERICA.webp"],
   },
 };
@@ -111,19 +111,35 @@ export default function RootLayout({
     "image": "https://www.sapgene.com/images/SAPG%202026-%20DEALER%20CERTIFICATE-CUMMINS%20AND%20POWERICA.webp",
     "telephone": "+91-9442946598",
     "url": "https://www.sapgene.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "No. 4, VOC Street, Pondicherry & Karaikal",
-      "addressLocality": "Pondicherry",
-      "addressRegion": "Puducherry",
-      "postalCode": "605001",
-      "addressCountry": "IN"
-    },
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "19B, 6th cross Extension, Anna Nagar",
+        "addressLocality": "Pondicherry",
+        "addressRegion": "Puducherry",
+        "postalCode": "605005",
+        "addressCountry": "IN"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "14, West St, Mela Oduthurai",
+        "addressLocality": "Karaikal",
+        "addressRegion": "Puducherry",
+        "postalCode": "609602",
+        "addressCountry": "IN"
+      }
+    ],
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": 11.9416,
       "longitude": 79.8083
     },
+    "areaServed": [
+      "Chennai",
+      "Pondicherry",
+      "Karaikal",
+      "Tamil Nadu"
+    ],
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [

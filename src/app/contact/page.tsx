@@ -2,11 +2,20 @@ import type { Metadata } from "next";
 import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
-  title: "Contact SAPGEN | Shri Annamalai Power Generators Offices & Support",
-  description: "Contact Shri Annamalai Power Generators (SAPGEN). Get office addresses, phone numbers, and inquiry forms for generator sales in Pondicherry and Karaikal.",
-  keywords: "sapgen contact, contact shri annamalai power generators, generator dealers phone number pondicherry, generators dealer karaikal, sapgen email",
+  title: "Generator Maintenance & Sales Support Chennai",
+  description: "Get in touch with SAPGEN for Cummins generator sales, professional installation, emergency maintenance, and power backup support in Chennai.",
+  keywords: "Generator Maintenance Chennai, sapgen contact, contact shri annamalai power generators, generator dealers phone number, Chennai generator repair",
   alternates: {
     canonical: "https://www.sapgene.com/contact",
+  },
+  openGraph: {
+    title: "Generator Maintenance & Sales Support Chennai | SAPGEN",
+    description: "Get in touch with SAPGEN for Cummins generator sales, professional installation, emergency maintenance, and power backup support in Chennai.",
+    url: "https://www.sapgene.com/contact",
+  },
+  twitter: {
+    title: "Generator Maintenance & Sales Support Chennai | SAPGEN",
+    description: "Get in touch with SAPGEN for Cummins generator sales, professional installation, emergency maintenance, and power backup support in Chennai.",
   },
 };
 

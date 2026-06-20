@@ -2,11 +2,20 @@ import type { Metadata } from "next";
 import GalleryClient from "./GalleryClient";
 
 export const metadata: Metadata = {
-  title: "Project Gallery | Shri Annamalai Power Generator Installations",
-  description: "Explore Shri Annamalai Power Generators (SAPGEN) installation gallery. View our commercial, residential, and industrial diesel generator setups in India.",
-  keywords: "sapgen gallery, generator installation pictures, commercial generator setups, industrial generator photos, shri annamalai power generators, cummins dealer gallery",
+  title: "DG Set Installation Chennai - Project Gallery",
+  description: "Browse our project gallery displaying commercial, residential, and industrial Cummins diesel generator installations and site setups across Chennai.",
+  keywords: "DG Set Installation Chennai, sapgen gallery, generator installation pictures, commercial generator setups, industrial generator photos",
   alternates: {
     canonical: "https://www.sapgene.com/gallery",
+  },
+  openGraph: {
+    title: "DG Set Installation Chennai - Project Gallery | SAPGEN",
+    description: "Browse our project gallery displaying commercial, residential, and industrial Cummins diesel generator installations and site setups across Chennai.",
+    url: "https://www.sapgene.com/gallery",
+  },
+  twitter: {
+    title: "DG Set Installation Chennai - Project Gallery | SAPGEN",
+    description: "Browse our project gallery displaying commercial, residential, and industrial Cummins diesel generator installations and site setups across Chennai.",
   },
 };
 

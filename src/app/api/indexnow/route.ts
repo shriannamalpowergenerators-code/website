@@ -5,13 +5,13 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const token = searchParams.get('token');
   
-  if (token !== '7ec78198547643a79b64eaf80a51eb41') {
+  if (token !== 'e72472cd1b4f4f9490dd460ee494ec6f') {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
   const host = 'www.sapgene.com';
-  const key = '7ec78198547643a79b64eaf80a51eb41';
-  const keyLocation = `https://${host}/7ec78198547643a79b64eaf80a51eb41.txt`;
+  const key = 'e72472cd1b4f4f9490dd460ee494ec6f';
+  const keyLocation = `https://${host}/e72472cd1b4f4f9490dd460ee494ec6f.txt`;
   
   const staticRoutes = [
     '',

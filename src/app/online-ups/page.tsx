@@ -7,12 +7,21 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Online UPS Systems | Uninterruptible Power Supply Solutions",
-    description: "Ensure zero downtime with SAPGEN Online UPS Systems. True double-conversion power backup designed for critical IT, medical, and industrial applications.",
-    keywords: "online UPS, uninterruptible power supply, critical power backup, zero transfer UPS",
-    alternates: {
-        canonical: "https://www.sapgene.com/online-ups",
-    },
+  title: "Online UPS Systems & Power Backup Solutions",
+  description: "Ensure zero downtime with true double-conversion Online UPS systems. Reliable power backup solutions for IT, medical, and industries in Chennai.",
+  keywords: "online UPS, Power Backup Solutions Chennai, uninterruptible power supply, critical power backup, zero transfer UPS",
+  alternates: {
+    canonical: "https://www.sapgene.com/online-ups",
+  },
+  openGraph: {
+    title: "Online UPS Systems & Power Backup Solutions | SAPGEN",
+    description: "Ensure zero downtime with true double-conversion Online UPS systems. Reliable power backup solutions for IT, medical, and industries in Chennai.",
+    url: "https://www.sapgene.com/online-ups",
+  },
+  twitter: {
+    title: "Online UPS Systems & Power Backup Solutions | SAPGEN",
+    description: "Ensure zero downtime with true double-conversion Online UPS systems. Reliable power backup solutions for IT, medical, and industries in Chennai.",
+  },
 };
 
 export default function OnlineUpsPage() {
@@ -68,26 +77,26 @@ export default function OnlineUpsPage() {
                 </div>
             </div>
             {/* SEO Content Injection */}
-            <section className="py-16 md:py-15 bg-white border-t border-gray-100">
+            <section className="py-16 md:py-14 bg-white border-t border-gray-100">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="max-w-4xl mx-auto prose prose-blue prose-lg md:prose-xl">
                         <h2 className="text-2xl md:text-3xl font-heading font-black text-brand-enterprise mb-6">High-Performance Online UPS Systems for Critical Operations</h2>
                         <p className="text-gray-600 font-sans leading-relaxed mb-6">
-                            At Shri Annamalai Power Generators, we deliver <strong>mission-critical Online UPS Systems</strong> engineered specifically to protect high-stakes digital and medical infrastructure from devastating electrical volatility. Whether you run a high-density data center, an automated robotic assembly line, or a life-support medical ICU, our power conditioners and true double-conversion UPS units provide an impenetrable barrier against power sags, surges, and micro-outages.
+                            At Shri Annamalai Power Generators, we deliver <strong>mission-critical Online UPS Systems</strong> engineered specifically to protect high-stakes digital and medical infrastructure from devastating electrical volatility. Whether you run a high-density data center, an automated robotic assembly line, or a life-support medical ICU, our power conditioners and <Link href="/servo-stabilizers" className="text-brand-action underline hover:text-brand-enterprise transition-colors">servo stabilizers & UPS units</Link> provide an impenetrable barrier against power sags, surges, and micro-outages.
                         </p>
-
+ 
                         <h3 className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise mt-10 mb-4">Understanding Zero-Transfer Time Technology</h3>
                         <p className="text-gray-600 font-sans leading-relaxed mb-6">
                             Unlike consumer-grade offline or line-interactive systems that feature a brief delay when switching to battery power, a true <strong>zero-transfer time Uninterruptible Power Supply (UPS)</strong> operates continuously through its inverter. The incoming AC power is converted to DC to charge the battery banks and is then immediately inverted back to perfectly clean, pure sine wave AC output. This means your sensitive electronics never even "feel" a power failure occurring. The transition is instantaneous and completely seamless.
                         </p>
-
+ 
                         <h3 className="text-xl md:text-2xl font-heading font-bold text-brand-enterprise mt-10 mb-4">Seamless Integration with Cummins Industrial Generators</h3>
                         <p className="text-gray-600 font-sans leading-relaxed mb-6">
-                            An Online UPS system is the perfect companion to a heavy-duty backup generator. When a total blackout occurs, heavy diesel generators (like Cummins DG Sets) require approximately 10 to 15 seconds to spin up to full operational speed and stabilize their voltage frequency. Our customized UPS grid bridges this critical gap—carrying the facility's entire load effortlessly until the generators take over the heavy lifting, securing comprehensive 24/7 power backup strategies.
+                            An Online UPS system is the perfect companion to a heavy-duty backup generator. When a total blackout occurs, <Link href="/generators" className="text-brand-action underline hover:text-brand-enterprise transition-colors">heavy diesel generators (like Cummins DG Sets)</Link> require approximately 10 to 15 seconds to spin up to full operational speed and stabilize their voltage frequency. Our customized UPS grid bridges this critical gap—carrying the facility's entire load effortlessly until the <Link href="/rental-generators" className="text-brand-action underline hover:text-brand-enterprise transition-colors">rental generators</Link> take over the heavy lifting, securing comprehensive 24/7 power backup strategies.
                         </p>
-
+ 
                         <p className="text-gray-600 font-sans leading-relaxed">
-                            Protect your microprocessors, secure your corporate data, and extend the lifespan of expensive sensitive machinery. We offer bespoke sizing and rapid installation services for three-phase commercial UPS architectures across pondicherry and Karaikal.
+                            Protect your microprocessors, secure your corporate data, and extend the lifespan of expensive sensitive machinery. We offer bespoke sizing and <Link href="/contact" className="text-brand-action underline hover:text-brand-enterprise transition-colors">rapid installation services</Link> for three-phase commercial UPS architectures across Chennai, Pondicherry, and Karaikal.
                         </p>
                     </div>
                 </div>

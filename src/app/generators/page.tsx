@@ -2,11 +2,20 @@ import type { Metadata } from "next";
 import GeneratorsClient from "./GeneratorsClient";
 
 export const metadata: Metadata = {
-  title: "Cummins Powerica Diesel Generator Sets | SAPGEN Authorized Partner",
-  description: "Explore Cummins Powerica diesel generator sets from 7.5 kVA to 2750 kVA at SAPGEN. Get clean energy, robust power backup, and download technical spec sheets.",
-  keywords: "sapgen, generators, genrators, indians best generators, best generators in india, Shri Annamalai Power Generators, sapgen generators, diesel generator sets, Cummins Powerica, power backup, pondicherry, Karaikal",
+  title: "Cummins Diesel Generator Sets & Prices",
+  description: "Explore Cummins Powerica diesel generator sets from 7.5 kVA to 2750 kVA. Get robust power backup solutions, specs, and price quotes in Chennai.",
+  keywords: "cummins diesel generator, Generator Dealers Chennai, DG Set Prices, power backup, industrial generators",
   alternates: {
     canonical: "https://www.sapgene.com/generators",
+  },
+  openGraph: {
+    title: "Cummins Diesel Generator Sets & Prices | SAPGEN",
+    description: "Explore Cummins Powerica diesel generator sets from 7.5 kVA to 2750 kVA. Get robust power backup solutions, specs, and price quotes in Chennai.",
+    url: "https://www.sapgene.com/generators",
+  },
+  twitter: {
+    title: "Cummins Diesel Generator Sets & Prices | SAPGEN",
+    description: "Explore Cummins Powerica diesel generator sets from 7.5 kVA to 2750 kVA. Get robust power backup solutions, specs, and price quotes in Chennai.",
   },
 };
 

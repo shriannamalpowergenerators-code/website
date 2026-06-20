@@ -3,11 +3,20 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Legal Terms & Conditions | Shri Annamalai Power Generators",
-  description: "Read the terms of service and legal conditions for using the Shri Annamalai Power Generators (SAPGEN) website, products, and power backup solutions.",
+  title: "Legal Terms & Conditions - Service Brief",
+  description: "Read the terms of service and legal conditions for using the SAPGEN website, generator sales, rentals, and maintenance services in India.",
   keywords: "sapgen terms, shri annamalai power generators terms, generator sales legal conditions, power generator terms of service",
   alternates: {
     canonical: "https://www.sapgene.com/legal",
+  },
+  openGraph: {
+    title: "Legal Terms & Conditions - Service Brief | SAPGEN",
+    description: "Read the terms of service and legal conditions for using the SAPGEN website, generator sales, rentals, and maintenance services in India.",
+    url: "https://www.sapgene.com/legal",
+  },
+  twitter: {
+    title: "Legal Terms & Conditions - Service Brief | SAPGEN",
+    description: "Read the terms of service and legal conditions for using the SAPGEN website, generator sales, rentals, and maintenance services in India.",
   },
 };
 

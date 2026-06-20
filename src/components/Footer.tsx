@@ -67,8 +67,8 @@ const Footer = () => {
                     {/* Brand Info */}
                     <div className="lg:col-span-4 flex flex-col justify-start gap-6 h-full">
                         <Link href="/" className="flex items-center gap-3 w-full">
-                            <div className="w-12 h-12 bg-white rounded flex items-center justify-center shrink-0">
-                                <img src="/images/logo.webp" alt="Logo" className="w-10 h-10 object-contain" />
+                            <div className="w-12 h-12 bg-white rounded flex items-center justify-center shrink-0 relative">
+                                <Image src="/images/logo.webp" alt="SAPGEN Logo" width={40} height={40} className="object-contain" />
                             </div>
                             <div className="flex flex-col">
                                 <span className="font-heading font-black text-sm md:text-xl leading-tight text-white whitespace-normal break-words w-full">SHRI ANNAMALAI POWER GENERATORS</span>
@@ -80,19 +80,38 @@ const Footer = () => {
                         </p>
 
                         <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-action transition-colors cursor-pointer text-white/60 hover:text-white border border-white/10">
+                            <a
+                                href="https://facebook.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Visit SAPGEN Facebook page"
+                                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-action transition-colors text-white/60 hover:text-white border border-white/10"
+                            >
                                 <Facebook size={18} />
-                            </div>
-                            <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-action transition-colors cursor-pointer text-white/60 hover:text-white border border-white/10">
+                            </a>
+                            <a
+                                href="https://twitter.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Visit SAPGEN Twitter profile"
+                                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-action transition-colors text-white/60 hover:text-white border border-white/10"
+                            >
                                 <Twitter size={18} />
-                            </div>
-                            <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-action transition-colors cursor-pointer text-white/60 hover:text-white border border-white/10">
+                            </a>
+                            <a
+                                href="https://linkedin.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Visit SAPGEN LinkedIn profile"
+                                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-action transition-colors text-white/60 hover:text-white border border-white/10"
+                            >
                                 <Linkedin size={18} />
-                            </div>
+                            </a>
                             <a
                                 href="https://wa.me/919442946598"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Contact SAPGEN via WhatsApp"
                                 className="w-10 h-10 flex items-center justify-center transition-transform hover:scale-110 cursor-pointer"
                             >
                                 <Image

@@ -8,19 +8,19 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Commercial Solar Infrastructure & Grid Hybrid",
-  description: "Reduce operational costs with SAPGEN commercial solar arrays, hybrid grid integrations, and industrial power solutions in Chennai and Tamil Nadu.",
+  description: "Reduce operational costs with SAPGENE commercial solar arrays, hybrid grid integrations, and industrial power solutions in Chennai and Tamil Nadu.",
   keywords: "solar infrastructure, commercial solar panels, industrial solar grid, hybrid power generators, Chennai solar",
   alternates: {
     canonical: "https://www.sapgene.com/solar-infrastructure",
   },
   openGraph: {
-    title: "Commercial Solar Infrastructure & Grid Hybrid | SAPGEN",
-    description: "Reduce operational costs with SAPGEN commercial solar arrays, hybrid grid integrations, and industrial power solutions in Chennai and Tamil Nadu.",
+    title: "Commercial Solar Infrastructure & Grid Hybrid | SAPGENE",
+    description: "Reduce operational costs with SAPGENE commercial solar arrays, hybrid grid integrations, and industrial power solutions in Chennai and Tamil Nadu.",
     url: "https://www.sapgene.com/solar-infrastructure",
   },
   twitter: {
-    title: "Commercial Solar Infrastructure & Grid Hybrid | SAPGEN",
-    description: "Reduce operational costs with SAPGEN commercial solar arrays, hybrid grid integrations, and industrial power solutions in Chennai and Tamil Nadu.",
+    title: "Commercial Solar Infrastructure & Grid Hybrid | SAPGENE",
+    description: "Reduce operational costs with SAPGENE commercial solar arrays, hybrid grid integrations, and industrial power solutions in Chennai and Tamil Nadu.",
   },
 };
 

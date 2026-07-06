@@ -455,7 +455,7 @@ export default function GeneratorsClient() {
                             <div className="absolute top-0 right-0 -mt-4 -mr-4 p-4 bg-brand-action rounded-2xl shadow-lg text-white"><ShieldCheck size={32} /></div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Powering Performance with Reliability</h3>
                             <p className="text-gray-600 leading-relaxed mb-8">
-                                With dependable generator technology from <span className="font-medium text-gray-800">Cummins Powerica</span> and dedicated support from <span className="font-medium text-gray-800">Shri Annamalai Power Generators (SAPGEN)</span>, we deliver power solutions built for performance, efficiency, and uninterrupted operations.
+                                With dependable generator technology from <span className="font-medium text-gray-800">Cummins Powerica</span> and dedicated support from <span className="font-medium text-gray-800">Shri Annamalai Power Generators (SAPGENE)</span>, we deliver power solutions built for performance, efficiency, and uninterrupted operations.
                             </p>
                         </motion.div>
                     </motion.div>

@@ -141,7 +141,7 @@ export default function GalleryClient() {
                                         <div className="absolute inset-0 bg-brand-enterprise/20 group-hover:bg-transparent transition-all duration-500 z-10 pointer-events-none" />
                                         <Image
                                             src={img.src}
-                                            alt={img.alt + " - SAPGEN Installations"}
+                                            alt={img.alt + " - SAPGENE Installations"}
                                             fill
                                             unoptimized
                                             className="object-cover group-hover:scale-105 transition-transform duration-700"

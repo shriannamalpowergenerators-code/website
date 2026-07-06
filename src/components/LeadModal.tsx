@@ -9,6 +9,8 @@ interface LeadModalProps {
     onClose: () => void;
 }
 
+const FORM_RECIPIENT_EMAIL = "info@sapgene.com";
+
 const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
     const [formData, setFormData] = useState({
         fullName: "",
@@ -43,6 +45,7 @@ const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
                 },
                 body: JSON.stringify({
                     access_key: accessKey,
+                    to_email: FORM_RECIPIENT_EMAIL,
                     subject: "New Lead Capture - Shri Annamalai Power Generators",
                     from_name: "Shri Annamalai Website Popup",
                     name: formData.fullName,
@@ -71,7 +74,7 @@ const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
             } else {
                 setSubmitError(result.message || "Failed to submit request. Please try again.");
             }
-        } catch (error) {
+        } catch {
             setSubmitError("An error occurred. Please try again.");
         } finally {
             setIsSubmitting(false);

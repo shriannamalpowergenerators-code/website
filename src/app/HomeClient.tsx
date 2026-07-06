@@ -80,6 +80,25 @@ export default function HomeClient() {
         {/* Testimonials */}
         <Testimonials />
 
+        {/* SEO Brand Identity Section – crawlable entity definition */}
+        <section className="bg-gray-50 border-t border-gray-100 py-10">
+          <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+            <h2 className="text-xl md:text-2xl font-heading font-black text-brand-enterprise mb-4">
+              About SAPGENE – Shri Annamalai Power Generators
+            </h2>
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-3">
+              <strong>SAPGENE</strong> (short for <strong>Shri Annamalai Power Generators</strong>) is an Indian diesel generator company headquartered in Pondicherry, India.
+              We are an authorized <strong>Cummins Powerica</strong> dealer supplying diesel generators, DG sets, rental generators,
+              servo stabilizers, online UPS systems, and solar infrastructure across <strong>Tamil Nadu, Chennai, Karaikal, and Puducherry</strong>.
+            </p>
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+              SAPGENE (sapgene.com) is a <strong>power backup and generator company in India</strong> — not related to any biology or molecular software product.
+              With 20+ years of experience and 3000+ successful generator installations, SAPGENE is India&apos;s trusted generator dealer for industrial, commercial, and residential power needs.
+              Call us at <strong>+91-9442946598</strong> or visit <strong>sapgene.com</strong>.
+            </p>
+          </div>
+        </section>
+
         <Footer />
 
         {/* Global Modal */}

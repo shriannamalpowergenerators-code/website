@@ -91,6 +91,10 @@ export default function RootLayout({
     "@id": "https://www.sapgene.com/#organization",
     "name": "SAPGENE – Shri Annamalai Power Generators",
     "alternateName": ["SAPGENE", "SAPGEN", "sapgen", "sapgene", "Shri Annamalai Power Generators", "Shri Annamalai Power Generator"],
+    "disambiguatingDescription": "SAPGENE (sapgene.com) is an Indian diesel generator company and authorized Cummins Powerica dealer based in Pondicherry, India. SAPGENE provides diesel generators, DG sets, power backup solutions, and generator rental services across Tamil Nadu and Puducherry — not to be confused with SnapGene molecular biology software.",
+    "naics": "423610",
+    "isicV4": "4659",
+    "knowsAbout": ["Diesel Generators", "Power Backup Systems", "DG Sets", "Generator Rental", "Cummins Powerica", "Industrial Generators India", "Servo Stabilizers", "Online UPS Systems", "Solar Infrastructure"],
     "url": "https://www.sapgene.com",
     "logo": {
       "@type": "ImageObject",
@@ -136,6 +140,8 @@ export default function RootLayout({
     "@id": "https://www.sapgene.com/#localbusiness",
     "name": "SAPGENE – Shri Annamalai Power Generators",
     "alternateName": ["SAPGENE", "SAPGEN", "Shri Annamalai Power Generators"],
+    "disambiguatingDescription": "SAPGENE is an Indian power generator dealership in Pondicherry, India. We sell diesel generators and power backup systems — not DNA software or biology tools.",
+    "naics": "423610",
     "image": {
       "@type": "ImageObject",
       "url": "https://www.sapgene.com/images/sapgene-cummins-diesel-generator-india.png",

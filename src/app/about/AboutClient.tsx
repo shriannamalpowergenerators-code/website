@@ -80,7 +80,7 @@ export default function AboutClient() {
                             Powering <span className="text-brand-action">Industrial Progress</span> Since 2004.
                         </h1>
                         <p className="text-base md:text-lg lg:text-xl text-blue-100/80 font-sans leading-relaxed border-l-2 border-brand-action pl-4 md:pl-6 mx-auto md:mx-0 max-w-3xl">
-                            Shri Annamalai Power Generators (SAPGEN) is a trusted name in delivering comprehensive power solutions across Tamil Nadu and Puducherry. We are more than just a dealer; we are a one-stop partner for all your industrial energy needs, supplying India's best generators and backup systems.
+                            SAPGENE – Shri Annamalai Power Generators is a trusted name in delivering comprehensive power solutions across Tamil Nadu and Puducherry. We are more than just a dealer; we are a one-stop partner for all your industrial energy needs, supplying India's best generators and backup systems.
                         </p>
                     </motion.div>
                 </div>

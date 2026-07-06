@@ -9,12 +9,12 @@ export const metadata: Metadata = {
     canonical: "https://www.sapgene.com/gallery",
   },
   openGraph: {
-    title: "DG Set Installation Chennai - Project Gallery | SAPGEN",
+    title: "DG Set Installation Chennai - Project Gallery | SAPGENE",
     description: "Browse our project gallery displaying commercial, residential, and industrial Cummins diesel generator installations and site setups across Chennai.",
     url: "https://www.sapgene.com/gallery",
   },
   twitter: {
-    title: "DG Set Installation Chennai - Project Gallery | SAPGEN",
+    title: "DG Set Installation Chennai - Project Gallery | SAPGENE",
     description: "Browse our project gallery displaying commercial, residential, and industrial Cummins diesel generator installations and site setups across Chennai.",
   },
 };

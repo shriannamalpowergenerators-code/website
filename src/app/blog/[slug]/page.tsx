@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Params }) {
     if (!post) return { title: "Not Found" };
     const baseTitle = post.title;
     const optimizedTitle = baseTitle.length > 50 ? `${baseTitle.substring(0, 47)}...` : baseTitle;
-    const finalTitle = `${optimizedTitle} | SAPGEN`;
+    const finalTitle = `${optimizedTitle} | SAPGENE`;
 
     return {
         title: {
@@ -90,7 +90,7 @@ export default async function BlogPost({ params }: { params: Params }) {
         },
         "publisher": {
             "@type": "Organization",
-            "name": "SAPGENE – Shri Annamalai Power Generators",
+            "name": "SAPGENEE – Shri Annamalai Power Generators",
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://www.sapgene.com/images/sapgene-logo.png",

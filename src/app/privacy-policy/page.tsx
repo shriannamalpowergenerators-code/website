@@ -4,19 +4,19 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - Inquiry Data Protection",
-  description: "Read the privacy policy of Shri Annamalai Power Generators (SAPGEN) to understand how we collect, protect, and handle your inquiry data.",
+  description: "Read the privacy policy of Shri Annamalai Power Generators (SAPGENE) to understand how we collect, protect, and handle your inquiry data.",
   keywords: "sapgen privacy policy, shri annamalai power generators privacy, generator dealer data security",
   alternates: {
     canonical: "https://www.sapgene.com/privacy-policy",
   },
   openGraph: {
-    title: "Privacy Policy - Inquiry Data Protection | SAPGEN",
-    description: "Read the privacy policy of Shri Annamalai Power Generators (SAPGEN) to understand how we collect, protect, and handle your inquiry data.",
+    title: "Privacy Policy - Inquiry Data Protection | SAPGENE",
+    description: "Read the privacy policy of Shri Annamalai Power Generators (SAPGENE) to understand how we collect, protect, and handle your inquiry data.",
     url: "https://www.sapgene.com/privacy-policy",
   },
   twitter: {
-    title: "Privacy Policy - Inquiry Data Protection | SAPGEN",
-    description: "Read the privacy policy of Shri Annamalai Power Generators (SAPGEN) to understand how we collect, protect, and handle your inquiry data.",
+    title: "Privacy Policy - Inquiry Data Protection | SAPGENE",
+    description: "Read the privacy policy of Shri Annamalai Power Generators (SAPGENE) to understand how we collect, protect, and handle your inquiry data.",
   },
 };
 
@@ -67,7 +67,7 @@ const PrivacyPolicyPage = () => {
                     </p>
                     <h2 className="text-2xl font-bold text-brand-enterprise mt-8 mb-4">Contact Us</h2>
                     <p className="mb-4">
-                        If you have any questions or concerns about our Privacy Policy, please contact us at sapgenekkl@gmail.com.
+                        If you have any questions or concerns about our Privacy Policy, please contact us at info@sapgene.com.
                     </p>
                 </div>
             </div>

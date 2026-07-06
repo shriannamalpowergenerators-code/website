@@ -61,14 +61,13 @@ const Hero = () => {
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold text-brand-enterprise leading-[1.1] tracking-tight">
-                            SAPGEN | Engineering <span className="text-brand-action">India's Best Generators</span> & Power Backup.
+                            SAPGENE – <span className="text-brand-action">India's Best Generator</span> & Power Backup Company.
                         </h1>
 
                         <p className="text-base md:text-lg text-[#475569] font-sans max-w-lg leading-relaxed">
-                            <strong>Shri Annamalai Power Generators (SAPGEN)</strong> offers advanced electric generator solutions
-                            designed to deliver dependable and efficient backup power. As one of <strong>India's best generator</strong> providers,
-                            we supply systems engineered for high performance, operational reliability, and seamless power management
-                            for <strong>Industrial, Commercial, Institutional, and Residential Applications</strong>.
+                            <strong>SAPGENE (Shri Annamalai Power Generators)</strong> is India's authorized Cummins Powerica diesel generator dealer.
+                            We supply and service <strong>diesel generators, DG sets, rental generators, solar systems,</strong> and power backup solutions
+                            for <strong>Industrial, Commercial, Institutional, and Residential</strong> applications across Tamil Nadu & Puducherry.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">

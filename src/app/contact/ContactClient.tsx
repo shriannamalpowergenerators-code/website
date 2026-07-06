@@ -8,6 +8,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Phone, Mail, MapPin, Send, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
+const FORM_RECIPIENT_EMAIL = "info@sapgene.com";
+
 export default function ContactClient() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const containerRef = useRef(null);
@@ -67,8 +69,10 @@ export default function ContactClient() {
                 },
                 body: JSON.stringify({
                     access_key: accessKey,
-                    subject: "New Engineering Support Request - Shri Annamalai Power Generators (SAPGEN)",
-                    from_name: "SAPGEN Website Contact Form",
+                    to_email: FORM_RECIPIENT_EMAIL,
+                    subject: "New Engineering Support Request - Shri Annamalai Power Generators (SAPGENE)",
+                    from_name: "SAPGENE Website Contact Form",
+                    replyto: data.email,
                     ...data
                 })
             });
@@ -79,7 +83,7 @@ export default function ContactClient() {
             } else {
                 setSubmitError(result.message || "Failed to transmit requirement. Please try again.");
             }
-        } catch (error) {
+        } catch {
             setSubmitError("An error occurred during transmission. Please try again.");
         } finally {
             setIsSubmitting(false);
@@ -120,7 +124,7 @@ export default function ContactClient() {
                         </h1>
 
                         <p className="text-base md:text-lg text-blue-100/80 font-sans leading-relaxed max-w-2xl mx-auto">
-                            Need technical guidance or a quote for SAPGEN generators? Our power experts are standing
+                            Need technical guidance or a quote for SAPGENE generators? Our power experts are standing
                             by to assist with your industrial, commercial, and residential
                             infrastructure requirements.
                         </p>
@@ -201,7 +205,7 @@ export default function ContactClient() {
                                             required
                                             type="email"
                                             name="email"
-                                            placeholder="sapgenekkl@gmail.com"
+                                            placeholder="info@sapgene.com"
                                             className={fieldStyle}
                                             disabled={isSubmitting}
                                         />
@@ -389,12 +393,12 @@ export default function ContactClient() {
                                     </a>
 
                                     <a
-                                        href="mailto:sapgenekkl@gmail.com"
+                                        href={`mailto:${FORM_RECIPIENT_EMAIL}`}
                                         className="flex items-center gap-4 p-4 bg-[#F1F5F9] text-black rounded-lg sm:col-span-2"
                                     >
                                         <Mail size={20} />
                                         <span className="text-xs font-bold uppercase">
-                                            sapgenekkl@gmail.com
+                                            {FORM_RECIPIENT_EMAIL}
                                         </span>
                                     </a>
                                 </div>

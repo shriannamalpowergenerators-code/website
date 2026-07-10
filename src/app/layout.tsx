@@ -48,13 +48,9 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", type: "image/x-icon" },
-      { url: "/images/sapgene-logo.png", sizes: "32x32", type: "image/png" },
-      { url: "/images/sapgene-logo.png", sizes: "192x192", type: "image/png" },
     ],
-    shortcut: [{ url: "/favicon.ico", type: "image/x-icon" }],
-    apple: [
-      { url: "/images/sapgene-logo.png", sizes: "180x180", type: "image/png" },
-    ],
+    shortcut: "/favicon.ico",
+    apple: "/images/sapgene-logo.png",
   },
   openGraph: {
     title: "SAPGENE | Shri Annamalai Power Generators - India's Best Generator Dealer",
@@ -288,6 +284,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="https://www.sapgene.com/favicon.ico" type="image/x-icon" sizes="any" />
+        <link rel="shortcut icon" href="https://www.sapgene.com/favicon.ico" type="image/x-icon" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}

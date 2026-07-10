@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     siteName: "Shri Annamalai Power Generators",
     images: [
       {
-        url: "https://www.sapgene.com/images/sapgene-cummins-powerica-dealer-certificate-india.webp",
-        width: 800,
-        height: 600,
-        alt: "SAPGENE – Shri Annamalai Power Generators Cummins Authorized Dealer Certificate",
+        url: "https://www.sapgene.com/images/sapgene-cummins-diesel-generator-india.png",
+        width: 1200,
+        height: 630,
+        alt: "SAPGENE – Shri Annamalai Power Generators Cummins Diesel Generator Set India",
       },
     ],
     locale: "en_IN",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SAPGENE | Shri Annamalai Power Generators - India's Best Generator Dealer",
     description: "SAPGENE – Shri Annamalai Power Generators. India's #1 authorized Cummins Powerica dealer for diesel generators & power backup in Chennai, Pondicherry & Tamil Nadu.",
-    images: ["https://www.sapgene.com/images/sapgene-cummins-powerica-dealer-certificate-india.webp"],
+    images: ["https://www.sapgene.com/images/sapgene-cummins-diesel-generator-india.png"],
   },
 };
 

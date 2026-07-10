@@ -77,9 +77,9 @@ const ProductGrid = ({ onQuoteInquiry }: { onQuoteInquiry: () => void }) => {
     const salesProducts = [
         {
             id: 1,
-            title: "Electric Generators",
+            title: "Diesel Generators",
             category: "POWER SYSTEMS",
-            description: "Precision power backup for mission-critical industrial and commercial applications.",
+            description: "India's best diesel generator sets. High-performance Cummins Powerica generators for reliable power backup.",
             image: "/images/sapgene-cummins-diesel-generator-india.png",
             features: ["2500kVA+", "Silent Env"],
             href: "/generators",

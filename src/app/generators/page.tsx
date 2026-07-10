@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import GeneratorsClient from "./GeneratorsClient";
 
 export const metadata: Metadata = {
-  title: "Indian Generators & Cummins DG Sets – Buy Near You",
-  description: "Browse SAPGENE's full range of Indian generators and Cummins Powerica diesel DG sets from 7.5 kVA to 2750 kVA. Best generator prices near you in Chennai, Pondicherry & Tamil Nadu. Call +91-9442946598.",
-  keywords: "indian generators, generators near me, cummins diesel generator, Generator Dealers Chennai, DG Set Prices, power backup, industrial generators, buy generators india, diesel generator sets india",
+  title: "Diesel Generator & Cummins DG Sets | Best Indian Generators",
+  description: "Browse SAPGENE's full range of high-efficiency diesel generator sets and Cummins Powerica DG sets from 7.5 kVA to 2750 kVA. Best Indian generators.",
+  keywords: "diesel generator, generators, indian generators, best indian generators, generators near me, cummins diesel generator, Generator Dealers Chennai, DG Set Prices, power backup, industrial generators, buy generators india, diesel generator sets india",
   alternates: {
     canonical: "https://www.sapgene.com/generators",
   },
   openGraph: {
-    title: "Indian Generators & Cummins DG Sets – Buy Near You | SAPGENE",
-    description: "Browse SAPGENE's full range of Indian generators and Cummins Powerica diesel DG sets from 7.5 kVA to 2750 kVA. Best prices near you in Chennai, Pondicherry & Tamil Nadu.",
+    title: "Diesel Generator & Cummins DG Sets | Best Indian Generators | SAPGENE",
+    description: "Browse SAPGENE's full range of high-efficiency diesel generator sets and Cummins Powerica DG sets from 7.5 kVA to 2750 kVA. Best Indian generators.",
     url: "https://www.sapgene.com/generators",
   },
   twitter: {
-    title: "Indian Generators & Cummins DG Sets – Buy Near You | SAPGENE",
-    description: "Browse SAPGENE's full range of Indian generators and Cummins Powerica diesel DG sets from 7.5 kVA to 2750 kVA. Best prices in Chennai, Pondicherry & Tamil Nadu.",
+    title: "Diesel Generator & Cummins DG Sets | Best Indian Generators | SAPGENE",
+    description: "Browse SAPGENE's full range of high-efficiency diesel generator sets and Cummins Powerica DG sets from 7.5 kVA to 2750 kVA. Best Indian generators.",
   },
 };
 

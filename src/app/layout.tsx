@@ -284,8 +284,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="https://www.sapgene.com/favicon.ico" type="image/x-icon" sizes="any" />
-        <link rel="shortcut icon" href="https://www.sapgene.com/favicon.ico" type="image/x-icon" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}

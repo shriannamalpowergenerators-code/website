@@ -8,14 +8,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Generator Rental Services Near You | Tamil Nadu & Chennai",
-  description: "Rent high-performance Indian generators near you. SAPGENE – Shri Annamalai Power Generators offers flexible Cummins diesel generator rental for events, industries & construction in Chennai, Pondicherry & Tamil Nadu.",
+  description: "Rent Cummins diesel generators from SAPGENE for events, industries & construction in Chennai, Pondicherry & Tamil Nadu. Flexible short & long-term plans.",
   keywords: "generator rental near me, generators near me, rental generators, Generator Rental Chennai, temporary power solutions, hire generators, construction generators india, indian generator rental",
   alternates: {
     canonical: "https://www.sapgene.com/rental-generators",
   },
   openGraph: {
     title: "Generator Rental Services Near You | Tamil Nadu & Chennai",
-    description: "Rent high-performance Indian generators near you. SAPGENE offers flexible Cummins diesel generator rental for events, industries & construction in Chennai, Pondicherry & Tamil Nadu.",
+    description: "Rent Cummins diesel generators from SAPGENE for events, industries & construction in Chennai, Pondicherry & Tamil Nadu.",
     url: "https://www.sapgene.com/rental-generators",
   },
   twitter: {

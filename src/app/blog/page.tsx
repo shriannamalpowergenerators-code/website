@@ -28,7 +28,7 @@ export const blogPosts = [
         id: 1,
         title: "Choosing the Right Generator for Home",
         slug: "choosing-right-generator-home",
-        description: "Discover how to calculate your home power needs and select the ideal residential generator to ensure continuous and reliable backup electricity during blackouts.",
+        description: "Discover how to calculate your home power needs and select the ideal residential generator for continuous backup electricity during blackouts.",
         image: "https://as2.ftcdn.net/v2/jpg/02/94/73/77/1000_F_294737756_KjCqEGclnmeqUPid17G1VFpYaHTHkLVu.jpg?q=80&w=1074&auto=format&fit=crop",
         date: "April 1, 2026",
         author: "Engineering Team",

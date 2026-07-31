@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     default: "SAPGENE | Shri Annamalai Power Generators - India's Best Generator Dealer",
     template: "SAPGENE | %s",
   },
-  description: "SAPGENE – Shri Annamalai Power Generators. India's trusted dealer for Cummins diesel generators, DG sets, and power backup solutions. Buy or rent generators near you in Chennai, Pondicherry & Tamil Nadu.",
+  description: "SAPGENE – Shri Annamalai Power Generators. India's trusted Cummins diesel generator dealer. Buy or rent DG sets in Chennai, Pondicherry & Tamil Nadu.",
   keywords: "sapgene, sapgen, sapgene generators, shri annamalai power generators, generators, indian generators, generators near me, diesel generators india, Generator Dealers Chennai, Power Backup Solutions Chennai, DG Set Installation Chennai, Industrial Generators Tamil Nadu, Generator Maintenance Chennai, Cummins Powerica, diesel generators, Pondicherry, Karaikal, best generators in india, generator dealers india",
   applicationName: "Shri Annamalai Power Generators",
   robots: {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "SAPGENE | Shri Annamalai Power Generators - India's Best Generator Dealer",
-    description: "SAPGENE – Shri Annamalai Power Generators. India's trusted dealer for Cummins diesel generators, DG sets, and power backup solutions. Buy or rent generators near you in Chennai, Pondicherry & Tamil Nadu.",
+    description: "SAPGENE – Shri Annamalai Power Generators. India's trusted Cummins diesel generator dealer. Buy or rent DG sets in Chennai, Pondicherry & Tamil Nadu.",
     url: "https://www.sapgene.com",
     siteName: "SAPGENE – Shri Annamalai Power Generators",
     images: [
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SAPGENE | Shri Annamalai Power Generators - India's Best Generator Dealer",
-    description: "SAPGENE – Shri Annamalai Power Generators. India's trusted dealer for Cummins diesel generators, DG sets, and power backup solutions in Chennai, Pondicherry & Tamil Nadu.",
+    description: "SAPGENE – Shri Annamalai Power Generators. India's trusted Cummins diesel generator dealer in Chennai, Pondicherry & Tamil Nadu.",
     images: ["/images/sapgene-cummins-diesel-generator-india.png"],
   },
 };

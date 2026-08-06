@@ -8,7 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Phone, Mail, MapPin, Send, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
-const FORM_RECIPIENT_EMAIL = "info@sapgene.com";
+const FORM_RECIPIENT_EMAIL = "Office.sapgene@gmail.com";
 
 export default function ContactClient() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -205,7 +205,7 @@ export default function ContactClient() {
                                             required
                                             type="email"
                                             name="email"
-                                            placeholder="info@sapgene.com"
+                                            placeholder="Office.sapgene@gmail.com"
                                             className={fieldStyle}
                                             disabled={isSubmitting}
                                         />

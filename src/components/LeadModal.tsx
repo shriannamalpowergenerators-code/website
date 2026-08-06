@@ -9,7 +9,7 @@ interface LeadModalProps {
     onClose: () => void;
 }
 
-const FORM_RECIPIENT_EMAIL = "info@sapgene.com";
+const FORM_RECIPIENT_EMAIL = "Office.sapgene@gmail.com";
 
 const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
     const [formData, setFormData] = useState({

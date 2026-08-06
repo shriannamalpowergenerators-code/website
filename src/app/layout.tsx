@@ -150,7 +150,7 @@ export default function RootLayout({
       "caption": "SAPGENE – Shri Annamalai Power Generators, India's authorized Cummins Powerica diesel generator dealer"
     },
     "telephone": "+91-9442946598",
-    "email": "info@sapgene.com",
+    "email": "Office.sapgene@gmail.com",
     "url": "https://www.sapgene.com",
     "priceRange": "₹₹₹",
     "currenciesAccepted": "INR",

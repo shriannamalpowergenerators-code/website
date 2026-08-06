@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Send, Facebook, Twitter, Linkedin, MessageCircle, 
 import Link from "next/link";
 import Image from "next/image";
 
-const FORM_RECIPIENT_EMAIL = "info@sapgene.com";
+const FORM_RECIPIENT_EMAIL = "Office.sapgene@gmail.com";
 
 const Footer = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
